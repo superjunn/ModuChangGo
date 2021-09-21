@@ -22,7 +22,7 @@ class CustomTextFormField extends StatelessWidget {
         SizedBox(width: gap_m),
         Expanded(
           child: TextFormField(
-            obscureText: false,
+            obscureText: hintText == "비밀번호를 입력하세요" ? true : false,
             decoration: InputDecoration(
               hintText: hintText,
               focusedBorder: OutlineInputBorder(
