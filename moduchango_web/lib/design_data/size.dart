@@ -1,6 +1,7 @@
 // Margin
 import 'package:flutter/cupertino.dart';
 
+const double gap_padding = 400;
 const double gap_xl = 40;
 const double gap_l = 30;
 const double gap_m = 20;

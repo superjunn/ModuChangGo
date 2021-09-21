@@ -4,6 +4,15 @@ import 'package:moduchango/design_data/size.dart';
 class PageLeftMenuBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Padding(
+      padding: const EdgeInsets.only(right: gap_l),
+      child: Container(
+        width: 200,
+        decoration: BoxDecoration(
+          color: Colors.greenAccent,
+        ),
+        height: 500,
+      ),
+    );
   }
 }

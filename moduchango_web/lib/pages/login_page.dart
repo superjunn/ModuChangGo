@@ -10,8 +10,9 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          // PageHeader(),
-          LoginPageBody(),
+          PageHeader(),
+          Text("LoginPage"),
+          // LoginPageBody(),
           // PageFooter(),
         ],
       ),
