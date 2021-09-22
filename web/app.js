@@ -21,48 +21,66 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
+// DB connection
 
-// 라즈베리파이에서 서버로 json형태의 데이터를 request body에 담아 보낸다.
-// 보낸 데이터를 데이터베이스로 보낸다.
-// DB에 저장된 데이터와 중복되지 않으면 저장 / 중복되면 Error response
-// 성공 : 성공알림 / 실패 : 실패알림(실패이유)
+const mysql = require('mysql');
 
-app.post('/profile', (req, res) => {
-console.log(req.body); // body의 데이터를 요청 
-const user = {
-    name: req.body.name,
-    hobby: req.body.hobby
+const getConnection = require('./config/database');
+
+
+// MySQL에서 modu_chango 라는 데이터베이스에 chango_list 라는 table 생성
+
+// CREATE TABLE IF NOT EXISTS `chango_list` (
+//   `NIIN` varchar(20) NOT NULL,
+//   `productName` varchar(50) NOT NULL,
+//   `location` varchar(50) NOT NULL,
+//	 `mode` int(3) UNSIGNED NOT NULL,
+//   PRIMARY KEY (`NIIN`)
+// ) DEFAULT CHARSET=utf8;
+
+
+// 데이터 송수신 페이지
+app.post('/product', (req, res) => {
+console.log(req.body);
+const product = {
+    NIIN: req.body.NIIN,
+    productName: req.body.productName,
+	location: req.body.location,
+	mode: req.body.mode
 	}
-    res.send(user)
+	if (product){
+		if (product.mode == 1){ // 입고
+			res.send(product);
+
+			getConnection((conn) => {
+			const sql = 'INSERT INTO chango_list VALUES (?, ?, ?)';
+			const params = [product.NIIN, product.productName, product.location];
+			conn.query(sql, params, function(err) {
+				conn.release();
+				if(err) console.log('query is not excuted. insert fail...\n' + err);
+				else res.redirect('/main');
+				});
+			})
+		} else { // 출고
+			res.send(product);
+
+			getConnection((conn) => {
+			const sql = 'DELETE FROM chango_list WHERE NIIN=?';
+			const params = [product.NIIN];
+			conn.query(sql, params, function(err) {
+				conn.release();
+				if(err) {
+					alert('query is not excuted. delete fail...\n' + err);
+					res.redirect('/product');
+				} else res.redirect('/main');
+				});
+			})		
+		}		
+	}
+    
+	
 })
 
-
-
-
-
-
-
-
-
-
-
-// // catch 404 and forward to error handler
-// app.use(function(req, res, next) {
-//   const err = new Error('Not Found');
-//   err.status = 404;
-//   next(err);
-// });
-
-// // error handler
-// app.use(function(err, req, res, next) {
-//   // set locals, only providing error in development
-//   res.locals.message = err.message;
-//   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-//   // render the error page
-//   res.status(err.status || 500);
-//   res.render('error');
-// });
 
 app.listen(process.env.PORT || 3000, () => console.log('Example app listening on port 3000!'));
 
