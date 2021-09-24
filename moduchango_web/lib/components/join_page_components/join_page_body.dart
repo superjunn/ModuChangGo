@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/custom_text_form_field.dart';
 import 'package:moduchango/components/common/page_left_menu_bar.dart';
+// 플러터 데이트 피커, 피커 위젯 사용
 
 class JoinPageBody extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();

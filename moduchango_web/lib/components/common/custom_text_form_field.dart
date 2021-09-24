@@ -14,12 +14,15 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(gap_s),
+      padding: const EdgeInsets.all(gap_xs),
       child: Row(
         children: [
-          Text(
-            "$titleText",
-            style: h2(),
+          SizedBox(
+            width: 100,
+            child: Text(
+              "$titleText",
+              style: h2(isBold: false),
+            ),
           ),
           SizedBox(width: gap_m),
           Expanded(
