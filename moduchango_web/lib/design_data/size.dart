@@ -16,7 +16,7 @@ const double header_height = 500;
 // To get the 70 percent of the size of the monitor ??
 // MediaQuery
 double getBodyWidth(BuildContext context) {
-  return MediaQuery.of(context).size.width * 0.7;
+  return MediaQuery.of(context).size.width * 0.6;
 }
 
 double getMonitorWidth(BuildContext context) {

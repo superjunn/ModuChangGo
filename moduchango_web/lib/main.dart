@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:moduchango/pages/home_page.dart';
-import 'package:moduchango/pages/join_page.dart';
-import 'package:moduchango/pages/storehouse_page.dart';
-import 'package:moduchango/pages/test_page.dart';
+import 'package:moduchango/pages/login_page.dart';
 import 'package:moduchango/pages/test_page2.dart';
 
 void main() {
@@ -18,7 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "NotoSans"),
-      home: TestPage2(),
+      home: LoginPage(),
     );
   }
 }
