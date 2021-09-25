@@ -9,7 +9,7 @@ class PageLeftMenuBar extends StatelessWidget {
       child: Container(
         width: 200,
         decoration: BoxDecoration(
-          color: Colors.greenAccent,
+          color: Colors.red,
         ),
         height: 500,
       ),

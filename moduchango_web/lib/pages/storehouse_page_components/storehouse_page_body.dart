@@ -6,3 +6,4 @@ class StoreHousePageBody extends StatelessWidget {
     return Container();
   }
 }
+
