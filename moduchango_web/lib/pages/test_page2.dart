@@ -1,32 +1,47 @@
+import 'dart:html';
+// Complete Using GridView
 import 'package:flutter/material.dart';
+import 'package:moduchango/components/common/page_left_menu_bar.dart';
+import 'package:moduchango/design_data/size.dart';
 
 class TestPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Text("TestPage, jom..."),
-          Row(
-            children: [
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.red,
-              ),
-              Column(
+      appBar: AppBar(),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: gap_padding),
+        child: Column(
+          children: [
+            Expanded(
+              child: Row(
                 children: [
-                  Text("Column"),
-                  Container(
-                    width: 100,
-                    height: 150,
-                    color: Colors.blue,
+                  PageLeftMenuBar(),
+                  Expanded(
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: GridView.count(
+                            crossAxisCount: 4,
+                            children: List.generate(16, (index) {
+                              return Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                  color: Colors.red,
+                                  child: Text("Hello $index"),
+                                ),
+                              );
+                            }),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }
