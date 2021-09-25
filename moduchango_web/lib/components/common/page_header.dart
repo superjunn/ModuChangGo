@@ -35,7 +35,7 @@ class PageHeader extends StatelessWidget {
                   PageHeaderFunctionBlock(
                     mText: "창고 현황",
                     funPageRoute: () {
-                      Get.to(() => Body1Page());
+                      Get.to(() => StoreHousePage());
                     },
                   ),
                   PageHeaderFunctionBlock(
