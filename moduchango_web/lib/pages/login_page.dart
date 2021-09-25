@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
-import 'package:moduchango/components/login_page_components/login_page_body.dart';
+import 'package:moduchango/pages/login_page_components/login_page_body.dart';
 import 'package:moduchango/design_data/size.dart';
 
 class LoginPage extends StatelessWidget {
