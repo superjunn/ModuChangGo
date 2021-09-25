@@ -7,7 +7,7 @@ class PageFooter extends StatelessWidget {
       width: double.infinity,
       height: 1000,
       decoration: BoxDecoration(
-        color: Colors.green,
+        color: Colors.green
       ),
     );
   }
