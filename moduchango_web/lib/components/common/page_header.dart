@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_header_function_block.dart';
 import 'package:moduchango/components/common/components_detail/page_header_logo.dart';
 import 'package:moduchango/design_data/colors.dart';
-import 'package:moduchango/pages/body1_page.dart';
+import 'package:moduchango/pages/storehouse_page.dart';
 import 'package:moduchango/pages/body2_page.dart';
 import 'package:moduchango/pages/home_page.dart';
 import 'package:moduchango/pages/join_page.dart';
@@ -33,7 +33,7 @@ class PageHeader extends StatelessWidget {
                   ),
                   SizedBox(width: 50),
                   PageHeaderFunctionBlock(
-                    mText: "page1",
+                    mText: "창고 현황",
                     funPageRoute: () {
                       Get.to(() => Body1Page());
                     },
