@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/components_detail/page_left_menu_bar_function_block.dart';
 import 'package:moduchango/design_data/size.dart';
 
-class PageLeftMenuBar extends StatelessWidget {
+class StoreHousePageLeftMenuBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,8 +26,8 @@ class PageLeftMenuBar extends StatelessWidget {
                   color: Colors.grey,
                 ),
               ),
-              PageLeftMenuBarFunctionBlock(mText: "Detail function 1"),
-              PageLeftMenuBarFunctionBlock(mText: "Detail function 2"),
+              PageLeftMenuBarFunctionBlock(mText: "창고 선택"),
+              PageLeftMenuBarFunctionBlock(mText: "선반 선택"),
             ],
           ),
         ),

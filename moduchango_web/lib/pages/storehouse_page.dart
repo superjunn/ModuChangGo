@@ -7,13 +7,18 @@ import 'package:moduchango/pages/storehouse_page_components/storehouse_page_body
 class StoreHousePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double bodyWidth = getBodyWidth(context);
+    double currentSize = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: ListView(
         children: [
           PageHeader(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: gap_padding),
-            child: StoreHousePageBody(),
+          Align(
+            child: SizedBox(
+              width: currentSize < 340 ? double.infinity : bodyWidth,
+              child: StoreHousePageBody(),
+            ),
           ),
           PageFooter(),
         ],
