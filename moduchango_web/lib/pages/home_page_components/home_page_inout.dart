@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HomePageBody3 extends StatelessWidget {
+class HomePageInout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();

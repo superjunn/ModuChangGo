@@ -9,7 +9,7 @@ const double gap_s = 10;
 const double gap_xs = 5;
 
 const double storage_edge_s = 200;
-const double storage_edge_b = 350;
+const double storage_edge_b = 240;
 
 const double header_height = 500;
 

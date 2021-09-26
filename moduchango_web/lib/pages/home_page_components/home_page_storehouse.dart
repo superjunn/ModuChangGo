@@ -3,7 +3,7 @@ import 'package:moduchango/components/common/storage_form.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/design_data/styles.dart';
 
-class HomePageBody1 extends StatelessWidget {
+class HomePageStoreHouse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,7 +14,7 @@ class HomePageBody1 extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text("Body1", style: h3()),
+                Text("창고 보기", style: h3()),
               ],
             ),
             SizedBox(height: gap_s),

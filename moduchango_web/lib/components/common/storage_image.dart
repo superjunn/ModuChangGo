@@ -5,21 +5,20 @@ class StorageImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Stack(
+        overflow: Overflow.visible,
+        alignment: Alignment.center,
         children: [
-          Image.network("https://picsum.photos/150/100"),
+          Image.network("https://picsum.photos/240/120"),
           Positioned(
-            bottom: 0,
-            
             child: Text(
               "Storage Name",
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 16,
                 color: Colors.white,
               ),
             ),
           ),
         ],
-        
       ),
     );
   }

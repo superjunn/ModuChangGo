@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_header_function_block.dart';
 import 'package:moduchango/components/common/components_detail/page_header_logo.dart';
 import 'package:moduchango/design_data/colors.dart';
-import 'package:moduchango/pages/storehouse_page.dart';
+import 'package:moduchango/pages/storehouse/storehouse_page_components/storehouse_page.dart';
 import 'package:moduchango/pages/body2_page.dart';
 import 'package:moduchango/pages/home_page.dart';
 import 'package:moduchango/pages/join_page.dart';
@@ -39,13 +39,13 @@ class PageHeader extends StatelessWidget {
                     },
                   ),
                   PageHeaderFunctionBlock(
-                    mText: "page2",
+                    mText: "입고/출고",
                     funPageRoute: () {
                       Get.to(() => Body2Page());
                     },
                   ),
-                  PageHeaderFunctionBlock(mText: "page3"),
-                  PageHeaderFunctionBlock(mText: "page4"),
+                  PageHeaderFunctionBlock(mText: "공지사항"),
+                  PageHeaderFunctionBlock(mText: "마이 페이지"),
                   Spacer(),
                   PageHeaderFunctionBlock(
                     mText: "Login",
