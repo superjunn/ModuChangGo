@@ -1,0 +1,13 @@
+{
+  "data": [
+    { "ID" : "21-71501010",
+      "password" : "supejunnabyungsin",
+      "armyUnit" : "제7포병여단 662대대",
+      "rank": "소령(진)",
+      "username" : "김태한",
+      "storageInCharge" : [
+        {"storageId": "00701021"}, {"storageId": "00701022"}, {"storageId": "007010223"}, {"storageId": "00701024"}
+      ]
+    }
+  ]
+}
