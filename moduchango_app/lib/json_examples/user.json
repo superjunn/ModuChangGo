@@ -1,28 +1,28 @@
 {
-  "data": [
-    { "ID" : "21-76040230",
-      "password" : "supejunnabyungsin",
-      "armyUnit" : {
-        "name": "제7포병여단 662대대",
-        "unitId": "01250662"
-      },
+  "users": [
+    {
+      "ID": "21-76040230",
+      "password": "supejunnabyungsin",
+      "armyUnitName": "제7포병여단 662대대",
+      "armyUnitID": "01250662",
       "rank": "소령(진)",
-      "username" : "김태한",
-      "storageInCharge" : [
-        {"storageId": "01"}, {"storageId": "02"}, {"storageId": "03"}, {"storageId": "04"}
+      "username": "김태한",
+      "storageInCharge": [
+        "01",
+        "02",
+        "03"
       ]
     },
-
-    { "ID" : "21-71501010",
-      "password" : "supejunnabyungsin",
-      "armyUnit" : {
-        "name": "제7포병여단 663대대",
-        "unitId": "01250663"
-      },
+    {
+      "ID": "21-71501010",
+      "password": "supejunnabyungsin",
+      "armyUnitName": "제7포병여단 663대대",
+      "armyUnitID": "01250663",
       "rank": "이병",
-      "username" : "허승준",
-      "storageInCharge" : [
-        {"storageId": "01"}, {"storageId": "02"}
+      "username": "허승준",
+      "storageInCharge": [
+        "01",
+        "03"
       ]
     }
   ]
