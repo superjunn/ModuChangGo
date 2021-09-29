@@ -1,0 +1,144 @@
+{
+    "storages": [
+        {
+            "storageID": "012345a",
+            "storageName": "훈련용창고_1",
+            "manager": "SuperRecon",
+            "location": "전투연병장 뒤쪽",
+            "Shelves": [
+                {
+                    "shelfNum": "1",
+                    "numOfRows": "3",
+                    "numOfColumns": "4",
+                    "contents": [
+                        {
+                            "rowNum": "1",
+                            "colNum": "1",
+                            "contents": "방상외피",
+                            "count": "12"
+                        },
+                        {
+                            "rowNum": "1",
+                            "colNum": "2",
+                            "contents": "방상내피",
+                            "count": "12"
+                        },
+                        {
+                            "rowNum": "1",
+                            "colNum": "3",
+                            "contents": "방한두건",
+                            "count": "34"
+                        },
+                        {
+                            "rowNum": "1",
+                            "colNum": "4",
+                            "contents": "방충두건",
+                            "count": "50"
+                        }
+                    ]
+                },
+                {
+                    "shelfNum": "2",
+                    "numOfRows": "3",
+                    "numOfColumns": "4",
+                    "contents": [
+                        {
+                            "rowNum": "1",
+                            "colNum": "1",
+                            "contents": "방상외피",
+                            "count": "12"
+                        },
+                        {
+                            "rowNum": "1",
+                            "colNum": "2",
+                            "contents": "방상내피",
+                            "count": "12"
+                        },
+                        {
+                            "rowNum": "1",
+                            "colNum": "3",
+                            "contents": "방한두건",
+                            "count": "34"
+                        },
+                        {
+                            "rowNum": "1",
+                            "colNum": "4",
+                            "contents": "방충두건",
+                            "count": "50"
+                        }
+                    ]
+                },
+                {
+                    "shelfNum": "3",
+                    "numOfRows": "3",
+                    "numOfColumns": "5",
+                    "contents": [
+                        {
+                            "rowNum": "1",
+                            "colNum": "1",
+                            "contents": "방상외피",
+                            "count": "12"
+                        },
+                        {
+                            "rowNum": "1",
+                            "colNum": "2",
+                            "contents": "방상내피",
+                            "count": "12"
+                        },
+                        {
+                            "rowNum": "1",
+                            "colNum": "3",
+                            "contents": "방한두건",
+                            "count": "34"
+                        },
+                        {
+                            "rowNum": "1",
+                            "colNum": "4",
+                            "contents": "방충두건",
+                            "count": "50"
+                        }
+                    ]
+                },
+                {
+                    "shelfNum": "4",
+                    "numOfRows": "4",
+                    "numOfColumns": "3",
+                    "contents": [
+                        {
+                            "rowNum": "1",
+                            "colNum": "1",
+                            "contents": "방상외피",
+                            "count": "12"
+                        },
+                        {
+                            "rowNum": "1",
+                            "colNum": "2",
+                            "contents": "방상내피",
+                            "count": "12"
+                        },
+                        {
+                            "rowNum": "1",
+                            "colNum": "3",
+                            "contents": "방한두건",
+                            "count": "34"
+                        },
+                        {
+                            "rowNum": "1",
+                            "colNum": "4",
+                            "contents": "방충두건",
+                            "count": "50"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "storageID": "012346a",
+            "storageName": "훈련용창고_2",
+            "manager": "SuperRecon",
+            "numOfShelves": "2",
+            "location": "전투연병장 뒤쪽",
+            "Shelves": []
+        }
+    ]
+}
