@@ -18,12 +18,11 @@ class Post {
     this.updated,
   });
 
-  //For Communication,, JSON-Look like String will be get
-
+  //통신을 위해서 json 처럼 생긴 문자열 ==> Dart 오브젝트
   Post.fromJson(Map<String, dynamic> json)
       : id = json["id"],
-        title = json["username"],
-        content = json["password"],
+        title = json["title"],
+        content = json["content"],
         user = User.fromJson(json["user"]),
         created = DateFormat("yyyy-mm-dd").parse(json["created"]),
         updated = DateFormat("yyyy-mm-dd").parse(json["updated"]);

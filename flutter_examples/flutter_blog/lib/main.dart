@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blog/view/pages/post/home_page.dart';
 import 'package:flutter_blog/view/pages/user/login_page.dart';
-import 'package:get/get.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // route building is not required in here => GetX will be used
+      //경로 설정 필요없음
       home: LoginPage(),
     );
   }

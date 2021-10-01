@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  final String buttonText;
-  final pageRoute;
+  final String text;
+  final funPageRoute;
 
-  CustomElevatedButton({required this.pageRoute, required this.buttonText});
+  const CustomElevatedButton({required this.text, required this.funPageRoute});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: pageRoute,
-      child: Text("$buttonText"),
       style: ElevatedButton.styleFrom(
         minimumSize: Size(double.infinity, 50),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(50),
         ),
       ),
+      onPressed: funPageRoute,
+      child: Text("$text"),
     );
   }
 }

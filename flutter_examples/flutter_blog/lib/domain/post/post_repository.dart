@@ -1,29 +1,80 @@
-import 'package:flutter_blog/controller/dto/CMRespDTO.dart';
+import 'package:flutter_blog/controller/dto/CMRespDto.dart';
+import 'package:flutter_blog/controller/dto/SaveOrUpdateReqDto.dart';
 import 'package:flutter_blog/domain/post/post.dart';
-import 'package:get/get.dart';
+import 'package:flutter_blog/domain/post/post_provider.dart';
+import 'package:get/get_connect.dart';
 
-import 'post_provider.dart';
-
-// Call communication and refactor the response data to pretty => json => Dart Object
+//통신을 호출해서 응답되는 데이터를 예쁘게 가공 => json => Dart 오브젝트
 class PostRepository {
   final PostProvider _postProvider = PostProvider();
 
-  Future<void> findAll() async {
-    Response response = await _postProvider.findAll();
+  Future<Post> updateById(int id, String title, String content) async {
+    SaveOrUpdateReqDto updateReqDto = SaveOrUpdateReqDto(title, content);
+    Response response =
+        await _postProvider.updateById(id, updateReqDto.toJson());
     dynamic body = response.body;
-    // print(body);
-    // dynamic convertBody = convertUtf8ToObject(body);
-    // 어차피 한글로 잘 바껴서 상관 없음 안해줘도 됨
     CMRespDto cmRespDto = CMRespDto.fromJson(body);
-    print(cmRespDto.code);
-    print(cmRespDto.msg);
-    print(cmRespDto.data.runtimeType);
+
+    if (cmRespDto.code == 1) {
+      print("수정 성공");
+      Post post = Post.fromJson(cmRespDto.data);
+      return post;
+    } else {
+      print("수정 실패");
+      return Post();
+    }
+  }
+
+  Future<int> deleteById(int id) async {
+    Response response = await _postProvider.deleteById(id);
+    dynamic body = response.body;
+    CMRespDto cmRespDto = CMRespDto.fromJson(body);
+    return cmRespDto.code!;
+  }
+
+  Future<Post> findById(int id) async {
+    Response response = await _postProvider.findById(id);
+    dynamic body = response.body;
+    CMRespDto cmRespDto = CMRespDto.fromJson(body);
+
+    if (cmRespDto.code == 1) {
+      Post post = Post.fromJson(cmRespDto.data);
+      return post;
+    } else {
+      return Post();
+    }
+  }
+
+  Future<List<Post>> findAll() async {
+    Response response = await _postProvider.findAll();
+    dynamic body = await response.body;
+    CMRespDto cmRespDto = CMRespDto.fromJson(body);
+    // print(cmRespDto.code);
+    // print(cmRespDto.msg);
+    // print(cmRespDto.data.runtimeType);
 
     if (cmRespDto.code == 1) {
       List<dynamic> temp = cmRespDto.data;
       List<Post> posts = temp.map((post) => Post.fromJson(post)).toList();
-      print(posts.length);
-      print(posts[0].title);
-    } else {}
+      return posts;
+    } else {
+      return <Post>[];
+    }
+  }
+
+  Future<Post> save(String title, String content) async {
+    SaveOrUpdateReqDto saveReqDto = SaveOrUpdateReqDto(title, content);
+    Response response = await _postProvider.save(saveReqDto.toJson());
+    dynamic body = response.body;
+    CMRespDto cmRespDto = CMRespDto.fromJson(body);
+
+    if (cmRespDto.code == 1) {
+      print("글쓰기 성공");
+      Post post = Post.fromJson(cmRespDto.data);
+      return post;
+    } else {
+      print("글쓰기 실패");
+      return Post();
+    }
   }
 }
