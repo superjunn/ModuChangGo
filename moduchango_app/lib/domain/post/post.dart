@@ -1,4 +1,4 @@
-import 'package:moduchango_app/domain/user/user.dart';
+import 'package:flutter_blog/domain/user/user.dart';
 import 'package:intl/intl.dart';
 
 class Post {

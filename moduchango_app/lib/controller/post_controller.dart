@@ -1,5 +1,5 @@
-import 'package:moduchango_app/domain/post/post.dart';
-import 'package:moduchango_app/domain/post/post_repository.dart';
+import 'package:flutter_blog/domain/post/post.dart';
+import 'package:flutter_blog/domain/post/post_repository.dart';
 import 'package:get/get.dart';
 
 class PostController extends GetxController {

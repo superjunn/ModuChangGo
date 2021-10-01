@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:moduchango_app/controller/post_controller.dart';
-import 'package:moduchango_app/controller/user_controller.dart';
-import 'package:moduchango_app/view/pages/post/home_page.dart';
-import 'package:moduchango_app/view/pages/post/update_page.dart';
+import 'package:flutter_blog/controller/post_controller.dart';
+import 'package:flutter_blog/controller/user_controller.dart';
+import 'package:flutter_blog/view/pages/post/home_page.dart';
+import 'package:flutter_blog/view/pages/post/update_page.dart';
 import 'package:get/get.dart';
 
 class DetailPage extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:moduchango_app/view/pages/post/home_page.dart';
-import 'package:moduchango_app/view/pages/user/login_page.dart';
+import 'package:flutter_blog/view/pages/post/home_page.dart';
+import 'package:flutter_blog/view/pages/user/login_page.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {

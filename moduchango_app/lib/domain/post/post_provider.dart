@@ -1,4 +1,4 @@
-import 'package:moduchango_app/util/jwt.dart';
+import 'package:flutter_blog/util/jwt.dart';
 import 'package:get/get.dart';
 
 const host = "http://192.168.0.9:8080";

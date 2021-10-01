@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:moduchango_app/controller/user_controller.dart';
-import 'package:moduchango_app/domain/user/user_repository.dart';
-import 'package:moduchango_app/util/validator_util.dart';
-import 'package:moduchango_app/view/components/custom_elevated_button.dart';
-import 'package:moduchango_app/view/components/custom_text_form_field.dart';
-import 'package:moduchango_app/view/pages/post/home_page.dart';
-import 'package:moduchango_app/view/pages/user/join_page.dart';
+import 'package:flutter_blog/controller/user_controller.dart';
+import 'package:flutter_blog/domain/user/user_repository.dart';
+import 'package:flutter_blog/util/validator_util.dart';
+import 'package:flutter_blog/view/components/custom_elevated_button.dart';
+import 'package:flutter_blog/view/components/custom_text_form_field.dart';
+import 'package:flutter_blog/view/pages/post/home_page.dart';
+import 'package:flutter_blog/view/pages/user/join_page.dart';
 import 'package:get/get.dart';
 import 'package:validators/validators.dart';
 

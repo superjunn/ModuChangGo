@@ -1,7 +1,7 @@
-import 'package:moduchango_app/controller/dto/CMRespDto.dart';
-import 'package:moduchango_app/controller/dto/SaveOrUpdateReqDto.dart';
-import 'package:moduchango_app/domain/post/post.dart';
-import 'package:moduchango_app/domain/post/post_provider.dart';
+import 'package:flutter_blog/controller/dto/CMRespDto.dart';
+import 'package:flutter_blog/controller/dto/SaveOrUpdateReqDto.dart';
+import 'package:flutter_blog/domain/post/post.dart';
+import 'package:flutter_blog/domain/post/post_provider.dart';
 import 'package:get/get_connect.dart';
 
 //통신을 호출해서 응답되는 데이터를 예쁘게 가공 => json => Dart 오브젝트

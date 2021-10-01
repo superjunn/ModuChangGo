@@ -1,6 +1,6 @@
-import 'package:moduchango_app/domain/user/user.dart';
-import 'package:moduchango_app/domain/user/user_repository.dart';
-import 'package:moduchango_app/util/jwt.dart';
+import 'package:flutter_blog/domain/user/user.dart';
+import 'package:flutter_blog/domain/user/user_repository.dart';
+import 'package:flutter_blog/util/jwt.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 

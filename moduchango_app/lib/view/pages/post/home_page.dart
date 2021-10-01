@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:moduchango_app/controller/post_controller.dart';
-import 'package:moduchango_app/controller/user_controller.dart';
-import 'package:moduchango_app/size.dart';
-import 'package:moduchango_app/util/jwt.dart';
-import 'package:moduchango_app/view/pages/post/detail_page.dart';
-import 'package:moduchango_app/view/pages/post/write_page.dart';
-import 'package:moduchango_app/view/pages/user/login_page.dart';
-import 'package:moduchango_app/view/pages/user/user_info.dart';
+import 'package:flutter_blog/controller/post_controller.dart';
+import 'package:flutter_blog/controller/user_controller.dart';
+import 'package:flutter_blog/size.dart';
+import 'package:flutter_blog/util/jwt.dart';
+import 'package:flutter_blog/view/pages/post/detail_page.dart';
+import 'package:flutter_blog/view/pages/post/write_page.dart';
+import 'package:flutter_blog/view/pages/user/login_page.dart';
+import 'package:flutter_blog/view/pages/user/user_info.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
