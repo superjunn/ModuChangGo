@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/controller/user_controller.dart';
 import 'package:flutter_blog/domain/user/user_repository.dart';
+import 'package:flutter_blog/styles.dart';
 import 'package:flutter_blog/util/validator_util.dart';
 import 'package:flutter_blog/view/components/custom_elevated_button.dart';
 import 'package:flutter_blog/view/components/custom_text_form_field.dart';
@@ -20,9 +21,10 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20),
         child: ListView(
           children: [
+            SizedBox(height: 100),
             Container(
               alignment: Alignment.center,
               height: 200,
@@ -90,7 +92,10 @@ class LoginPage extends StatelessWidget {
               onPressed: () {
                 Get.to(JoinPage());
               },
-              child: Text("아직 회원가입이 안 되어 있나요?"),
+              child: Text(
+                "아직 회원가입이 안 되어 있나요?",
+                style: TextStyle(color: kColor1),
+              ),
             )
           ],
         ),

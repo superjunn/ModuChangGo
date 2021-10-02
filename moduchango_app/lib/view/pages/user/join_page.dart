@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_blog/styles.dart';
 import 'package:flutter_blog/util/validator_util.dart';
 import 'package:flutter_blog/view/components/custom_elevated_button.dart';
 import 'package:flutter_blog/view/components/custom_text_form_field.dart';
@@ -64,7 +65,10 @@ class JoinPage extends StatelessWidget {
             onPressed: () {
               Get.to(LoginPage());
             },
-            child: Text("로그인 페이지로 이동"),
+            child: Text(
+              "로그인 페이지로 이동",
+              style: TextStyle(color: kColor1),
+            ),
           )
         ],
       ),
