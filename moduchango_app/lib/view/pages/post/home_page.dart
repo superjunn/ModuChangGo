@@ -20,19 +20,18 @@ class HomePage extends StatelessWidget {
     // 객체 생성(create), onInit 함수 실행 (initialize)
     PostController p = Get.put(PostController());
     //p.findAll();
-
     return Scaffold(
       key: scaffoldKey,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          if (scaffoldKey.currentState!.isDrawerOpen) {
-            scaffoldKey.currentState!.openEndDrawer();
-          } else {
-            scaffoldKey.currentState!.openDrawer();
-          }
-        },
-        child: Icon(Icons.code),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     if (scaffoldKey.currentState!.isDrawerOpen) {
+      //       scaffoldKey.currentState!.openEndDrawer();
+      //     } else {
+      //       scaffoldKey.currentState!.openDrawer();
+      //     }
+      //   },
+      //   child: Icon(Icons.code),
+      // ),
       drawer: _navigation(context),
       appBar: AppBar(
         title: Text("${u.isLogin}"),

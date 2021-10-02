@@ -20,7 +20,7 @@ class CustomTextFormField extends StatelessWidget {
         validator: funValidator,
         obscureText: hint == "Password" ? true : false,
         decoration: InputDecoration(
-            hintText: "Enter $hint",
+            hintText: "$hint",
             enabledBorder:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
             focusedBorder:

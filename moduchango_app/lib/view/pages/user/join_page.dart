@@ -42,15 +42,15 @@ class JoinPage extends StatelessWidget {
       child: Column(
         children: [
           CustomTextFormField(
-            hint: "Username",
+            hint: "군번을 입력하세요",
             funValidator: validateUsername(),
           ),
           CustomTextFormField(
-            hint: "Password",
+            hint: "비밀번호를 입력하세요",
             funValidator: validatePassword(),
           ),
           CustomTextFormField(
-            hint: "Email",
+            hint: "이메일을 입력하세요",
             funValidator: validateEmail(),
           ),
           CustomElevatedButton(

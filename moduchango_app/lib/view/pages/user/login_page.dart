@@ -65,12 +65,12 @@ class LoginPage extends StatelessWidget {
           children: [
             CustomTextFormField(
               controller: _username,
-              hint: "Username",
+              hint: "군번을 입력하세요",
               funValidator: validateUsername(),
             ),
             CustomTextFormField(
               controller: _password,
-              hint: "Password",
+              hint: "비밀번호를 입력하세요",
               funValidator: validatePassword(),
             ),
             CustomElevatedButton(
