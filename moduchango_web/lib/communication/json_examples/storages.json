@@ -1,6 +1,7 @@
 {
     "storages": [
         {
+            "armyUnit" : "3사단 수색대",
             "storageID": "012345a",
             "storageName": "훈련용창고_1",
             "manager": "SuperRecon",
@@ -8,6 +9,7 @@
             "location": "전투연병장 뒤쪽"
         },
         {
+            "armyUnit" : "3사단 수색대",
             "storageID": "012346a",
             "storageName": "훈련용창고_2",
             "manager": "SuperRecon",
@@ -15,6 +17,7 @@
             "location": "전투연병장 뒤쪽"
         },
         {
+            "armyUnit" : "3사단 수색대",
             "storageID": "012347a",
             "storageName": "작전창고_1",
             "manager": "SuperRecon",
@@ -22,6 +25,7 @@
             "location": "생활관 1층"
         },
         {
+            "armyUnit" : "7포병여단 662대대",
             "storageID": "012348a",
             "storageName": "전투창고1(운용/정비)",
             "manager": "SuperArtillery",
@@ -29,6 +33,7 @@
             "location": "식당 앞"
         },
         {
+            "armyUnit" : "7포병여단 662대대",
             "storageID": "012349a",
             "storageName": "탄약창고",
             "manager": "SuperInfantry",
