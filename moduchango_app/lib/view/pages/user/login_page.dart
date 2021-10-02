@@ -26,12 +26,25 @@ class LoginPage extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               height: 200,
-              child: Text(
-                "로그인 페이지",
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.home, size: 100),
+                  Text(
+                    "모두의 창고",
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "병영창고 관리의 혁신",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
               ),
             ),
             _loginForm(),
@@ -44,40 +57,43 @@ class LoginPage extends StatelessWidget {
   Widget _loginForm() {
     return Form(
       key: _formKey,
-      child: Column(
-        children: [
-          CustomTextFormField(
-            controller: _username,
-            hint: "Username",
-            funValidator: validateUsername(),
-          ),
-          CustomTextFormField(
-            controller: _password,
-            hint: "Password",
-            funValidator: validatePassword(),
-          ),
-          CustomElevatedButton(
-            text: "로그인",
-            funPageRoute: () async {
-              if (_formKey.currentState!.validate()) {
-                //Get.to(HomePage());
-                int result =
-                    await u.login(_username.text.trim(), _password.text.trim());
-                if (result == 1) {
-                  Get.to(() => HomePage());
-                } else {
-                  Get.snackbar("로그인 시도", "로그인 실패");
+      child: Padding(
+        padding: const EdgeInsets.only(top: 40),
+        child: Column(
+          children: [
+            CustomTextFormField(
+              controller: _username,
+              hint: "Username",
+              funValidator: validateUsername(),
+            ),
+            CustomTextFormField(
+              controller: _password,
+              hint: "Password",
+              funValidator: validatePassword(),
+            ),
+            CustomElevatedButton(
+              text: "로그인",
+              funPageRoute: () async {
+                if (_formKey.currentState!.validate()) {
+                  //Get.to(HomePage());
+                  int result = await u.login(
+                      _username.text.trim(), _password.text.trim());
+                  if (result == 1) {
+                    Get.to(() => HomePage());
+                  } else {
+                    Get.snackbar("로그인 시도", "로그인 실패");
+                  }
                 }
-              }
-            },
-          ),
-          TextButton(
-            onPressed: () {
-              Get.to(JoinPage());
-            },
-            child: Text("아직 회원가입이 안 되어 있나요?"),
-          )
-        ],
+              },
+            ),
+            TextButton(
+              onPressed: () {
+                Get.to(JoinPage());
+              },
+              child: Text("아직 회원가입이 안 되어 있나요?"),
+            )
+          ],
+        ),
       ),
     );
   }
