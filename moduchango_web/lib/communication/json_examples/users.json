@@ -1,9 +1,11 @@
 {
   "users": [
     {
-      "ID": "SuperRecon",
-      "password": "pwd_SuperRecon",
-      "armyUnitName": "3사단 수색대",
+      "userName": "허승준",
+      "armyRank" : "중위",
+      "armyUnitName": "3사단 수색대대 2중대",
+      "dogNumber" : "20-40321234",
+      "password": "pwd_hsj",
       "storageInCharge": [
         "012345",
         "012346",
@@ -11,9 +13,11 @@
       ]
     },
     {
-      "ID": "SuperArtillery",
-      "password": "pwd_SuperArtillery",
-      "armyUnitName": "7포병여단 662대대",
+      "userName": "김태한",
+      "armyRank" : "대위",
+      "armyUnitName": "7포병여단 662대대 본부포대",
+      "dogNumber" : "21-76040230",
+      "password": "pwd_kth",
       "storageInCharge": [
         "012348",
         "012349",
@@ -21,14 +25,15 @@
       ]
     },
     {
-      "ID": "SuperInfantry",
-      "password": "pwd_SuperInfantry",
-      "armyUnitName": "11사단 보병대",
+      "userName": "조명근",
+      "armyRank" : "소위",
+      "armyUnitName": "7포병여단 662대대 본부포대",
+      "dogNumber" : "21-76040230",
+      "password": "pwd_hsj",
       "storageInCharge": [
         "012351",
         "012352",
-        "012353",
-        "012354"
+        "012353"
       ]
     }
   ]
