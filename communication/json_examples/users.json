@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "userName" : "허승준",
+      "armyRank" : "상병",
+      "dogNumber": "20-40321234",
+      "password": "pwd_hsj",
+      "armyUnitName": "3사단 수색대",
+      "storageInCharge": [
+        "012345",
+        "012346",
+        "012347"
+      ]
+    },
+    {
+      "userName" : "김태한",
+      "armyRank" : "일병",
+      "dogNumber": "21-76040230",
+      "password": "pwd_thk",
+      "armyUnitName": "7포병여단 662대대",
+      "storageInCharge": [
+        "012348",
+        "012349",
+        "012350"
+      ]
+    },
+    {
+      "userName" : "조명근",
+      "armyRank" : "상병",
+      "dogNumber": "20-60361234",
+      "password": "pwd_hsj",
+      "armyUnitName": "7포병여단 663대대",
+      "storageInCharge": [
+        "012351",
+        "012352",
+        "012353"
+      ]
+    }
+  ]
+}
