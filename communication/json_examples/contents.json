@@ -5,32 +5,32 @@
       "momShelf" : "1",
       "rowNum" : "1",
       "colNum" : "1",
-      "contents" : "방상외피",
-      "count" : "12"
+      "contents" : ["방상외피"],
+      "count" : ["12"]
     },
     {
       "momStorage" : "012345a",
       "momShelf" : "1",
       "rowNum" : "1",
       "colNum" : "2",
-      "contents" : "방상내피",
-      "count" : "12"
+      "contents" : ["방상내피"],
+      "count" : ["12"]
     },
     {
       "momStorage" : "012345a",
       "momShelf" : "1",
       "rowNum" : "1",
       "colNum" : "3",
-      "contents" : "방한두건",
-      "count" : "34"
+      "contents" : ["방한두건"],
+      "count" : ["34"]
     },
     {
       "momStorage" : "012345a",
       "momShelf" : "1",
       "rowNum" : "1",
       "colNum" : "4",
-      "contents" : "방충두건",
-      "count" : "50"
+      "contents" : ["방충두건", "방한두건"],
+      "count" : ["50","12"]
     }
   ]
 }

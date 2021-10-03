@@ -13,6 +13,18 @@
       ]
     },
     {
+      "userName" : "성윤준",
+      "armyRank" : "상병",
+      "dogNumber": "21-71500230",
+      "password": "pwd_syj",
+      "armyUnitName": "3사단 수색대",
+      "storageInCharge": [
+        "012348",
+        "012349",
+        "012350"
+      ]
+    },
+    {
       "userName" : "김태한",
       "armyRank" : "일병",
       "dogNumber": "21-76040230",
