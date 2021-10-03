@@ -1,0 +1,10 @@
+{
+      "ID": "SuperRecon",
+      "password": "pwd_SuperRecon",
+      "armyUnitName": "3사단 수색대",
+      "storageInCharge": [
+        "012345",
+        "012346",
+        "012347"
+      ]
+    }
