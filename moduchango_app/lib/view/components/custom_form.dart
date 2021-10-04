@@ -36,8 +36,8 @@ class CustomForm extends StatelessWidget {
               myValid: (value) {
                 if (value!.isEmpty) {
                   return "비밀번호를 입력하세요.";
-                } else if (!(4 < value.toString().length &&
-                    value.toString().length < 12)) {
+                } else if (!(3 < value.toString().length &&
+                    value.toString().length < 13)) {
                   return "비밀번호는 4자 이상 12자 이하입니다.";
                 } else {
                   return null;
