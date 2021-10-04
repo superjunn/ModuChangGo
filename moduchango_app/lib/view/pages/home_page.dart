@@ -10,7 +10,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       drawer: _navigation(context),
       appBar: AppBar(
-        backgroundColor: Colors.black,
         title: Text("7포병여단 662대대"),
       ),
       body: Center(

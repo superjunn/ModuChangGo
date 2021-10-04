@@ -17,17 +17,23 @@ class CustomTextFormField extends StatelessWidget {
           validator: myValid, // Bonus way to provide validator
           obscureText: title == "Password" ? true : false,
           decoration: InputDecoration(
+            fillColor: Colors.white,
+            filled: true,
             hintText: "$title 을(를) 입력하세요.",
             enabledBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: Colors.black, width: 1),
               borderRadius: BorderRadius.circular(20),
             ),
             focusedBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: Colors.black, width: 2),
               borderRadius: BorderRadius.circular(20),
             ),
             errorBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: Colors.black, width: 1),
               borderRadius: BorderRadius.circular(20),
             ),
             focusedErrorBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: Colors.black, width: 2),
               borderRadius: BorderRadius.circular(20),
             ),
           ),

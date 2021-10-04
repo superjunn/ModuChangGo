@@ -70,6 +70,7 @@ class CustomForm extends StatelessWidget {
             child: Text(
               "아직 회원가입을 하지 않으셨나요?",
               style: TextStyle(
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                   decoration: TextDecoration.underline),
             ),
