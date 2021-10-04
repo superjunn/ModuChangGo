@@ -12,6 +12,7 @@ import 'package:validators/validators.dart';
 
 class LoginPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
+  // put ??없으면 만들고, 있으면 찾는다 !!
   final UserController u = Get.put(UserController());
   final _username = TextEditingController();
   final _password = TextEditingController();

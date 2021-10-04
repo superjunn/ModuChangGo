@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:moduchango/components/common/storage_image.dart';
-import 'package:moduchango/design_data/colors.dart';
 import 'package:moduchango/design_data/styles.dart';
+import 'package:moduchango/pages/storehouse/storehouse_shelves_view_page.dart';
 
 class StorageForm extends StatelessWidget {
   final edge_length;
@@ -14,7 +15,9 @@ class StorageForm extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: InkWell(
-          onTap: () {},
+          onTap: () {
+            Get.to(() => StoreHouseShelfPage());
+          },
           child: Material(
             elevation: 5,
             child: Container(

@@ -4,7 +4,7 @@ import 'package:moduchango/design_data/size.dart';
 
 import 'storehouse_page_left_menu_bar.dart';
 
-class StoreHousePageBody extends StatelessWidget {
+class StoreHouseMyStoragesViewPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(

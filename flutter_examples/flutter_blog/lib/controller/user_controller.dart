@@ -6,7 +6,8 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 
 class UserController extends GetxController {
   final UserRepository _userRepository = UserRepository();
-  final RxBool isLogin = false.obs; // UI가 관찰 가능한 변수 => 변경 => UI가 자동 업데이트
+  final RxBool isLogin = false.obs; // OBS ??? UI가 관찰 가능한 변수 => 얘가 바뀌면 UI will be updated
+
 
   final principal = User().obs;
   void logout() {

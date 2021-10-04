@@ -4,11 +4,11 @@ import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_header_function_block.dart';
 import 'package:moduchango/components/common/components_detail/page_header_logo.dart';
 import 'package:moduchango/design_data/colors.dart';
-import 'package:moduchango/pages/storehouse/storehouse_page_components/storehouse_page.dart';
 import 'package:moduchango/pages/body2_page.dart';
 import 'package:moduchango/pages/home_page.dart';
 import 'package:moduchango/pages/join_page.dart';
 import 'package:moduchango/pages/login_page.dart';
+import 'package:moduchango/pages/storehouse/storehouse_my_storages_view_page.dart';
 // import 'package:flutter_email_sender/flutter_email_sender.dart';
 
 class PageHeader extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/pages/home_page.dart';
-import 'pages/storehouse/storehouse_page_components/storehouse_page.dart';
+import 'package:moduchango/pages/test_page.dart';
 
 void main() {
   runApp(MyApp());
