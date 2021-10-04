@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:moduchango_app/size.dart';
 
 class JoinPage extends StatelessWidget {
   @override

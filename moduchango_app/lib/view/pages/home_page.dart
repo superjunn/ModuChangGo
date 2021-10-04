@@ -13,7 +13,14 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.black,
         title: Text("7포병여단 662대대"),
       ),
-      body: Column(),
+      body: Center(
+        child: Column(
+          children: [
+            TextButton(onPressed: () {}, child: Text("창고현황")),
+            TextButton(onPressed: () {}, child: Text("입고/출고")),
+          ],
+        ),
+      ),
     );
   }
 }
