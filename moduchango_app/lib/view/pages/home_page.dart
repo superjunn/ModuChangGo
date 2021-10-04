@@ -10,13 +10,26 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       drawer: _navigation(context),
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
+        centerTitle: true,
         title: Text("7포병여단 662대대"),
       ),
       body: Center(
         child: Column(
           children: [
-            TextButton(onPressed: () {}, child: Text("창고현황")),
-            TextButton(onPressed: () {}, child: Text("입고/출고")),
+            Expanded(
+              child: Center(
+                child: TextButton(onPressed: () {}, child: Text("창고현황")),
+              ),
+            ),
+            Expanded(
+              child: Center(
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text("입고/출고"),
+                ),
+              ),
+            )
           ],
         ),
       ),
