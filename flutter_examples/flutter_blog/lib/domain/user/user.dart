@@ -17,7 +17,7 @@ class User {
     this.updated,
   });
 
-  //For Communication,, JSON-Look like String will be get
+  // 통신을 위해서, json 처럼 생긴 문자열 {"id" : 1} 을 dart 오브젝트로 만들어줄 것이다.
 
   User.fromJson(Map<String, dynamic> json)
       : id = json["id"],
