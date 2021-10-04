@@ -1,16 +1,34 @@
-# moduchango_app
+통신 방식
 
-A new Flutter project.
+1. 로그인(login_page)
 
-## Getting Started
+요청 주소 (POST)
+- http://localhost:8080/login
 
-This project is a starting point for a Flutter application.
+요청 파라미터
+- application/json
+{
+    "dogNumber":"21-76040230",
+    "password":"1234"
+}
 
-A few resources to get you started if this is your first Flutter project:
+응답 헤더
+Authorization : Bearer
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+응답 바디
+- application/json
+{
+    "code": 1,
+    "msg": "success",
+    "data": {
+        "dogNumber": "getinthere",
+        "password": "1234",
+        "email": "getinthere@nate.com",
+    }
+}
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
+
+

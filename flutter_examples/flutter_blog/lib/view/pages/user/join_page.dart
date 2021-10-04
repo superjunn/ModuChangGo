@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_blog/util/validator_util.dart';
 import 'package:flutter_blog/view/components/custom_elevated_button.dart';
 import 'package:flutter_blog/view/components/custom_text_form_field.dart';
 import 'package:flutter_blog/view/pages/user/login_page.dart';
@@ -12,23 +14,21 @@ class JoinPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(20.0),
         child: ListView(
           children: [
             Container(
               alignment: Alignment.center,
-              child: Text(
-                "Sign in Page",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-              ),
               height: 200,
+              child: Text(
+                "회원가입 페이지",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
             _joinForm(),
-            TextButton(
-                onPressed: () {
-                  Get.to(() => LoginPage());
-                },
-                child: Text("Already member of this site?")),
           ],
         ),
       ),
@@ -41,29 +41,31 @@ class JoinPage extends StatelessWidget {
       child: Column(
         children: [
           CustomTextFormField(
-            funvalidator: (value) {
-              if (!isNumeric(value)) {
-                return "Username is not Numeric";
-              } else {
-                return null;
-              }
-            },
-            hintText: "Username",
+            hint: "Username",
+            funValidator: validateUsername(),
           ),
           CustomTextFormField(
-            funvalidator: () {},
-            hintText: "Password",
+            hint: "Password",
+            funValidator: validatePassword(),
           ),
           CustomTextFormField(
-            funvalidator: () {},
-            hintText: "Email",
+            hint: "Email",
+            funValidator: validateEmail(),
           ),
           CustomElevatedButton(
-            buttonText: "Sign in",
-            pageRoute: () {
-              Get.to(() => LoginPage());
+            text: "회원가입",
+            funPageRoute: () {
+              if (_formKey.currentState!.validate()) {
+                Get.to(LoginPage());
+              }
             },
           ),
+          TextButton(
+            onPressed: () {
+              Get.to(LoginPage());
+            },
+            child: Text("로그인 페이지로 이동"),
+          )
         ],
       ),
     );

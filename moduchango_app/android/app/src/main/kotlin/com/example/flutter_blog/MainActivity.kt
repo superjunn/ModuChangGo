@@ -1,4 +1,4 @@
-package com.example.moduchango_app
+package com.example.flutter_blog
 
 import io.flutter.embedding.android.FlutterActivity
 

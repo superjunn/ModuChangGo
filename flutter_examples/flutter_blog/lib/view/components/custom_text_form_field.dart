@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  final String hintText;
-  final funvalidator;
-  final String? initialValue;
+  final String? hint;
+  final funValidator;
   final controller;
 
   const CustomTextFormField({
-    required this.funvalidator,
-    required this.hintText,
-    this.initialValue,
+    required this.hint,
+    required this.funValidator,
     this.controller,
   });
 
@@ -19,23 +17,18 @@ class CustomTextFormField extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 5),
       child: TextFormField(
         controller: controller,
-        initialValue: initialValue,
-        obscureText: hintText == "Password" ? true : false,
+        validator: funValidator,
+        obscureText: hint == "Password" ? true : false,
         decoration: InputDecoration(
-          hintText: "Enter $hintText",
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-        ),
+            hintText: "Enter $hint",
+            enabledBorder:
+                OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+            focusedBorder:
+                OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+            errorBorder:
+                OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+            focusedErrorBorder:
+                OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
       ),
     );
   }

@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 
-const host = "http://192.168.219.100:8080";
+const host = "http://192.168.0.9:8080";
 
-// Communication
+//통신
 class UserProvider extends GetConnect {
-  // Promise (We assure the data will be given)
+  // Promise (데이터 약속)
   Future<Response> login(Map data) => post("$host/login", data);
 }

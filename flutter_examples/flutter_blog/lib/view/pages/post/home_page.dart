@@ -1,48 +1,70 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blog/controller/post_controller.dart';
 import 'package:flutter_blog/controller/user_controller.dart';
-
 import 'package:flutter_blog/size.dart';
+import 'package:flutter_blog/util/jwt.dart';
 import 'package:flutter_blog/view/pages/post/detail_page.dart';
 import 'package:flutter_blog/view/pages/post/write_page.dart';
 import 'package:flutter_blog/view/pages/user/login_page.dart';
-import 'package:flutter_blog/view/pages/user/user_info_page.dart';
+import 'package:flutter_blog/view/pages/user/user_info.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
+  var refreshKey = GlobalKey<RefreshIndicatorState>();
+  var scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
-    // put ??없으면 만들고, 있으면 찾는다 !!
+    //put 없으면 만들고, 있으면 찾기!!
     UserController u = Get.find();
+
+    // 객체 생성(create), onInit 함수 실행 (initialize)
     PostController p = Get.put(PostController());
-    p.findAll();
+    //p.findAll();
 
     return Scaffold(
+      key: scaffoldKey,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          if (scaffoldKey.currentState!.isDrawerOpen) {
+            scaffoldKey.currentState!.openEndDrawer();
+          } else {
+            scaffoldKey.currentState!.openDrawer();
+          }
+        },
+        child: Icon(Icons.code),
+      ),
       drawer: _navigation(context),
       appBar: AppBar(
         title: Text("${u.isLogin}"),
       ),
-      body: ListView.separated(
-        itemCount: 20,
-        itemBuilder: (context, index) {
-          return ListTile(
-            onTap: () {
-              Get.to(DetailPage(id: index), arguments: "arguments 속성 테스트했던 것임");
+      body: Obx(() => RefreshIndicator(
+            key: refreshKey,
+            onRefresh: () async {
+              await p.findAll();
             },
-            title: Text("Title1"),
-            leading: Text("1"),
-          );
-        },
-        separatorBuilder: (context, index) {
-          return Divider();
-        },
-      ),
+            child: ListView.separated(
+              itemCount: p.posts.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  onTap: () async {
+                    await p.findById(p.posts[index].id!);
+                    Get.to(() => DetailPage(p.posts[index].id),
+                        arguments: "arguments 속성 테스트");
+                  },
+                  title: Text("${p.posts[index].title}"),
+                  leading: Text("${p.posts[index].id}"),
+                );
+              },
+              separatorBuilder: (context, index) {
+                return Divider();
+              },
+            ),
+          )),
     );
   }
 
   Widget _navigation(BuildContext context) {
     UserController u = Get.find();
-
     return Container(
       width: getDrawerWidth(context),
       height: double.infinity,
@@ -55,7 +77,7 @@ class HomePage extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  Get.to(WritePage());
+                  Get.to(() => WritePage());
                 },
                 child: Text(
                   "글쓰기",
@@ -69,10 +91,11 @@ class HomePage extends StatelessWidget {
               Divider(),
               TextButton(
                 onPressed: () {
+                  Navigator.pop(context);
                   Get.to(() => UserInfo());
                 },
                 child: Text(
-                  "회원 정보 보기",
+                  "회원정보보기",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -84,10 +107,10 @@ class HomePage extends StatelessWidget {
               TextButton(
                 onPressed: () {
                   u.logout();
-                  Get.to(() => LoginPage());
+                  Get.to(LoginPage());
                 },
                 child: Text(
-                  "로그 아웃",
+                  "로그아웃",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
