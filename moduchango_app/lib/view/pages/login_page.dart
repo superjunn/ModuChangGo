@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: xlarge_gap),
             Container(
               alignment: Alignment.center,
-              height: 250,
+              height: 280,
               child: Column(
                 children: [
                   Icon(Icons.home, size: 150),

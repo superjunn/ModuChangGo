@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:moduchango_app/size.dart';
 import 'package:moduchango_app/view/components/custom_text_form_field.dart';
@@ -25,7 +26,7 @@ class CustomForm extends StatelessWidget {
             },
           ),
           SizedBox(
-            height: small_gap,
+            height: medium_gap,
           ),
           CustomTextFormField(
               title: "비밀번호",
@@ -39,8 +40,15 @@ class CustomForm extends StatelessWidget {
                   return null;
                 }
               }),
-          SizedBox(height: large_gap),
+          SizedBox(height: small_gap),
           TextButton(
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.black,
+              primary: Colors.white,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30)),
+              minimumSize: Size(80, 40),
+            ),
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 Navigator.pushNamed(context, "/home");
@@ -48,6 +56,19 @@ class CustomForm extends StatelessWidget {
             },
             child: Text("Login"),
           ),
+          TextButton(
+            style: TextButton.styleFrom(
+              // padding: EdgeInsets.zero,
+              primary: Colors.black,
+            ),
+            onPressed: () {},
+            child: Text(
+              "아직 회원가입을 하지 않으셨나요?",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.underline),
+            ),
+          )
         ],
       ),
     );

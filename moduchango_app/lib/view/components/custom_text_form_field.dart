@@ -13,8 +13,6 @@ class CustomTextFormField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title),
-        SizedBox(height: small_gap),
         TextFormField(
           // validator: (value) => value!.isEmpty ? "Please enter some text" : null
           // 값이 없으면 Please enter some text 경고 화면 표시
