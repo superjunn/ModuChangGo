@@ -1,35 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:moduchango_app/size.dart';
+import 'package:validators/validators.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  final String? hint;
-  final funValidator;
-  final controller;
+  final String title;
+  final myValid;
 
-  const CustomTextFormField({
-    required this.hint,
-    required this.funValidator,
-    this.controller,
-  });
+  const CustomTextFormField({required this.title, required this.myValid});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5),
-      child: TextFormField(
-        controller: controller,
-        validator: funValidator,
-        obscureText: hint == "Password" ? true : false,
-        decoration: InputDecoration(
-            hintText: "$hint",
-            enabledBorder:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-            focusedBorder:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-            errorBorder:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-            focusedErrorBorder:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(title),
+        SizedBox(height: small_gap),
+        TextFormField(
+          // validator: (value) => value!.isEmpty ? "Please enter some text" : null
+          // 값이 없으면 Please enter some text 경고 화면 표시
+          validator: myValid, // Bonus way to provide validator
+          obscureText: title == "Password" ? true : false,
+          decoration: InputDecoration(
+            hintText: "Enter $title",
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+          ),
+        ),
+      ], //children
     );
   }
 }
