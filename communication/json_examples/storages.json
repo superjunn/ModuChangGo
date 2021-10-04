@@ -1,42 +1,37 @@
 {
     "storages": [
         {
-            "armyUnit" : "3사단 수색대",
             "storageID": "012345",
             "storageName": "훈련용창고_1",
-            "manager": "20-40321234",
+            "manager": "SuperRecon",
             "numOfShelves": "4",
             "location": "전투연병장 뒤쪽"
         },
         {
-            "armyUnit" : "3사단 수색대",
             "storageID": "012346",
             "storageName": "훈련용창고_2",
-            "manager": "20-40321234",
+            "manager": "SuperRecon",
             "numOfShelves": "2",
             "location": "전투연병장 뒤쪽"
         },
         {
-            "armyUnit" : "3사단 수색대",
             "storageID": "012347",
             "storageName": "작전창고_1",
-            "manager": "20-40321234",
+            "manager": "SuperRecon",
             "numOfShelves": "2",
             "location": "생활관 1층"
         },
         {
-            "armyUnit" : "7포병여단 662대대",
             "storageID": "012348",
             "storageName": "전투창고1(운용/정비)",
-            "manager": "21-76040230",
+            "manager": "SuperArtillery",
             "numOfShelves": "3",
             "location": "식당 앞"
         },
         {
-            "armyUnit" : "7포병여단 662대대",
             "storageID": "012349",
             "storageName": "탄약창고",
-            "manager": "21-76040230",
+            "manager": "SuperInfantry",
             "numOfShelves": "5",
             "location": "탄약고"
         }

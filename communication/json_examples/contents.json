@@ -1,7 +1,7 @@
 {
   "contents":[
     {
-      "momStorage" : "012345a",
+      "momStorage" : "012345",
       "momShelf" : "1",
       "rowNum" : "1",
       "colNum" : "1",
@@ -9,7 +9,7 @@
       "count" : ["12"]
     },
     {
-      "momStorage" : "012345a",
+      "momStorage" : "012345",
       "momShelf" : "1",
       "rowNum" : "1",
       "colNum" : "2",
@@ -17,7 +17,7 @@
       "count" : ["12"]
     },
     {
-      "momStorage" : "012345a",
+      "momStorage" : "012345",
       "momShelf" : "1",
       "rowNum" : "1",
       "colNum" : "3",
@@ -25,7 +25,7 @@
       "count" : ["34"]
     },
     {
-      "momStorage" : "012345a",
+      "momStorage" : "012345",
       "momShelf" : "1",
       "rowNum" : "1",
       "colNum" : "4",
