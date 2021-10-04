@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'view/pages/home_page.dart';
 import 'view/pages/login_page.dart';
@@ -10,7 +11,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       // theme: ThemeData(
       //   textButtonTheme: TextButtonThemeData(
       //     style: TextButton.styleFrom(
@@ -23,11 +24,7 @@ class MyApp extends StatelessWidget {
       //   ),
       // ),
       debugShowCheckedModeBanner: false,
-      initialRoute: "/login",
-      routes: {
-        "/login": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
-      },
+      home: LoginPage(),
     );
   }
 }

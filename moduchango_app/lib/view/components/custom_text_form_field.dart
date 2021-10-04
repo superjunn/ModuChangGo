@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:moduchango_app/size.dart';
-import 'package:validators/validators.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String title;
