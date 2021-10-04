@@ -11,7 +11,23 @@ class LoginPage extends StatelessWidget {
         child: ListView(
           children: [
             SizedBox(height: xlarge_gap),
-            SizedBox(height: large_gap),
+            Container(
+              alignment: Alignment.center,
+              height: 250,
+              child: Column(
+                children: [
+                  Icon(Icons.home, size: 150),
+                  Text(
+                    "모두의 창고",
+                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "\" 병영창고 관리의 혁신 \"",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
             CustomForm(),
           ], // children
         ),

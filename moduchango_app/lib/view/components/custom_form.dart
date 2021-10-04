@@ -13,28 +13,28 @@ class CustomForm extends StatelessWidget {
       child: Column(
         children: [
           CustomTextFormField(
-            title: "Email",
+            title: "관리자 ID",
             myValid: (value) {
               if (value!.isEmpty) {
-                return "Please enter some text";
-              } else if (!isEmail(value)) {
-                return "Please enter valid Email form";
+                return "관리자 ID를 입력하세요.";
+              } else if (!isAlphanumeric(value)) {
+                return "ID는 영어와 숫자로만 이루어집니다.";
               } else {
                 return null;
               }
             },
           ),
           SizedBox(
-            height: medium_gap,
+            height: small_gap,
           ),
           CustomTextFormField(
-              title: "Password",
+              title: "비밀번호",
               myValid: (value) {
                 if (value!.isEmpty) {
-                  return "Please enter some text";
+                  return "비밀번호를 입력하세요.";
                 } else if (!(4 < value.toString().length &&
                     value.toString().length < 12)) {
-                  return "Please enter proper length of the password";
+                  return "비밀번호는 4자 이상 12자 이하입니다.";
                 } else {
                   return null;
                 }

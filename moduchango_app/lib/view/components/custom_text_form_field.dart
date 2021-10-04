@@ -21,7 +21,7 @@ class CustomTextFormField extends StatelessWidget {
           validator: myValid, // Bonus way to provide validator
           obscureText: title == "Password" ? true : false,
           decoration: InputDecoration(
-            hintText: "Enter $title",
+            hintText: "$title 을(를) 입력하세요.",
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
             ),
