@@ -8,7 +8,7 @@ import 'package:moduchango/pages/body2_page.dart';
 import 'package:moduchango/pages/home_page.dart';
 import 'package:moduchango/pages/join_page.dart';
 import 'package:moduchango/pages/login_page.dart';
-import 'package:moduchango/pages/storehouse/storehouse_page.dart';
+import 'package:moduchango/pages/storehouse/storehouse_my_storages_view_page.dart';
 // import 'package:flutter_email_sender/flutter_email_sender.dart';
 
 class PageHeader extends StatelessWidget {

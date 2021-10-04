@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/components/common/storage_image.dart';
 import 'package:moduchango/design_data/styles.dart';
-import 'package:moduchango/pages/storehouse/storehouse_shelf_page.dart';
+import 'package:moduchango/pages/storehouse/storehouse_shelves_view_page.dart';
 
 class StorageForm extends StatelessWidget {
   final edge_length;

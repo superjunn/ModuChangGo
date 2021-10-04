@@ -6,7 +6,7 @@ import 'package:moduchango/design_data/size.dart';
 import '../../storehouse_delete_page.dart';
 import '../../storehouse_edit_page.dart';
 import '../../storehouse_init_page.dart';
-import '../../storehouse_page.dart';
+import '../../storehouse_my_storages_view_page.dart';
 
 
 class StoreHousePageLeftMenuBar extends StatelessWidget {
