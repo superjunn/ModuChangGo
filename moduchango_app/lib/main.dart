@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:moduchango_app/styles.dart';
 
 import 'view/pages/home_page.dart';
 import 'view/pages/login_page.dart';
@@ -12,6 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          color: kColor5,
+          titleTextStyle: TextStyle(
+              color: Colors.black, fontSize: 19, fontWeight: FontWeight.bold),
+        ),
+      ),
       // theme: ThemeData(
       //   textButtonTheme: TextButtonThemeData(
       //     style: TextButton.styleFrom(
