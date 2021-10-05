@@ -27,25 +27,9 @@ class JoinPageBody extends StatelessWidget {
                 CustomTextFormField(
                     titleText: "아이디", hintText: "아이디를 입력해주세요", width: 340),
                 CustomTextFormField(
-                    titleText: "성명", hintText: "성명을 입력해주세요", width: 340),
+                    titleText: "비밀번호", hintText: "비밀번호를 입력해주세요", width: 340),
                 CustomTextFormField(
-                    titleText: "계급",
-                    hintText: "계급(이등병, 일등병, 상등병, 병장)을 입력해주세요",
-                    width: 340),
-                CustomTextFormField(
-                    titleText: "병과", hintText: "병과를 입력해주세요", width: 340),
-                CustomTextFormField(
-                    titleText: "소속부대",
-                    hintText: "소속부대를 중대급으로 입력해주세요",
-                    width: 340),
-                CustomTextFormField(
-                    titleText: "군 일반전화",
-                    hintText: "중대 행정반 전화번호를 입력해주세요",
-                    width: 340),
-                CustomTextFormField(
-                    titleText: "입대일", hintText: "입대일을 입력해주세요", width: 340),
-                CustomTextFormField(
-                    titleText: "전역일", hintText: "전역일을 입력해주세요", width: 340),
+                    titleText: "부대", hintText: "부대를 입력해주세요", width: 340),
               ],
             ),
           ),
