@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_left_menu_bar_function_block.dart';
 import 'package:moduchango/design_data/size.dart';
-
-import '../../storehouse_delete_page.dart';
-import '../../storehouse_edit_page.dart';
-import '../../storehouse_init_page.dart';
-import '../../storehouse_my_storages_view_page.dart';
+import 'package:moduchango/pages/stock_release_page/stock_release_history_page.dart';
+import 'package:moduchango/pages/stock_release_page/stock_release_release_page.dart';
+import 'package:moduchango/pages/stock_release_page/stock_release_stock_page.dart';
 
 
-class StoreHousePageLeftMenuBar extends StatelessWidget {
+class StockReleasePageLeftMenuBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -34,29 +32,24 @@ class StoreHousePageLeftMenuBar extends StatelessWidget {
                 ),
               ),
               PageLeftMenuBarFunctionBlock(
-                mText: "창고 보기",
+                mText: "입고하기",
                 funPageRoute: () {
-                  Get.to(() => StoreHousePage());
+                  Get.to(() => StockReleaseStockPage());
                 },
               ),
               PageLeftMenuBarFunctionBlock(
-                mText: "창고 만들기",
+                mText: "출고하기",
                 funPageRoute: () {
-                  Get.to(() => StoreHouseInitPage());
+                  Get.to(() => StockReleaseReleasePage());
                 },
               ),
               PageLeftMenuBarFunctionBlock(
-                mText: "창고 수정",
+                mText: "입/출고 내역 보기",
                 funPageRoute: () {
-                  Get.to(() => StoreHouseEditPage());
+                  Get.to(() => StockReleaseHistoryPage());
                 },
               ),
-              PageLeftMenuBarFunctionBlock(
-                mText: "창고 삭제",
-                funPageRoute: () {
-                  Get.to(() => StoreHouseDeletePage());
-                },
-              ),
+            
             ],
           ),
         ),
