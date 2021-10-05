@@ -2,14 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_left_menu_bar_function_block.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_my_storages_view_page.dart';
-
-import '../../storehouse_delete_page.dart';
-import '../../storehouse_edit_page.dart';
-import '../../storehouse_init_page.dart';
+import 'package:moduchango/pages/my_page/my_page_edit_page.dart';
+import 'package:moduchango/pages/my_page/my_page_view_page.dart';
 
 
-class StoreHousePageLeftMenuBar extends StatelessWidget {
+class MyPageLeftMenuBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -34,27 +31,15 @@ class StoreHousePageLeftMenuBar extends StatelessWidget {
                 ),
               ),
               PageLeftMenuBarFunctionBlock(
-                mText: "창고 보기",
+                mText: "회원정보 보기",
                 funPageRoute: () {
-                  Get.to(() => StoreHouseMyStoragesViewPage());
+                  Get.to(() => MyPageViewPage());
                 },
               ),
               PageLeftMenuBarFunctionBlock(
-                mText: "창고 만들기",
+                mText: "회원 정보 수정",
                 funPageRoute: () {
-                  Get.to(() => StoreHouseInitPage());
-                },
-              ),
-              PageLeftMenuBarFunctionBlock(
-                mText: "창고 수정",
-                funPageRoute: () {
-                  Get.to(() => StoreHouseEditPage());
-                },
-              ),
-              PageLeftMenuBarFunctionBlock(
-                mText: "창고 삭제",
-                funPageRoute: () {
-                  Get.to(() => StoreHouseDeletePage());
+                  Get.to(() => MyPageEditPage());
                 },
               ),
             ],

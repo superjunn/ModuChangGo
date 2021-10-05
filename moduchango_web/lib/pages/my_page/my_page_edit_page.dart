@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
-import 'package:moduchango/pages/login_page_components/login_page_body.dart';
 import 'package:moduchango/design_data/size.dart';
+import 'package:moduchango/pages/my_page/my_page_components/my_page_edit_page_body.dart';
 
-class LoginPage extends StatelessWidget {
+class MyPageEditPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double bodyWidth = getBodyWidth(context);
@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: LoginPageBody(),
+              child: MyPageEditPageBody(),
             ),
           ),
           PageFooter(),

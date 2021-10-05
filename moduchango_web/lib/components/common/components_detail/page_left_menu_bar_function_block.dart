@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/design_data/styles.dart';
-import 'package:moduchango/pages/login_page.dart';
+import 'package:moduchango/pages/login_page/login_page.dart';
 
 class PageLeftMenuBarFunctionBlock extends StatelessWidget {
   final mText;

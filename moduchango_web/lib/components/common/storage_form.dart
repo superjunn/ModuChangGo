@@ -16,7 +16,7 @@ class StorageForm extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: InkWell(
           onTap: () {
-            Get.to(() => StoreHouseShelfPage());
+            Get.to(() => StoreHouseShelvesViewPage());
           },
           child: Material(
             elevation: 5,

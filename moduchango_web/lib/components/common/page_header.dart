@@ -4,11 +4,14 @@ import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_header_function_block.dart';
 import 'package:moduchango/components/common/components_detail/page_header_logo.dart';
 import 'package:moduchango/design_data/colors.dart';
-import 'package:moduchango/pages/home_page.dart';
-import 'package:moduchango/pages/join_page.dart';
-import 'package:moduchango/pages/login_page.dart';
+import 'package:moduchango/pages/announcements_page/announcements_page.dart';
+import 'package:moduchango/pages/announcements_page/announcements_page_components/announcements_page_body.dart';
+import 'package:moduchango/pages/home_page/home_page.dart';
+import 'package:moduchango/pages/join_page/join_page.dart';
+import 'package:moduchango/pages/login_page/login_page.dart';
+import 'package:moduchango/pages/my_page/my_page_view_page.dart';
 import 'package:moduchango/pages/stock_release_page/stock_release_page.dart';
-import 'package:moduchango/pages/storehouse/storehouse_my_storages_view_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_my_storages_view_page.dart';
 // import 'package:flutter_email_sender/flutter_email_sender.dart';
 
 class PageHeader extends StatelessWidget {
@@ -35,7 +38,7 @@ class PageHeader extends StatelessWidget {
                   PageHeaderFunctionBlock(
                     mText: "창고 현황",
                     funPageRoute: () {
-                      Get.to(() => StoreHousePage());
+                      Get.to(() => StoreHouseMyStoragesViewPage());
                     },
                   ),
                   PageHeaderFunctionBlock(
@@ -44,8 +47,18 @@ class PageHeader extends StatelessWidget {
                       Get.to(() => StockReleasePage());
                     },
                   ),
-                  PageHeaderFunctionBlock(mText: "공지사항"),
-                  PageHeaderFunctionBlock(mText: "마이 페이지"),
+                  PageHeaderFunctionBlock(
+                    mText: "공지사항",
+                    funPageRoute: () {
+                      Get.to(() => AnnouncementsPage());
+                    },
+                  ),
+                  PageHeaderFunctionBlock(
+                    mText: "마이 페이지",
+                    funPageRoute: () {
+                      Get.to(() => MyPageViewPage());
+                    },
+                  ),
                   Spacer(),
                   PageHeaderFunctionBlock(
                     mText: "Login",

@@ -4,7 +4,7 @@ import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_components/storehouse_shelves_view_page_body.dart';
 
-class StoreHouseShelfPage extends StatelessWidget {
+class StoreHouseShelvesViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double bodyWidth = getBodyWidth(context);
