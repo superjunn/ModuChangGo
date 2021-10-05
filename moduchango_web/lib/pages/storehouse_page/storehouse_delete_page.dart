@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_components/storehouse_my_storages_view_page_body.dart';
+
+import 'storehouse_page_components/storehouse_page_components/storehouse_delete_page_body.dart';
 
 class StoreHouseDeletePage extends StatelessWidget {
   @override
@@ -17,7 +18,7 @@ class StoreHouseDeletePage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: StoreHouseMyStoragesViewPageBody(),
+              child: StoreHouseDeletePageBody(),
             ),
           ),
           PageFooter(),

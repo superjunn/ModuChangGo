@@ -3,7 +3,7 @@ import 'package:moduchango/components/common/storage_form.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/pages/stock_release_page/stock_release_page_components/stock_release_page_left_menu_bar.dart';
 
-class StockReleasePageBody extends StatelessWidget {
+class StockReleaseStockPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(

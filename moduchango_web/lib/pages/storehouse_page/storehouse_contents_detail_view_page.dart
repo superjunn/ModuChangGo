@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/stock_release_page/stock_release_page_components/stock_release_page_body.dart';
-class StockReleasePage extends StatelessWidget {
+import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_components/storehouse_contents_detail_view_page_body.dart';
+
+class StoreHouseContentsDetailViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double bodyWidth = getBodyWidth(context);
@@ -16,7 +17,7 @@ class StockReleasePage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: StockReleasePageBody(),
+              child: StoreHouseContentsDetailViewPageBody(),
             ),
           ),
           PageFooter(),

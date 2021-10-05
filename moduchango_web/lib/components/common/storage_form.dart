@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/components/common/storage_image.dart';
 import 'package:moduchango/design_data/styles.dart';
+import 'package:moduchango/pages/home_page/home_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_delete_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_edit_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_init_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_shelves_view_page.dart';
 
 class StorageForm extends StatelessWidget {
   final edge_length;
+  final Status stat = Status.view;
 
   const StorageForm({required this.edge_length});
 
@@ -16,7 +21,18 @@ class StorageForm extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: InkWell(
           onTap: () {
-            Get.to(() => StoreHouseShelvesViewPage());
+            if (stat == Status.view) {
+              Get.to(() => StoreHouseShelvesViewPage());
+            } else if (stat == Status.init) {
+              Get.to(() => StoreHouseInitPage());
+            } else if (stat == Status.edit) {
+              Get.to(() => StoreHouseEditPage());
+            } else if (stat == Status.delete) {
+              Get.to(() => StoreHouseDeletePage());
+            } else {
+              print("Error");
+              HomePage();
+            }
           },
           child: Material(
             elevation: 5,
@@ -40,4 +56,11 @@ class StorageForm extends StatelessWidget {
       ),
     );
   }
+}
+
+enum Status {
+  view,
+  init,
+  edit,
+  delete,
 }

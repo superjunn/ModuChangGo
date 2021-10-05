@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_contents_view_page.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_shelves_view_page.dart';
 
 class ShelfForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 240,
-      height: 266,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: InkWell(
@@ -25,31 +23,22 @@ class ShelfForm extends StatelessWidget {
                       TableRow(
                         children: [
                           _buildContentsinShelves(),
-                          SizedBox(width: 10),
                           _buildContentsinShelves(),
-                          SizedBox(width: 10),
                           _buildContentsinShelves(),
-                          SizedBox(width: 10),
                         ],
                       ),
                       TableRow(
                         children: [
                           _buildContentsinShelves(),
-                          SizedBox(width: 10),
                           _buildContentsinShelves(),
-                          SizedBox(width: 10),
                           _buildContentsinShelves(),
-                          SizedBox(width: 10),
                         ],
                       ),
                       TableRow(
                         children: [
                           _buildContentsinShelves(),
-                          SizedBox(width: 10),
                           _buildContentsinShelves(),
-                          SizedBox(width: 10),
                           _buildContentsinShelves(),
-                          SizedBox(width: 10),
                         ],
                       ),
                     ],
@@ -66,13 +55,16 @@ class ShelfForm extends StatelessWidget {
   }
 
   _buildContentsinShelves() {
-    return Container(
-      width: 70,
-      height: 70,
-      decoration: BoxDecoration(
-        color: Colors.blueAccent,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        width: 70,
+        height: 70,
+        decoration: BoxDecoration(
+          color: Colors.blueAccent,
+        ),
+        child: Text("Contents"),
       ),
-      child: Text("Contents"),
     );
   }
 }

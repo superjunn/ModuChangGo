@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/stock_release_page/stock_release_page_components/stock_release_page_body.dart';
+import 'package:moduchango/pages/stock_release_page/stock_release_page_components/stock_release_stock_page_body.dart';
+
 class StockReleaseStockPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class StockReleaseStockPage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: Text("입고 페이지"),
+              child: StockReleaseStockPageBody(),
             ),
           ),
           PageFooter(),

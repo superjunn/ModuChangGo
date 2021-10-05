@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_left_menu_bar_function_block.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/pages/stock_release_page/stock_release_history_page.dart';
+import 'package:moduchango/pages/stock_release_page/stock_release_page_components/stock_release_stock_page_body.dart';
 import 'package:moduchango/pages/stock_release_page/stock_release_release_page.dart';
 import 'package:moduchango/pages/stock_release_page/stock_release_stock_page.dart';
 
