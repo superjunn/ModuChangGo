@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_components/storehouse_edit_page_body.dart';
+
+import 'storehouse_page_components/storehouse_edit_page_body.dart';
 
 class StoreHouseEditPage extends StatelessWidget {
   @override

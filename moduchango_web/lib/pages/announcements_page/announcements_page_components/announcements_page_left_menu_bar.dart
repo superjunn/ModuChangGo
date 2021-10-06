@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_left_menu_bar_function_block.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/pages/announcements_page/announcements_FAQ.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_my_storages_view_page.dart';
 
 import '../announcements_page.dart';
 

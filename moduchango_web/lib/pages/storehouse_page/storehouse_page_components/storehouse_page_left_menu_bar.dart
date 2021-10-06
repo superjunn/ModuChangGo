@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_left_menu_bar_function_block.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_my_storages_view_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_my_storages_view_page.dart';
 
-import '../../storehouse_delete_page.dart';
-import '../../storehouse_edit_page.dart';
-import '../../storehouse_init_page.dart';
+import '../storehouse_delete/storehouse_delete_page.dart';
+import '../storehouse_edit_page.dart';
+import '../storehouse_init/storehouse_init_page.dart';
+
 
 
 class StoreHousePageLeftMenuBar extends StatelessWidget {

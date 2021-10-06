@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'storehouse_page_left_menu_bar.dart';
+import '../../storehouse_page_components/storehouse_page_left_menu_bar.dart';
 
-class StoreHouseDeletePageBody extends StatelessWidget {
+class StoreHouseInitPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         StoreHousePageLeftMenuBar(),
-        Text("StoreHouse Delete Page"),
+        Text("StoreHouse Init Page"),
       ],
     );
   }

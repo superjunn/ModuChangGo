@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_contents_view_page.dart';
 
 class ShelfForm extends StatelessWidget {
   @override
@@ -67,4 +66,7 @@ class ShelfForm extends StatelessWidget {
       ),
     );
   }
+}
+
+class StoreHouseContentsViewPage {
 }

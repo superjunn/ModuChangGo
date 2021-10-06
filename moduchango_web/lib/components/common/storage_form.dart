@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:moduchango/components/common/storage_image.dart';
 import 'package:moduchango/design_data/styles.dart';
 import 'package:moduchango/pages/home_page/home_page.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_delete_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_delete/storehouse_delete_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_edit_page.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_init_page.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_shelves_view_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_init/storehouse_init_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_shelves_view_page.dart';
 
 class StorageForm extends StatelessWidget {
   final edge_length;

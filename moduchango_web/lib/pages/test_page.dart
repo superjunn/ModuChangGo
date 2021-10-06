@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/contents_tile.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
-import 'package:moduchango/components/common/shelf_form2.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_components/storehouse_page_left_menu_bar.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_left_menu_bar.dart';
 
-import 'storehouse_page/storehouse_page_components/storehouse_page_components/storehouse_my_storages_view_page_body.dart';
 
 class TestPage extends StatelessWidget {
   @override

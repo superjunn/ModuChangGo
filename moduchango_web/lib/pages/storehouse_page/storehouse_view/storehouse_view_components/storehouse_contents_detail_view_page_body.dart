@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/contents_tile.dart';
-import 'storehouse_page_left_menu_bar.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_left_menu_bar.dart';
 
 class StoreHouseContentsDetailViewPageBody extends StatelessWidget {
   @override

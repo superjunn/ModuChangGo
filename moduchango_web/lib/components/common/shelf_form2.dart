@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_contents_detail_view_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_contents_detail_view_page.dart';
 
 class ShelfForm2 extends StatelessWidget {
   @override
