@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_left_menu_bar_function_block.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/stock_release_page/stock_release_history_page.dart';
-import 'package:moduchango/pages/stock_release_page/stock_release_page_components/stock_release_stock_page_body.dart';
-import 'package:moduchango/pages/stock_release_page/stock_release_release_page.dart';
-import 'package:moduchango/pages/stock_release_page/stock_release_stock_page.dart';
+import 'package:moduchango/pages/stock_release_page/stock_release_history_page/stock_release_history_page.dart';
+import 'package:moduchango/pages/stock_release_page/stock_page/stock_page_components/stock_page_body.dart';
+import 'package:moduchango/pages/stock_release_page/release_page/release_page.dart';
+import 'package:moduchango/pages/stock_release_page/stock_page/stock_page.dart';
 
 
 class StockReleasePageLeftMenuBar extends StatelessWidget {
@@ -35,13 +35,13 @@ class StockReleasePageLeftMenuBar extends StatelessWidget {
               PageLeftMenuBarFunctionBlock(
                 mText: "입고하기",
                 funPageRoute: () {
-                  Get.to(() => StockReleaseStockPage());
+                  Get.to(() => StockPage());
                 },
               ),
               PageLeftMenuBarFunctionBlock(
                 mText: "출고하기",
                 funPageRoute: () {
-                  Get.to(() => StockReleaseReleasePage());
+                  Get.to(() => ReleasePage());
                 },
               ),
               PageLeftMenuBarFunctionBlock(

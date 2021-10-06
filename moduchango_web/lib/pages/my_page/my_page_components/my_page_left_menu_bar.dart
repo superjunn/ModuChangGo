@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_left_menu_bar_function_block.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/my_page/my_page_edit_page.dart';
-import 'package:moduchango/pages/my_page/my_page_view_page.dart';
+import 'package:moduchango/pages/my_page/my_page_edit/my_page_edit_page.dart';
+import 'package:moduchango/pages/my_page/my_page_view/my_page_view_page.dart';
 
 
 class MyPageLeftMenuBar extends StatelessWidget {

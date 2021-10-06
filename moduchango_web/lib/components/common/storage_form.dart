@@ -4,15 +4,18 @@ import 'package:moduchango/components/common/storage_image.dart';
 import 'package:moduchango/design_data/styles.dart';
 import 'package:moduchango/pages/home_page/home_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_delete/storehouse_delete_page.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_edit_page.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_init/storehouse_init_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_edit/storehouse_edit_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_init/storage_init_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_shelves_view_page.dart';
 
 class StorageForm extends StatelessWidget {
   final edge_length;
-  final Status stat = Status.view;
+  final Status stat;
 
-  const StorageForm({required this.edge_length});
+  const StorageForm({
+    required this.edge_length,
+    this.stat = Status.view,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,7 @@ class StorageForm extends StatelessWidget {
             if (stat == Status.view) {
               Get.to(() => StoreHouseShelvesViewPage());
             } else if (stat == Status.init) {
-              Get.to(() => StoreHouseInitPage());
+              Get.to(() => StorageInitPage());
             } else if (stat == Status.edit) {
               Get.to(() => StoreHouseEditPage());
             } else if (stat == Status.delete) {

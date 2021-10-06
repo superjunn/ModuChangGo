@@ -3,9 +3,9 @@ import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
 
-import 'storehouse_init_components/storehouse_init_page_body.dart';
+import 'storehouse_init_components/storage_init_page_body.dart';
 
-class StoreHouseInitPage extends StatelessWidget {
+class StorageInitPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double bodyWidth = getBodyWidth(context);
@@ -18,7 +18,7 @@ class StoreHouseInitPage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: StoreHouseInitPageBody(),
+              child: StorageInitPageBody(),
             ),
           ),
           PageFooter(),
