@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:moduchango_app/components/custom_form.dart';
 import 'package:moduchango_app/size.dart';
 import 'package:moduchango_app/styles.dart';
-import 'package:moduchango_app/view/components/custom_form.dart';
 
 class LoginPage extends StatelessWidget {
   @override
