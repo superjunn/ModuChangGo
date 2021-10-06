@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango_app/components/custom_text_form_field.dart';
-import 'package:moduchango_app/size.dart';
+import 'package:moduchango_app/view/design/size.dart';
 import 'package:moduchango_app/view/pages/home_page.dart';
 import 'package:moduchango_app/view/pages/join_page.dart';
 import 'package:validators/validators.dart';
