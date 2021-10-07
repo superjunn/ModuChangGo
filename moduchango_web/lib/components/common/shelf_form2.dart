@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:moduchango/pages/home_page/home_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_contents_detail_view_page.dart';
 
 class ShelfForm2 extends StatelessWidget {
+  final Status stat;
+
+  const ShelfForm2({
+    this.stat = Status.view,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -51,7 +58,11 @@ class ShelfForm2 extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: InkWell(
         onTap: () {
-          Get.to(() => StoreHouseContentsDetailViewPage());
+          if (stat == Status.view) {
+            Get.to(() => StoreHouseContentsDetailViewPage());
+          } else if (stat == Status.stock) {
+            Get.to(() => HomePage());
+          }
         },
         child: Container(
           height: 217.333,
@@ -63,4 +74,9 @@ class ShelfForm2 extends StatelessWidget {
       ),
     );
   }
+}
+
+enum Status {
+  view,
+  stock,
 }
