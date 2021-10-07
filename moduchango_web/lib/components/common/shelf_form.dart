@@ -14,6 +14,7 @@ class ShelfForm extends StatelessWidget {
             Get.to(() => StoreHouseContentsViewPage());
           },
           child: Material(
+            borderRadius: BorderRadius.circular(5),
             elevation: 5,
             child: Column(
               children: [

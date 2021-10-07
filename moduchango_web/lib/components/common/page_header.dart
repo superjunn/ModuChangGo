@@ -5,11 +5,11 @@ import 'package:moduchango/components/common/components_detail/page_header_funct
 import 'package:moduchango/components/common/components_detail/page_header_logo.dart';
 import 'package:moduchango/design_data/colors.dart';
 import 'package:moduchango/pages/announcements_page/announcements_page.dart';
+import 'package:moduchango/pages/history_page/history_byDate_page/history_byDate_datepicker_page.dart';
 import 'package:moduchango/pages/home_page/home_page.dart';
 import 'package:moduchango/pages/join_page/join_page.dart';
 import 'package:moduchango/pages/login_page/login_page.dart';
 import 'package:moduchango/pages/my_page/my_page_view/my_page_view_page.dart';
-import 'package:moduchango/pages/stock_release_page/stock_page/stock_storage_select_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_my_storages_view_page.dart';
 // import 'package:flutter_email_sender/flutter_email_sender.dart';
 
@@ -41,9 +41,9 @@ class PageHeader extends StatelessWidget {
                     },
                   ),
                   PageHeaderFunctionBlock(
-                    mText: "입고/출고",
+                    mText: "입/출고 내역 보기",
                     funPageRoute: () {
-                      Get.to(() => StockStorageSelectPage());
+                      Get.to(() => HistoryByDateDatepickerPage());
                     },
                   ),
                   PageHeaderFunctionBlock(

@@ -18,6 +18,7 @@ class CustomTextFormField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(gap_xs),
       child: Row(
+        mainAxisAlignment : MainAxisAlignment.center,
         children: [
           SizedBox(
             width: 100,

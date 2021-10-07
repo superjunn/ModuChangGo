@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/components/common/storage_image.dart';
 import 'package:moduchango/design_data/styles.dart';
+import 'package:moduchango/pages/history_page/history_byDate_page/history_byDate_view_page.dart';
 import 'package:moduchango/pages/home_page/home_page.dart';
-import 'package:moduchango/pages/stock_release_page/stock_page/stock_shelf_select_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_delete/storehouse_delete_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_edit/storehouse_edit_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_init/storage_init_page.dart';
@@ -33,8 +33,8 @@ class StorageForm extends StatelessWidget {
               Get.to(() => StoreHouseEditPage());
             } else if (stat == Status.delete) {
               Get.to(() => StoreHouseDeletePage());
-            } else if (stat == Status.stock){
-              Get.to(() => StockShelfSelectPage());
+            } else if (stat == Status.history){
+              Get.to(() => HistoryByDateViewPage());
             }
             else {
               print("Error");
@@ -42,6 +42,7 @@ class StorageForm extends StatelessWidget {
             }
           },
           child: Material(
+            borderRadius: BorderRadius.circular(10),
             elevation: 5,
             child: Container(
                 decoration: BoxDecoration(
@@ -70,5 +71,5 @@ enum Status {
   init,
   edit,
   delete,
-  stock,
+  history,
 }
