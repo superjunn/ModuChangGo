@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:moduchango_app/view/design/styles.dart';
+import 'package:moduchango_app/view/pages/community/FAQ_page.dart';
+import 'package:moduchango_app/view/pages/community/announcement_page.dart';
+import 'package:moduchango_app/view/pages/login_page.dart';
+import 'package:moduchango_app/view/pages/my_page/my_page_edit.dart';
+import 'package:moduchango_app/view/pages/my_page/my_page_view.dart';
 
 class HomePageDrawer extends StatelessWidget {
   @override
@@ -32,11 +38,15 @@ class HomePageDrawer extends StatelessWidget {
                   ],
                 ),
               )),
-          CustomListTile(Icons.person, '회원정보보기', () => {}),
-          CustomListTile(Icons.edit, '회원정보수정', () => {}),
-          CustomListTile(Icons.notifications, '공지사항', () => {}),
-          CustomListTile(Icons.settings, 'QnA', () => {}),
-          CustomListTile(Icons.logout, '로그아웃', () => {}),
+          CustomListTile(
+              Icons.person, '회원정보보기', () => Get.to(() => MyPageView())),
+          CustomListTile(
+              Icons.edit, '회원정보수정', () => Get.to(() => MyPageEdit())),
+          CustomListTile(Icons.notifications, '공지사항',
+              () => Get.to(() => AnnouncementPage())),
+          CustomListTile(
+              Icons.question_answer, 'FAQ', () => Get.to(() => FAQPage())),
+          CustomListTile(Icons.logout, '로그아웃', () => Get.to(() => LoginPage())),
         ],
       ),
     );
@@ -47,7 +57,7 @@ class CustomListTile extends StatelessWidget {
   final IconData icon;
   final String text;
   final Function onTap;
-
+  //그냥 함수 대신에 int로 아이디 넘겨받아서 이 클래스 안에 각각 id에 맞게 겟엑스를 구현해보자
   CustomListTile(this.icon, this.text, this.onTap);
   @override
   Widget build(BuildContext context) {
@@ -58,7 +68,9 @@ class CustomListTile extends StatelessWidget {
             border: Border(bottom: BorderSide(color: Colors.grey.shade400))),
         child: InkWell(
             splashColor: kColor5,
-            onTap: () => onTap,
+            onTap: () {
+              onTap;
+            },
             child: Container(
                 height: 40,
                 child: Row(
