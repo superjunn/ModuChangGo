@@ -13,7 +13,7 @@ class StockPageBody extends StatelessWidget {
         Expanded(
           child: Wrap(
             spacing: 10,
-            children: List.generate(50, (index) => StorageForm(edge_length: storage_edge_b)),
+            children: List.generate(50, (index) => StorageForm(edge_length: storage_edge_b, stat: Status.init)),
           ),
         ),
       ],
