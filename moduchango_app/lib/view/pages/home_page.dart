@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:moduchango_app/view/pages/home_page_drawer.dart';
+import 'package:moduchango_app/view/pages/page_drawer.dart';
 import 'package:moduchango_app/view/design/size.dart';
 import 'package:moduchango_app/view/design/styles.dart';
 import 'package:moduchango_app/view/pages/login_page.dart';
@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: HomePageDrawer(),
+      drawer: PageDrawer(),
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
         centerTitle: true,

@@ -7,7 +7,7 @@ import 'package:moduchango_app/view/pages/login_page.dart';
 import 'package:moduchango_app/view/pages/my_page/my_page_edit.dart';
 import 'package:moduchango_app/view/pages/my_page/my_page_view.dart';
 
-class HomePageDrawer extends StatelessWidget {
+class PageDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Drawer(
