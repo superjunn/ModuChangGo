@@ -3,10 +3,10 @@ import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
 
-import 'stock_page_components/stock_shelf_select_page_body.dart';
+import 'history_byStorage_components/history_byStorage_view_page_body.dart';
 
 
-class StockShelfSelectPage extends StatelessWidget {
+class HistoryByStorageViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double bodyWidth = getBodyWidth(context);
@@ -19,7 +19,7 @@ class StockShelfSelectPage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: StockShelfSelectPageBody(),
+              child: HistoryByStorageViewPageBody(),
             ),
           ),
           PageFooter(),

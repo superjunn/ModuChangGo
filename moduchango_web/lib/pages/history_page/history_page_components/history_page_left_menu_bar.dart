@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_left_menu_bar_function_block.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/stock_release_page/stock_release_history_page/stock_release_history_page.dart';
-import 'package:moduchango/pages/stock_release_page/stock_page/stock_page_components/stock_storage_select_page_body.dart';
-import 'package:moduchango/pages/stock_release_page/release_page/release_page.dart';
-import 'package:moduchango/pages/stock_release_page/stock_page/stock_storage_select_page.dart';
+import 'package:moduchango/pages/history_page/history_byContents_page/history_byContents_page.dart';
+import 'package:moduchango/pages/history_page/history_byDate_page/history_byDate_datepicker_page.dart';
+import 'package:moduchango/pages/history_page/history_byStorage_page/history_byStorage_select_page.dart';
 
 
-class StockReleasePageLeftMenuBar extends StatelessWidget {
+
+class HistoryPageLeftMenuBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -33,21 +33,21 @@ class StockReleasePageLeftMenuBar extends StatelessWidget {
                 ),
               ),
               PageLeftMenuBarFunctionBlock(
-                mText: "입고하기",
+                mText: "날짜별 보기",
                 funPageRoute: () {
-                  Get.to(() => StockStorageSelectPage());
+                  Get.to(() => HistoryByDateDatepickerPage());
                 },
               ),
               PageLeftMenuBarFunctionBlock(
-                mText: "출고하기",
+                mText: "창고별 보기",
                 funPageRoute: () {
-                  Get.to(() => ReleasePage());
+                  Get.to(() => HistoryByStorageSelectPage());
                 },
               ),
               PageLeftMenuBarFunctionBlock(
-                mText: "입/출고 내역 보기",
+                mText: "물품별 보기",
                 funPageRoute: () {
-                  Get.to(() => StockReleaseHistoryPage());
+                  Get.to(() => HistoryByContentsPage());
                 },
               ),
             

@@ -15,6 +15,7 @@ class ShelfForm2 extends StatelessWidget {
     return Container(
       width: 700,
       child: Material(
+        borderRadius: BorderRadius.circular(5),
         elevation: 5,
         child: Column(
           children: [

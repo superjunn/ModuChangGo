@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/stock_release_page/stock_page/stock_page_components/stock_storage_select_page_body.dart';
+import 'package:moduchango/pages/history_page/history_byDate_page/history_byDate_components/history_byDate_datepicker_page_body.dart';
 
-class StockStorageSelectPage extends StatelessWidget {
+class HistoryByDateDatepickerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double bodyWidth = getBodyWidth(context);
@@ -17,7 +17,7 @@ class StockStorageSelectPage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: StockStorageSelectPageBody(),
+              child: HistoryByDateDatepickerPageBody(),
             ),
           ),
           PageFooter(),

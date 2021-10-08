@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
-class StockReleaseHistoryPage extends StatelessWidget {
+
+import 'history_byStorage_components/history_byStorage_select_page_body.dart';
+
+class HistoryByStorageSelectPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double bodyWidth = getBodyWidth(context);
@@ -15,7 +18,7 @@ class StockReleaseHistoryPage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: Text("입출고 내역 페이지"),
+              child: HistoryByStorageSelectPageBody(),
             ),
           ),
           PageFooter(),

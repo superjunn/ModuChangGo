@@ -13,7 +13,6 @@ class TestPage extends StatelessWidget {
     double bodyWidth = getBodyWidth(context);
     double currentSize = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(),
       body: ListView(
         children: [
           PageHeader(),
