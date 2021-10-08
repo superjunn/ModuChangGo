@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
               child: Center(
                 child: TextButton(
                   onPressed: () {},
-                  child: Text("입고/출고"),
+                  child: Text("입/출고 내역 보기"),
                 ),
               ),
             )
