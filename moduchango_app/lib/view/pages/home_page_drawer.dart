@@ -38,15 +38,11 @@ class HomePageDrawer extends StatelessWidget {
                   ],
                 ),
               )),
-          CustomListTile(
-              Icons.person, '회원정보보기', () => Get.to(() => MyPageView())),
-          CustomListTile(
-              Icons.edit, '회원정보수정', () => Get.to(() => MyPageEdit())),
-          CustomListTile(Icons.notifications, '공지사항',
-              () => Get.to(() => AnnouncementPage())),
-          CustomListTile(
-              Icons.question_answer, 'FAQ', () => Get.to(() => FAQPage())),
-          CustomListTile(Icons.logout, '로그아웃', () => Get.to(() => LoginPage())),
+          CustomListTile(Icons.person, '회원정보보기', 1),
+          CustomListTile(Icons.edit, '회원정보수정', 2),
+          CustomListTile(Icons.notifications, '공지사항', 3),
+          CustomListTile(Icons.question_answer, 'FAQ', 4),
+          CustomListTile(Icons.logout, '로그아웃', 5),
         ],
       ),
     );
@@ -56,9 +52,9 @@ class HomePageDrawer extends StatelessWidget {
 class CustomListTile extends StatelessWidget {
   final IconData icon;
   final String text;
-  final Function onTap;
+  final int route;
   //그냥 함수 대신에 int로 아이디 넘겨받아서 이 클래스 안에 각각 id에 맞게 겟엑스를 구현해보자
-  CustomListTile(this.icon, this.text, this.onTap);
+  CustomListTile(this.icon, this.text, this.route);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -69,7 +65,19 @@ class CustomListTile extends StatelessWidget {
         child: InkWell(
             splashColor: kColor5,
             onTap: () {
-              onTap;
+              if (route == 1) {
+                Get.to(() => MyPageView());
+              } else if (route == 2) {
+                Get.to(() => MyPageEdit());
+              } else if (route == 3) {
+                Get.to(() => AnnouncementPage());
+              } else if (route == 4) {
+                Get.to(() => FAQPage());
+              } else if (route == 5) {
+                Get.to(() => LoginPage());
+              } else {
+                return null;
+              }
             },
             child: Container(
                 height: 40,
