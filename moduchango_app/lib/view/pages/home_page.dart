@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:moduchango_app/view/design/colors.dart';
 import 'package:moduchango_app/view/pages/page_drawer.dart';
-import 'package:moduchango_app/view/design/size.dart';
-import 'package:moduchango_app/view/design/styles.dart';
-import 'package:moduchango_app/view/pages/login_page.dart';
+import 'package:moduchango_app/view/pages/stock_release_history/stock_release_history.dart';
+import 'package:moduchango_app/view/pages/storage/storage_main_page.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  var _index = 0;
+  var _pages = [StorageMainPage(), StockReleaseHistory()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,86 +23,81 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         title: Text("7포병여단 662대대"),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Expanded(
-              child: Center(
-                child: TextButton(onPressed: () {}, child: Text("창고현황")),
-              ),
-            ),
-            Expanded(
-              child: Center(
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text("입/출고 내역 보기"),
-                ),
-              ),
-            )
-          ],
-        ),
+      body: _pages[_index],
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: kColor6,
+        onTap: (index) {
+          setState(
+            () {
+              _index = index;
+            },
+          );
+        },
+        currentIndex: _index,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+              icon: Icon(IconData(983518, fontFamily: 'MaterialIcons')),
+              label: "창고현황"),
+          BottomNavigationBarItem(
+              icon: Icon(IconData(58132, fontFamily: 'MaterialIcons')),
+              label: "입출고 내역"),
+        ],
       ),
     );
   }
 }
 
-// Widget _navigation(BuildContext context) {
-//   return Container(
-//     width: getDrawerWidth(context),
-//     height: double.infinity,
-//     color: Colors.white,
-//     child: SafeArea(
-//       child: Padding(
-//         padding: const EdgeInsets.all(16.0),
+// class HomePage extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       drawer: PageDrawer(),
+//       appBar: AppBar(
+//         iconTheme: IconThemeData(color: Colors.black),
+//         centerTitle: true,
+//         title: Text("7포병여단 662대대"),
+//       ),
+//       body: Center(
 //         child: Column(
-//           crossAxisAlignment: CrossAxisAlignment.start,
 //           children: [
-//             TextButton(
-//               onPressed: () {
-//                 // Get.to(() => WritePage());
-//               },
-//               child: Text(
-//                 "마이페이지",
-//                 style: TextStyle(
-//                   fontSize: 20,
-//                   fontWeight: FontWeight.bold,
-//                   color: Colors.black54,
-//                 ),
+//             Expanded(
+//               child: Center(
+//                 child: TextButton(
+//                     style: TextButton.styleFrom(
+//                       textStyle: TextStyle(fontWeight: FontWeight.bold),
+//                       backgroundColor: kColor5,
+//                       primary: Colors.black,
+//                       shape: RoundedRectangleBorder(
+//                           borderRadius: BorderRadius.circular(30)),
+//                       minimumSize: Size(80, 40),
+//                     ),
+//                     onPressed: () {
+//                       Get.to(() => StorageMainPage());
+//                     },
+//                     child: Text("창고현황")),
 //               ),
 //             ),
-//             Divider(),
-//             TextButton(
-//               onPressed: () {
-//                 Navigator.pop(context);
-//                 // Get.to(() => UserInfo());
-//               },
-//               child: Text(
-//                 "커뮤니티",
-//                 style: TextStyle(
-//                   fontSize: 20,
-//                   fontWeight: FontWeight.bold,
-//                   color: Colors.black54,
+//             Expanded(
+//               child: Center(
+//                 child: TextButton(
+//                   style: TextButton.styleFrom(
+//                     textStyle: TextStyle(fontWeight: FontWeight.bold),
+//                     backgroundColor: kColor5,
+//                     primary: Colors.black,
+//                     shape: RoundedRectangleBorder(
+//                         borderRadius: BorderRadius.circular(30)),
+//                     minimumSize: Size(80, 40),
+//                   ),
+//                   onPressed: () {
+//                     Get.to(() => StockReleaseHistory());
+//                   },
+//                   child: Text("입/출고 내역 보기"),
 //                 ),
 //               ),
-//             ),
-//             Divider(),
-//             TextButton(
-//               onPressed: () {
-//                 Get.to(LoginPage());
-//               },
-//               child: Text(
-//                 "로그아웃",
-//                 style: TextStyle(
-//                   fontSize: 20,
-//                   fontWeight: FontWeight.bold,
-//                   color: Colors.black54,
-//                 ),
-//               ),
-//             ),
-//             Divider(),
+//             )
 //           ],
 //         ),
 //       ),
-//     ),
-//   );
+//     );
+//   }
 // }
