@@ -10,12 +10,11 @@ class StorageMainPage extends StatelessWidget {
     double currentSize = MediaQuery.of(context).size.width;
     return ListView(
       children: [
-        Align(
-          child: SizedBox(
-              // width: currentSize < 340 ? double.infinity : bodyWidth,
-              // child: StoreHouseMyStoragesViewPageBody(),
-              ),
-        ),
+        Column(
+          children: [
+            SizedBox(height: 200),
+          ],
+        )
       ],
     );
   }
