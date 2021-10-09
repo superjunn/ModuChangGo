@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class StorageAddPage extends StatelessWidget {
+class StockReleaseHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();

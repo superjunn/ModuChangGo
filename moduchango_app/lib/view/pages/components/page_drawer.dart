@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:moduchango_app/view/design/styles.dart';
+import 'package:moduchango_app/view/design/colors.dart';
 import 'package:moduchango_app/view/pages/community/FAQ_page.dart';
 import 'package:moduchango_app/view/pages/community/announcement_page.dart';
 import 'package:moduchango_app/view/pages/login_page.dart';
