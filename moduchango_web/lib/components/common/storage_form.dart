@@ -8,6 +8,7 @@ import 'package:moduchango/pages/storehouse_page/storehouse_delete/storehouse_de
 import 'package:moduchango/pages/storehouse_page/storehouse_edit/storehouse_edit_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_init/storage_init_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_shelves_view_page.dart';
+import 'package:moduchango/pages/test_page/test_page.dart';
 
 class StorageForm extends StatelessWidget {
   final edge_length;
@@ -26,7 +27,7 @@ class StorageForm extends StatelessWidget {
         child: InkWell(
           onTap: () {
             if (stat == Status.view) {
-              Get.to(() => StoreHouseShelvesViewPage());
+              Get.to(() => TestPage());
             } else if (stat == Status.init) {
               Get.to(() => StorageInitPage());
             } else if (stat == Status.edit) {
