@@ -1,6 +1,6 @@
 # 모두의창고
 
--로고
+![image](https://user-images.githubusercontent.com/81310047/136656888-fa7e05b1-0c0b-4081-b0ee-83eb59b970fd.png)
 
 ## 프로젝트 소개
 
