@@ -5,8 +5,15 @@ import 'package:moduchango_app/view/pages/storage/storage_components/storage_ima
 import 'package:moduchango_app/view/pages/storage/storage_detail_page.dart';
 
 class StorageForm extends StatelessWidget {
-  // final edge_length;
-  // const StorageForm({required this.edge_length});
+  final String storage_name;
+  final String storage_location;
+  final String storage_image;
+
+  const StorageForm({
+    required this.storage_name,
+    required this.storage_location,
+    required this.storage_image,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,16 +35,20 @@ class StorageForm extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    StorageImage(),
+                    StorageImage(
+                      image_link: storage_image,
+                      storage_name: storage_name,
+                    ),
                     SizedBox(height: small_gap),
                     Text(
-                      "  이름: 훈련용 창고",
+                      "  이름: " + storage_name,
                       // style: TextStyle(fontWeight: FontWeight.bold)
                     ),
                     Text(
-                      "  위치: 전투연병장 뒤쪽",
+                      "  위치: " + storage_location,
                       // style: TextStyle(fontWeight: FontWeight.bold)
                     ),
+                    SizedBox(height: small_gap),
                     SizedBox(
                       height: 30,
                       child: Row(

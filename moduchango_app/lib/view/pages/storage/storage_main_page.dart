@@ -20,7 +20,14 @@ class StorageMainPage extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: GridView.count(
           crossAxisCount: 2,
-          children: List.generate(10, (index) => StorageForm()),
+          children: List.generate(
+            10,
+            (index) => StorageForm(
+              storage_name: "훈련용 창고",
+              storage_location: "전투연병장 뒤쪽",
+              storage_image: "https://picsum.photos/240/120",
+            ),
+          ),
         ),
       ),
     );
