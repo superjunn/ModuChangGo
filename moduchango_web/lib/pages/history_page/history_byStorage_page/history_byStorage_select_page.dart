@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
+import 'package:moduchango/components/common/storage_form.dart';
 import 'package:moduchango/design_data/size.dart';
-
-import 'history_byStorage_components/history_byStorage_select_page_body.dart';
+import 'package:moduchango/pages/history_page/history_page_components/history_page_left_menu_bar.dart';
 
 class HistoryByStorageSelectPage extends StatelessWidget {
   @override
@@ -18,12 +18,27 @@ class HistoryByStorageSelectPage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: HistoryByStorageSelectPageBody(),
+              child: _buildBody(),
             ),
           ),
           PageFooter(),
         ],
       ),
+    );
+  }
+
+  _buildBody() {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        HistoryPageLeftMenuBar(),
+        Expanded(
+          child: Wrap(
+            spacing: 10,
+            children: List.generate(50, (index) => StorageForm(formWidth: storage_edge_b, formHeight: storage_edge_b, stat: Status.history)),
+          ),
+        ),
+      ],
     );
   }
 }

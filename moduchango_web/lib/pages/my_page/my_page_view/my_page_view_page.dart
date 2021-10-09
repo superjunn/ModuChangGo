@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/my_page/my_page_view/my_page_view_components/my_page_view_page_body.dart';
+import 'package:moduchango/pages/my_page/my_page_components/my_page_left_menu_bar.dart';
 
 class MyPageViewPage extends StatelessWidget {
   @override
@@ -17,12 +17,22 @@ class MyPageViewPage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: MyPageViewPageBody(),
+              child: _buildBody(),
             ),
           ),
           PageFooter(),
         ],
       ),
+    );
+  }
+
+  _buildBody() {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        MyPageLeftMenuBar(),
+        Text("마이 페이지 정보보기 페이지"),
+      ],
     );
   }
 }

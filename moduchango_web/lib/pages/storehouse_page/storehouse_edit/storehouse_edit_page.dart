@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_left_menu_bar.dart';
 
-import 'storehouse_edit_components/storehouse_edit_page_body.dart';
 
 class StoreHouseEditPage extends StatelessWidget {
   @override
@@ -18,12 +18,22 @@ class StoreHouseEditPage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: StoreHouseEditPageBody(),
+              child: _buildBody(),
             ),
           ),
           PageFooter(),
         ],
       ),
+    );
+  }
+
+  _buildBody() {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        StoreHousePageLeftMenuBar(),
+        Text("StoreHouse Edit Page"),
+      ],
     );
   }
 }

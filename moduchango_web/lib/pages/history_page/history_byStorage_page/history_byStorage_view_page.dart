@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
-
-import 'history_byStorage_components/history_byStorage_view_page_body.dart';
-
+import 'package:moduchango/pages/history_page/history_page_components/history_page_left_menu_bar.dart';
 
 class HistoryByStorageViewPage extends StatelessWidget {
   @override
@@ -19,12 +17,22 @@ class HistoryByStorageViewPage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: HistoryByStorageViewPageBody(),
+              child: _buildBody(),
             ),
           ),
           PageFooter(),
         ],
       ),
+    );
+  }
+
+  _buildBody() {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        HistoryPageLeftMenuBar(),
+        Text("History by storage view page body")
+      ],
     );
   }
 }

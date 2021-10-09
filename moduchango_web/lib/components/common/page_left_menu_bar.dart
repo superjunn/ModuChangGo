@@ -3,6 +3,12 @@ import 'package:moduchango/components/common/components_detail/page_left_menu_ba
 import 'package:moduchango/design_data/size.dart';
 
 class PageLeftMenuBar extends StatelessWidget {
+  final List<String> functionsList;
+  final List<dynamic> funpageRouteList;
+
+  const PageLeftMenuBar(
+      {required this.functionsList, required this.funpageRouteList});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,21 +23,31 @@ class PageLeftMenuBar extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0),
-                child: Container(
-                  width: 180,
-                  height: 3,
-                  color: Colors.grey,
-                ),
-              ),
-              PageLeftMenuBarFunctionBlock(mText: "Detail function 1"),
-              PageLeftMenuBarFunctionBlock(mText: "Detail function 2"),
-            ],
+            children: _buildList(),
           ),
         ),
       ),
     );
+  }
+
+  _buildList() {
+    final List<dynamic> L1 = [
+      Padding(
+        padding: const EdgeInsets.only(left: 8.0),
+        child: Container(
+          width: 180,
+          height: 3,
+          color: Colors.grey,
+        ),
+      ),
+    ];
+    final List<dynamic> L2 = List.generate(
+      functionsList.length,
+      (index) => PageLeftMenuBarFunctionBlock(
+        mText: functionsList[index],
+        funPageRoute: funpageRouteList[index],
+      ),
+    );
+    return L1 + L2;
   }
 }

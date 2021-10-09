@@ -3,6 +3,7 @@ import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/page_left_menu_bar.dart';
 import 'package:moduchango/design_data/size.dart';
+import 'package:moduchango/pages/home_page/home_page.dart';
 
 class TestPage2 extends StatelessWidget {
   @override
@@ -15,7 +16,10 @@ class TestPage2 extends StatelessWidget {
             Expanded(
               child: Row(
                 children: [
-                  PageLeftMenuBar(),
+                  PageLeftMenuBar(
+                    functionsList: ["homepage1", "homepage2"],
+                    funpageRouteList: [HomePage(), HomePage()],
+                  ),
                   Expanded(
                     child: Column(
                       children: [

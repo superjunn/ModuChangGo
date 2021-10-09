@@ -18,6 +18,7 @@ class StoreHousePageLeftMenuBar extends StatelessWidget {
         width: 200,
         decoration: BoxDecoration(
           color: Colors.black12,
+          borderRadius: BorderRadius.circular(5),
         ),
         height: 500,
         child: Padding(
