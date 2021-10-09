@@ -41,7 +41,8 @@ class PageLeftMenuBar extends StatelessWidget {
         ),
       ),
     ];
-    final List<dynamic> L2 = List.generate(
+    
+    final List<Widget> L2 = List.generate(
       functionsList.length,
       (index) => PageLeftMenuBarFunctionBlock(
         mText: functionsList[index],
