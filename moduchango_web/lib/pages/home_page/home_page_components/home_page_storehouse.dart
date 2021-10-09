@@ -14,23 +14,27 @@ class HomePageStoreHouse extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text("창고 보기", style: h3()),
+                Text("창고 보기", style: h2_5()),
               ],
             ),
             SizedBox(height: gap_s),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 1.0),
-              height: storage_edge_s,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  StorageForm(formWidth: storage_edge_b, formHeight: storage_edge_b,),
-                  StorageForm(formWidth: storage_edge_b, formHeight: storage_edge_b,),
-                  StorageForm(formWidth: storage_edge_b, formHeight: storage_edge_b,),
-                  StorageForm(formWidth: storage_edge_b, formHeight: storage_edge_b,),
-                  StorageForm(formWidth: storage_edge_b, formHeight: storage_edge_b,),
-                ],
-              ),
+            Wrap(
+              children: [
+                StorageForm(
+                    formWidth: storage_edge_s, formHeight: storage_edge_s),
+                StorageForm(
+                    formWidth: storage_edge_s, formHeight: storage_edge_s),
+                StorageForm(
+                    formWidth: storage_edge_s, formHeight: storage_edge_s),
+                StorageForm(
+                    formWidth: storage_edge_s, formHeight: storage_edge_s),
+                StorageForm(
+                    formWidth: storage_edge_s, formHeight: storage_edge_s),
+                StorageForm(
+                    formWidth: storage_edge_s, formHeight: storage_edge_s),
+                StorageForm(
+                    formWidth: storage_edge_s, formHeight: storage_edge_s),
+              ],
             ),
           ],
         ),

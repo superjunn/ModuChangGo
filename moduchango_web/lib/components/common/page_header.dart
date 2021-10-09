@@ -6,6 +6,7 @@ import 'package:moduchango/components/common/components_detail/page_header_logo.
 import 'package:moduchango/design_data/colors.dart';
 import 'package:moduchango/pages/announcements_page/announcements_page.dart';
 import 'package:moduchango/pages/history_page/history_byDate_page/history_byDate_datepicker_page.dart';
+import 'package:moduchango/pages/history_page/history_byDate_page/history_byDate_view_page.dart';
 import 'package:moduchango/pages/home_page/home_page.dart';
 import 'package:moduchango/pages/join_page/join_page.dart';
 import 'package:moduchango/pages/login_page/login_page.dart';
@@ -43,7 +44,7 @@ class PageHeader extends StatelessWidget {
                   PageHeaderFunctionBlock(
                     mText: "입/출고 내역 보기",
                     funPageRoute: () {
-                      Get.to(() => HistoryByDateDatepickerPage());
+                      Get.to(() => HistoryByDateViewPage());
                     },
                   ),
                   PageHeaderFunctionBlock(
