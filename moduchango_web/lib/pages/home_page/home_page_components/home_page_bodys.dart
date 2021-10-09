@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'home_page_inout.dart';
+import 'home_page_stock_release.dart';
 import 'home_page_mypage.dart';
 import 'home_page_notification.dart';
 import 'home_page_storehouse.dart';
