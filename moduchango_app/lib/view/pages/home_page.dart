@@ -27,11 +27,9 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: kColor6,
         onTap: (index) {
-          setState(
-            () {
-              _index = index;
-            },
-          );
+          setState(() {
+            _index = index;
+          });
         },
         currentIndex: _index,
         items: <BottomNavigationBarItem>[

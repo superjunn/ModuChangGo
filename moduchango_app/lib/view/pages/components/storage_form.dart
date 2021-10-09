@@ -30,8 +30,14 @@ class StorageForm extends StatelessWidget {
                   children: [
                     StorageImage(),
                     SizedBox(height: small_gap),
-                    Text("  이름: 훈련용 창고"),
-                    Text("  위치: 전투연병장 뒤쪽"),
+                    Text(
+                      "  이름: 훈련용 창고",
+                      // style: TextStyle(fontWeight: FontWeight.bold)
+                    ),
+                    Text(
+                      "  위치: 전투연병장 뒤쪽",
+                      // style: TextStyle(fontWeight: FontWeight.bold)
+                    ),
                     SizedBox(
                       height: 30,
                       child: Row(
