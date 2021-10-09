@@ -27,7 +27,7 @@ class HistoryByDateViewPage extends StatelessWidget {
   }
 
   _buildBody() {
-    Row(
+    return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         HistoryPageLeftMenuBar(),
