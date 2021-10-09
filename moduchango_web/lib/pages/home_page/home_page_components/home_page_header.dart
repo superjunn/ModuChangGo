@@ -20,7 +20,7 @@ class HomePageHeader extends StatelessWidget {
               style: h1(),
             ),
             Text(
-              "모두의 창고를 통해 남은 군 생활, 고냥 개꿀 빨다가 전역하세욘",
+              "모두의 창고를 통해 부대 병영창고 정리의 혁신을 느껴보세요",
               style: h2(),
             ),
           ],

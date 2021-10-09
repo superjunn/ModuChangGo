@@ -13,7 +13,7 @@ class HistoryByStorageSelectPageBody extends StatelessWidget {
         Expanded(
           child: Wrap(
             spacing: 10,
-            children: List.generate(50, (index) => StorageForm(edge_length: storage_edge_b, stat: Status.history)),
+            children: List.generate(50, (index) => StorageForm(formWidth: storage_edge_b, formHeight: storage_edge_b, stat: Status.history)),
           ),
         ),
       ],

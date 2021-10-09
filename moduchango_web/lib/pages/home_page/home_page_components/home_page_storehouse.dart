@@ -24,13 +24,11 @@ class HomePageStoreHouse extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  StorageForm(edge_length: storage_edge_s),
-                  StorageForm(edge_length: storage_edge_s),
-                  StorageForm(edge_length: storage_edge_s),
-                  StorageForm(edge_length: storage_edge_s),
-                  StorageForm(edge_length: storage_edge_s),
-                  StorageForm(edge_length: storage_edge_s),
-                  StorageForm(edge_length: storage_edge_s),
+                  StorageForm(formWidth: storage_edge_b, formHeight: storage_edge_b,),
+                  StorageForm(formWidth: storage_edge_b, formHeight: storage_edge_b,),
+                  StorageForm(formWidth: storage_edge_b, formHeight: storage_edge_b,),
+                  StorageForm(formWidth: storage_edge_b, formHeight: storage_edge_b,),
+                  StorageForm(formWidth: storage_edge_b, formHeight: storage_edge_b,),
                 ],
               ),
             ),
