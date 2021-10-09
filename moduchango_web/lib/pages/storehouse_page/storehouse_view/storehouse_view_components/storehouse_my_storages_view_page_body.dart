@@ -14,7 +14,7 @@ class StoreHouseMyStoragesViewPageBody extends StatelessWidget {
         Expanded(
           child: Wrap(
             spacing: 10,
-            children: List.generate(50, (index) => StorageForm(formHeight: storage_edge_b, formWidth: storage_edge_b + 20,)),
+            children: List.generate(50, (index) => StorageForm(formHeight: storage_edge_b, formWidth: storage_edge_b + 20)),
           ),
         ),
       ],
