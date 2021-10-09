@@ -7,7 +7,9 @@ class StorageImage extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Image.network("https://picsum.photos/240/120"),
+          Image.network(
+            "https://picsum.photos/240/120",
+          ),
           Positioned(
             child: Text(
               "Storage Name",

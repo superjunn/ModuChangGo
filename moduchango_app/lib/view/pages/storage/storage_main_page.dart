@@ -7,9 +7,12 @@ import 'package:moduchango_app/view/pages/stock_release_history/stock_release_hi
 class StorageMainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 2,
-      children: List.generate(10, (index) => StorageForm(edge_length: 20.0)),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: GridView.count(
+        crossAxisCount: 2,
+        children: List.generate(10, (index) => StorageForm()),
+      ),
     );
   }
 }
