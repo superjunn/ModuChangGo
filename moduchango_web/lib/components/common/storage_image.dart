@@ -5,7 +5,6 @@ class StorageImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Stack(
-        overflow: Overflow.visible,
         alignment: Alignment.center,
         children: [
           Image.network("https://picsum.photos/240/120"),

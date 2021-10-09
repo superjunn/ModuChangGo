@@ -7,15 +7,16 @@ import 'package:moduchango/pages/home_page/home_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_delete/storehouse_delete_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_edit/storehouse_edit_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_init/storage_init_page.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_shelves_view_page.dart';
 import 'package:moduchango/pages/test_page/test_page.dart';
 
 class StorageForm extends StatelessWidget {
-  final edge_length;
+  final formWidth;
+  final formHeight;
   final Status stat;
 
   const StorageForm({
-    required this.edge_length,
+    required this.formWidth,
+    required this.formHeight,
     this.stat = Status.view,
   });
 
@@ -34,10 +35,9 @@ class StorageForm extends StatelessWidget {
               Get.to(() => StoreHouseEditPage());
             } else if (stat == Status.delete) {
               Get.to(() => StoreHouseDeletePage());
-            } else if (stat == Status.history){
+            } else if (stat == Status.history) {
               Get.to(() => HistoryByDateViewPage());
-            }
-            else {
+            } else {
               print("Error");
               HomePage();
             }
@@ -50,14 +50,41 @@ class StorageForm extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                   color: Colors.white70,
                 ),
-                width: edge_length,
-                height: edge_length,
+                width: formWidth,
+                height: formHeight,
                 child: Column(
                   children: [
                     StorageImage(),
                     Text("훈련용 창고", style: hbody()),
                     Text("선반 개수 : 5개", style: hbody()),
                     Text("전투연병장 뒤쪽", style: hbody()),
+                    SizedBox(
+                      height: 15,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: TextButton(
+                              onPressed: () {
+                                Get.to(() => StoreHouseEditPage());
+                              },
+                              child: Text("수정"),
+                              style: TextButton.styleFrom(
+                                  padding: EdgeInsets.zero,
+                                  alignment: Alignment.center),
+                            ),
+                          ),
+                          Expanded(
+                            child: TextButton(
+                              onPressed: () {},
+                              child: Text("삭제"),
+                              style: TextButton.styleFrom(
+                                  padding: EdgeInsets.zero,
+                                  alignment: Alignment.center),
+                            ),
+                          )
+                        ],
+                      ),
+                    )
                   ],
                 )),
           ),
