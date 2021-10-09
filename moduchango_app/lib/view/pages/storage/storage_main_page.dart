@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango_app/view/design/colors.dart';
-import 'package:moduchango_app/view/pages/components/storage_form.dart';
-import 'package:moduchango_app/view/pages/stock_release_history/stock_release_history.dart';
+import 'package:moduchango_app/view/pages/storage/storage_components/storage_form.dart';
 import 'package:moduchango_app/view/pages/storage/storage_add_page.dart';
 
 class StorageMainPage extends StatelessWidget {

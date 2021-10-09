@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango_app/view/design/size.dart';
-import 'package:moduchango_app/view/pages/components/storage_image.dart';
+import 'package:moduchango_app/view/pages/storage/storage_components/storage_image.dart';
 import 'package:moduchango_app/view/pages/storage/storage_detail_page.dart';
 
 class StorageForm extends StatelessWidget {
