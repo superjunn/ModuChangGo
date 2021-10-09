@@ -18,10 +18,9 @@ class LoginPage extends StatelessWidget {
               height: 280,
               child: Column(
                 children: [
-                  Icon(
-                    Icons.home,
-                    size: 150,
-                    color: Colors.black,
+                  Image.asset(
+                    'assets/moduchango_logo.png',
+                    height: 150,
                   ),
                   Text(
                     "모두의 창고",

@@ -24,17 +24,16 @@ class PageDrawer extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(50.0)),
                       elevation: 10,
                       child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Icon(
-                          Icons.home,
-                          size: 50,
-                        ),
-                      ),
+                          padding: EdgeInsets.all(16.0),
+                          child: Image.asset(
+                            'assets/moduchango_logo.jpg',
+                            height: 100,
+                          )),
                     ),
-                    Text(
-                      '모두의 창고',
-                      style: TextStyle(color: Colors.black, fontSize: 20.0),
-                    )
+                    // Text(
+                    //   '모두의 창고',
+                    //   style: TextStyle(color: Colors.black, fontSize: 20.0),
+                    // )
                   ],
                 ),
               )),
