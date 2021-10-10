@@ -44,7 +44,7 @@ class StoreHouseMyStoragesViewPage extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        StoreHousePageLeftMenuBar(),
+        StoreHousePageLeftMenuBar2(),
         Expanded(
           child: Wrap(
             spacing: 10,
