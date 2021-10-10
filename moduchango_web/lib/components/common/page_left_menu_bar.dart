@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_left_menu_bar_function_block.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/design_data/styles.dart';
 
 class PageLeftMenuBar extends StatelessWidget {
+  final String title;
   final List<String> functionsList;
   final List<dynamic> funpageRouteList;
 
   const PageLeftMenuBar(
-      {required this.functionsList, required this.funpageRouteList});
+      {required this.title, required this.functionsList, required this.funpageRouteList});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: gap_l, top: 6),
+      padding: const EdgeInsets.symmetric(horizontal: gap_l, vertical: 6),
       child: Container(
         width: 200,
         decoration: BoxDecoration(
@@ -32,7 +32,7 @@ class PageLeftMenuBar extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text("창고 보기", style: h2()),
+                    child: Text("$title", style: h2()),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0),
@@ -50,9 +50,7 @@ class PageLeftMenuBar extends StatelessWidget {
                   functionsList.length,
                   (index) => PageLeftMenuBarFunctionBlock(
                     mText: functionsList[index],
-                    funPageRoute: () {
-                      Get.to(() => funpageRouteList[index]);
-                    },
+                    funPageRoute: funpageRouteList[index],
                   ),
                 ),
               ),

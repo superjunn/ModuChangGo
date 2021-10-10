@@ -5,7 +5,6 @@ import 'package:moduchango/components/common/storage_form.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/design_data/styles.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_left_menu_bar.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_left_menu_bar2.dart';
 
 class StoreHouseMyStoragesViewPage extends StatelessWidget {
   @override
@@ -25,7 +24,7 @@ class StoreHouseMyStoragesViewPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      SizedBox(width: 250),
+                      SizedBox(width: 255),
                       Text("창고 현황 / 창고 보기", style: hsubtitle3()),
                     ],
                   ),
@@ -44,11 +43,12 @@ class StoreHouseMyStoragesViewPage extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        StoreHousePageLeftMenuBar2(),
+        StoreHousePageLeftMenuBar(),
         Expanded(
           child: Wrap(
             spacing: 10,
-            children: List.generate(50, (index) => StorageForm(formHeight: storage_edge_b, formWidth: storage_edge_b + 20)),
+            children: List.generate(
+                50, (index) => StorageForm(formWidth: storage_edge_b + 20)),
           ),
         ),
       ],
