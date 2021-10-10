@@ -66,9 +66,9 @@ app.get('/history', function(req,res){
 
 // 창고보기
 app.get('/storages', function(req,res){
-    Product.find('storageName', 'location', 'image').distinct('storageName', function(err, storages){
+    Product.find({}, 'storageName location image', function(err, storages){
         if(err) return res.status(500).send({error: 'database failure'});
-        res.json([storages]);
+        res.json(storages);
     })
 });
 
