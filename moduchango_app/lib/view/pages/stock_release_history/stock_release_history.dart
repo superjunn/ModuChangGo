@@ -12,25 +12,33 @@ class StockReleaseHistory extends StatefulWidget {
 }
 
 class _StockReleaseHistoryState extends State<StockReleaseHistory> {
-  var _index = 0;
-  var _pages = [
-    StockReleaseHistoryDate(),
-    StockReleaseHistoryContents(),
-    StockReleaseHistoryStorage(),
-  ];
+  // var _index = 0;
+  // var _pages = [
+  //   StockReleaseHistoryDate(),
+  //   StockReleaseHistoryContents(),
+  //   StockReleaseHistoryStorage(),
+  // ];
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        body: _pages[_index],
+        body: TabBarView(
+          children: <Widget>[
+            StockReleaseHistoryDate(),
+            StockReleaseHistoryContents(),
+            StockReleaseHistoryStorage(),
+          ],
+        ),
         appBar: AppBar(
           automaticallyImplyLeading: false,
           flexibleSpace: new Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               new TabBar(
+                labelColor: Colors.black,
+                indicatorColor: Colors.black,
                 tabs: [
                   new Tab(text: "날짜별"),
                   new Tab(text: "물품별"),
