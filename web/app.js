@@ -56,6 +56,14 @@ app.post('/storages/add', function(req, res){
     });
 });
 
+// 입출고내역
+app.get('/history', function(req,res){
+    Product.find({}, function(err, products){
+        if(err) return res.status(500).send({error: 'database failure'});
+        res.json(products);
+    })
+});
+
 // 창고보기
 app.get('/storages', function(req,res){
     Product.find().distinct('storageName', function(err, storages){
