@@ -1,13 +1,13 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var hisotrySchema = new Schema({
+var historySchema = new Schema({
     NIIN: {type: String, required: true},
     productName: {type: String, required: true},
     storageName: {type: String, required: true},
     location: String,
     state: String,
-    image: int,
+    image: Number,
     date: { type: Date, default: Date.now  }
 });
 

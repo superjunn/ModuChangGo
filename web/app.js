@@ -9,7 +9,7 @@ const users = require('./routes/users');
 
 const app = express();
 const mongoose = require('mongoose');
-const db_info = require('config/db_info.json');
+const db_info = require('./config/db_info.json');
 // 비밀정보이므로 별도 파일 만든 후 참조 후 .gitignore 추가.
 const url = `mongodb+srv://${db_info.id}:${db_info.password}@cluster0.xql9i.mongodb.net/${db_info.database}?retryWrites=true&w=majority`
 
