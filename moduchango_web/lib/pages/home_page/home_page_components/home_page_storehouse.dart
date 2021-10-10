@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moduchango/components/common/storage_form.dart';
+import 'package:moduchango/components/common/storage_init_form_.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/design_data/styles.dart';
 
@@ -19,22 +20,16 @@ class HomePageStoreHouse extends StatelessWidget {
             ),
             SizedBox(height: gap_s),
             Wrap(
-              children: [
-                StorageForm(
-                    formWidth: storage_edge_s, formHeight: storage_edge_s),
-                StorageForm(
-                    formWidth: storage_edge_s, formHeight: storage_edge_s),
-                StorageForm(
-                    formWidth: storage_edge_s, formHeight: storage_edge_s),
-                StorageForm(
-                    formWidth: storage_edge_s, formHeight: storage_edge_s),
-                StorageForm(
-                    formWidth: storage_edge_s, formHeight: storage_edge_s),
-                StorageForm(
-                    formWidth: storage_edge_s, formHeight: storage_edge_s),
-                StorageForm(
-                    formWidth: storage_edge_s, formHeight: storage_edge_s),
-              ],
+              children: List.generate(
+                7,
+                (index) {
+                  if (index != 6) {
+                    return StorageForm(formWidth: storage_edge_s);
+                  } else {
+                    return StorageInitForm(formWidth: storage_edge_s);
+                  }
+                },
+              ),
             ),
           ],
         ),

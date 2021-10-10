@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:moduchango/components/common/custom_outlined_button.dart';
 import 'package:moduchango/components/common/custom_text_form_field.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
+import 'package:moduchango/pages/join_page/join_page.dart';
 
 class LoginPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
-  final _userID = TextEditingController();
-  final _userPwd = TextEditingController();
-  final _unitName = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: _buildLoginPageBody(),
+              child: _buildBody(),
             ),
           ),
           PageFooter(),
@@ -31,19 +31,32 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  _buildLoginPageBody() {
-    return Expanded(
-      child: Form(
-        key: _formKey,
-        child: Column(
-          children: [
-            CustomTextFormField(
-                titleText: "아이디", hintText: "아이디를 입력해주세요", width: 340),
-            CustomTextFormField(
-                titleText: "비밀번호", hintText: "비밀번호를 입력해주세요", width: 340),
-            CustomTextFormField(
-                titleText: "부대", hintText: "부대를 입력해주세요", width: 340),
-          ],
+  _buildBody() {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        height: 600,
+        width: 600,
+        decoration: BoxDecoration(border: Border.all(color: Colors.black12)),
+        child: Center(
+          child: Form(
+            key: _formKey,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CustomTextFormField(
+                    titleText: "아이디", hintText: "아이디를 입력해주세요", width: 340),
+                CustomTextFormField(
+                    titleText: "비밀번호", hintText: "비밀번호를 입력해주세요", width: 340),
+              
+                CustomOutlinedButton(
+                  buttonText: "회원가입",
+                  funpageRoute: () => Get.to(() => JoinPage()),
+                  width: 460,
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

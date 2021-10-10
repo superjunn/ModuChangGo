@@ -5,10 +5,8 @@ import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_left_menu_bar.dart';
 
-
 class StorageInitPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
-
 
   @override
   Widget build(BuildContext context) {
@@ -39,15 +37,33 @@ class StorageInitPage extends StatelessWidget {
         Expanded(
           child: Form(
             key: _formKey,
-            child: Column(
-              children: [
-                CustomTextFormField(
-                    titleText: "창고 이름", hintText: "창고 이름을 입력해주세요", width: 340),
-                CustomTextFormField(
-                    titleText: "선반 개수", hintText: "창고 내 선반 개수를 입력해주세요", width: 340),
-                CustomTextFormField(
-                    titleText: "창고 위치", hintText: "창고 위치를 기록해주세요", width: 340),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 6.0),
+              child: Container(
+                width: 400,
+                height: 500,
+                decoration:
+                    BoxDecoration(border: Border.all(color: Colors.black12)),
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CustomTextFormField(
+                          titleText: "창고 이름",
+                          hintText: "창고 이름을 입력해주세요",
+                          width: 340),
+                      CustomTextFormField(
+                          titleText: "선반 개수",
+                          hintText: "창고 내 선반 개수를 입력해주세요",
+                          width: 340),
+                      CustomTextFormField(
+                          titleText: "창고 위치",
+                          hintText: "창고 위치를 기록해주세요",
+                          width: 340),
+                    ],
+                  ),
+                ),
+              ),
             ),
           ),
         ),

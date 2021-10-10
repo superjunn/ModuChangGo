@@ -17,6 +17,7 @@ class TestPage2 extends StatelessWidget {
               child: Row(
                 children: [
                   PageLeftMenuBar(
+                    title: "TextPage",
                     functionsList: ["homepage1", "homepage2"],
                     funpageRouteList: [HomePage(), HomePage()],
                   ),
