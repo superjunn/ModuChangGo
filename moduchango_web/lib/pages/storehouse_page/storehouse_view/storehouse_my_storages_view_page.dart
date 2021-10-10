@@ -5,6 +5,7 @@ import 'package:moduchango/components/common/storage_form.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/design_data/styles.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_left_menu_bar.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_left_menu_bar2.dart';
 
 class StoreHouseMyStoragesViewPage extends StatelessWidget {
   @override
@@ -43,7 +44,7 @@ class StoreHouseMyStoragesViewPage extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        StoreHousePageLeftMenuBar(),
+        StoreHousePageLeftMenuBar2(),
         Expanded(
           child: Wrap(
             spacing: 10,
