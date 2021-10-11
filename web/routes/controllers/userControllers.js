@@ -1,7 +1,7 @@
 const User = require('../../models/users');
 const bcrypt = require("bcryptjs");
 const jwt = require('jsonwebtoken');
-const jwt_info = require('jwt_info.json');
+const jwt_info = require('../../config/jwt_info.json');
 const SECRET_KEY = jwt_info.key;
 
 // jwt 토큰 생성
@@ -10,7 +10,7 @@ const createToken = (userId) => {
             expiresIn: '1h',
             issuer: "modu",
             subject: "user_info"
-        }););
+        });
   return token;
 };
 
@@ -35,7 +35,8 @@ const signUp = async function (req, res, next) {
 // 로그인
 const signIn = async (req, res, next) => {
   try {
-    const { id = null, password = null } = req.body;
+    const id = req.body.user_id;
+    const password = req.body.user_password;
 
     if (!id || !password) return res.json({result: 0, error: "wrong input"});
 

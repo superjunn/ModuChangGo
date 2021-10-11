@@ -6,8 +6,8 @@ const db_info = require('./config/db_info.json');
 const port = 3000;
 const app = express();
 
-const userController = require('./controllers/userControllers');
-const { verifyToken } = require('./middlewares/authorization');
+const userController = require('./routes/controllers/userControllers');
+const { verifyToken } = require('./routes/middlewares/authorization');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -71,7 +71,7 @@ app.get('/history', function(req,res){
 });
 
 //창고보기
-app.get('/storages', verifyToken, function(req,res){
+app.get('/storages', function(req,res){
     Storage.find({}, function(err, storage){
         if(err) return res.status(500).send({error: 'database failure'});
         res.json(storage);
@@ -91,7 +91,7 @@ app.get('/storages/:storageName', function(req, res){
 app.put('/storages/edit/:storageName', function(req, res){
     Storage.find({storageName: req.params.storageName}, function(err, storage){
         if(err) return res.status(500).json({ error: 'database failure' });
-        if(!storsge) return res.status(404).json({ error: 'storage not found' });
+        if(!storage) return res.status(404).json({ error: 'storage not found' });
 
         if(req.body.storageName) storage.storageName = req.body.storageName;
         if(req.body.location) storage.location = req.body.location;

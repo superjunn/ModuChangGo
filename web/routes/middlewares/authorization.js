@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const jwt_info = require('jwt_info.json');
+const jwt_info = require('../../config/jwt_info.json');
 const SECRET_KEY = jwt_info.key;
 
 const verifyToken = (req, res, next) => {
