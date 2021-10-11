@@ -26,7 +26,6 @@
 ## Iot
 
 ## 팀 정보 (Team Information)
-# readmetest
 <table width="788">
 <thead>
 <tr>
