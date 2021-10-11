@@ -1,16 +1,19 @@
 const express = require('express');
-const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const port = 3000;
-
-const index = require('./routes/index');
-const users = require('./routes/users');
-
-const app = express();
 const mongoose = require('mongoose');
 const db_info = require('./config/db_info.json');
-// 비밀정보이므로 별도 파일 만든 후 참조 후 .gitignore 추가.
+const port = 3000;
+const app = express();
+
+const userController = require('./controllers/userControllers');
+const { verifyToken } = require('./middlewares/authorization');
+
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// mongodb 연결
 const url = `mongodb+srv://${db_info.id}:${db_info.password}@cluster0.xql9i.mongodb.net/${db_info.database}?retryWrites=true&w=majority`
 
 mongoose.connect({
@@ -21,30 +24,33 @@ useFindAndModify: false
 const db = mongoose.connection;
 db.on('error', console.error);
 db.once('open', function(){
-    // CONNECTED TO MONGODB SERVER
     console.log("Connected to mongodb server");
 });
 
 mongoose.connect(url);
 
+// models import
 const Product = require('./models/product');
 const History = require('./models/history');
+const User = require('./models/users');
+const Storage = require('./models/storages');
 
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(express.static(path.join(__dirname, 'public')));
+// 로그인
+app.post('/login', userController.signIn);
+
+// 회원가입
+app.post('/join', userController.signUp);
 
 // 창고 추가
 app.post('/storages/add', function(req, res){
-    var product = new Product();
-    product.NIIN = req.body.NIIN;
-    product.productName = req.body.productName;
-    product.storageName = req.body.storageName;
-    product.location = req.body.location;
-    product.state = "입고";
+    var storage = new Storage();
 
-    product.save(function(err){
+    storage.storageName = req.body.storageName;
+    storage.location = req.body.location;
+    storage.manager = req.body.manager;
+    storage.item = req.body.item;
+
+    storage.save(function(err){
         if(err){
             console.error(err);
             res.json({result: 0});
@@ -58,17 +64,17 @@ app.post('/storages/add', function(req, res){
 
 // 입출고내역
 app.get('/history', function(req,res){
-    Product.find({}, function(err, products){
+    History.find({}, function(err, history){
         if(err) return res.status(500).send({error: 'database failure'});
-        res.json(products);
+        res.json(history);
     })
 });
 
-// 창고보기
-app.get('/storages', function(req,res){
-    Product.find({}, 'storageName location image', function(err, storages){
+//창고보기
+app.get('/storages', verifyToken, function(req,res){
+    Storage.find({}, function(err, storage){
         if(err) return res.status(500).send({error: 'database failure'});
-        res.json([storages]);
+        res.json(storage);
     })
 });
 
@@ -82,40 +88,31 @@ app.get('/storages/:storageName', function(req, res){
 });
 
 //창고 수정
-app.put('/storages/edit/:product_id', function(req, res){
-    Product.findById(req.params.product_id, function(err, product){
+app.put('/storages/edit/:storageName', function(req, res){
+    Storage.find({storageName: req.params.storageName}, function(err, storage){
         if(err) return res.status(500).json({ error: 'database failure' });
-        if(!product) return res.status(404).json({ error: 'product not found' });
+        if(!storsge) return res.status(404).json({ error: 'storage not found' });
 
+        if(req.body.storageName) storage.storageName = req.body.storageName;
+        if(req.body.location) storage.location = req.body.location;
+        if(req.body.manager) storage.manager = req.body.manager;
+        if(req.body.image) storage.image = req.body.image;
 
-        if(req.body.NIIN) product.NIIN = req.body.NIIN;
-        if(req.body.productName) product.productName = req.body.productName;
-        if(req.body.storageName)product.storageName = req.body.storageName;
-        if(req.body.location) product.location = req.body.location;
-
-        product.save(function(err){
+        storage.save(function(err){
             if(err) res.status(500).json({error: 'failed to update'});
-            res.json({message: 'product updated'});
-            res.redirect('/storages');
+            res.json({result: 1});
         });
 
     });
 
 });
 
-
 //창고 삭제
-app.delete('/storages/:product_id', function(req, res){
-    Product.remove({ NIIN: req.params.product_id }, function(err, output){
-        if(err) return res.status(500).json({ error: "database failure" });
+app.delete('/storages/:storageName', function(req, res){
+    Storage.remove({ storageName: req.params.storageName }, function(err, output){
+        if(err) return res.status(500).json({ error: "delete failed"})
 
-        /* ( SINCE DELETE OPERATION IS IDEMPOTENT, NO NEED TO SPECIFY )
-        if(!output.result.n) return res.status(404).json({ error: "product not found" });
-        res.json({ message: "product deleted" });
-        */
-
-        res.status(204).end();
-        res.redirect('/storages');
+        res.json({result: 1});
     })
 });
 

@@ -5,10 +5,8 @@ var historySchema = new Schema({
     NIIN: {type: String, required: true},
     productName: {type: String, required: true},
     storageName: {type: String, required: true},
-    location: String,
-    state: String,
-    image: Number,
+    state: {type: String, required: true},
     date: { type: Date, default: Date.now  }
 });
 
-module.exports = mongoose.model('History', historySchema);
+module.exports = mongoose.model('history', historySchema);
