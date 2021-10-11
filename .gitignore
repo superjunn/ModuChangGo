@@ -239,3 +239,7 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+
+#수동 추가
+web/config/db_info.json
+web/config/jwt_info.json
