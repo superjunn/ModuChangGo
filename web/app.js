@@ -88,23 +88,30 @@ app.get('/storages/:storageName', function(req, res){
 });
 
 //창고 수정
+//app.put('/storages/edit/:storageName', function(req, res){
+//    Storage.find({storageName: req.params.storageName}, function(err, storage){
+//        if(err) return res.status(500).json({ error: 'database failure' });
+//        if(!storage) return res.status(404).json({ error: 'storage not found' });
+//
+//        if(req.body.storageName) storage.storageName = req.body.storageName;
+//        if(req.body.location) storage.location = req.body.location;
+//        if(req.body.manager) storage.manager = req.body.manager;
+//        if(req.body.image) storage.image = req.body.image;
+//
+//        storage.save(function(err){
+//            if(err) res.status(500).json({error: 'failed to update'});
+//            res.json({result: 1});
+//        });
+//    });
+//});
 app.put('/storages/edit/:storageName', function(req, res){
-    Storage.find({storageName: req.params.storageName}, function(err, storage){
-        if(err) return res.status(500).json({ error: 'database failure' });
-        if(!storage) return res.status(404).json({ error: 'storage not found' });
-
-        if(req.body.storageName) storage.storageName = req.body.storageName;
-        if(req.body.location) storage.location = req.body.location;
-        if(req.body.manager) storage.manager = req.body.manager;
-        if(req.body.image) storage.image = req.body.image;
-
-        storage.save(function(err){
-            if(err) res.status(500).json({error: 'failed to update'});
-            res.json({result: 1});
-        });
-
-    });
-
+    Storage.update({storageName: req.params.storageName }, { $set: req.body }, function(err, output){
+        if(err) res.status(500).json({ error: 'database failure' });
+console.log(output);
+        if(!output.modifiedCount) return res.status(404).json({ error: 'storage not found' });
+        res.json( {result: 1} );
+        }
+    );
 });
 
 //창고 삭제
