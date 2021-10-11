@@ -29,4 +29,4 @@
 
 --
 ## 저작권 및 사용권 정보(Copyleft/ End User Licsense)
-https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/blob/main/LICENSE
+ * [MIT](https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/blob/main/LICENSE)
