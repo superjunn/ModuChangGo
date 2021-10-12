@@ -19,7 +19,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     StorageController s = Get.put(StorageController());
     s.findAll();
-
     return Scaffold(
       drawer: PageDrawer(),
       appBar: AppBar(
