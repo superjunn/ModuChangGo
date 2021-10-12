@@ -35,6 +35,7 @@ const signUp = async function (req, res, next) {
 // 로그인
 const signIn = async (req, res, next) => {
   try {
+
     const id = req.body.user_id;
     const password = req.body.user_password;
 
@@ -44,7 +45,7 @@ const signIn = async (req, res, next) => {
 
     if (!user) return res.json({result: 0, error: "no user data"});
 
-    const passwordCheck = await bcrypt.compare(password, user.password);
+    const passwordCheck = await bcrypt.compare(password.toString(), user.password);
 
     if (!passwordCheck) return res.json({result: 0, error: "wrong password"});
     const token = createToken(id);
