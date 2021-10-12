@@ -21,11 +21,18 @@ const signUp = async function (req, res, next) {
 
         const user = new User();
         user.user_id = req.body.user_id;
-        user.user_password = await bcrypt.hash(req.body.user_password, 12);
         user.user_army = req.body.user_army;
-        user.save();
+        bcrypt.hash(req.body.user_password, 10, function(err, hash) {
+            if(err) res.json({result:0, error:"encryption error"});
+            else
+            {
+              user.password = hash;
+              user.save();
+              res.status(201).json({result: 1});
+            }
+        });
 
-        res.status(201).json({result: 1});
+
     } catch (err) {
         console.error(err);
         next(err);
@@ -41,15 +48,15 @@ const signIn = async (req, res, next) => {
 
     if (!id || !password) return res.json({result: 0, error: "wrong input"});
 
-    const user = await User.findOne({ id });
+    const user = await User.findOne({ user_id:id });
 
     if (!user) return res.json({result: 0, error: "no user data"});
-    console.log(typeof password);
-    console.log(typeof user.password);
-    console.log(typeof String(user.password));
-    // const passwordCheck = await bcrypt.compare(password.toString(), user.password);
+    // console.log(typeof password);
+    // console.log(user);
+    //console.log(typeof String(user.password));
+    const passwordCheck = await bcrypt.compare(password, user.password);
 
-    // if (!passwordCheck) return res.json({result: 0, error: "wrong password"});
+    if (!passwordCheck) return res.json({result: 0, error: "wrong password"});
     const token = createToken(id);
     res.cookie('user', token, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 })
 

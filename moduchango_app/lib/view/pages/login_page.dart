@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moduchango_app/components/custom_form.dart';
+import 'package:moduchango_app/view/components/custom_form.dart';
 import 'package:moduchango_app/view/design/size.dart';
 import 'package:moduchango_app/view/design/colors.dart';
 
