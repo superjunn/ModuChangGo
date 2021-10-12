@@ -28,7 +28,7 @@ const signUp = async function (req, res, next) {
 
         const user = new User();
         user.user_id = req.body.user_id;
-        user.user_password = createHash(req.body.user_password);
+        user.user_password = req.body.user_password;
         user.user_army = req.body.user_army;
 
         user.save();

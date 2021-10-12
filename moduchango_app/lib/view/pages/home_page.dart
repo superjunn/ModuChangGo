@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:moduchango_app/controller/storage_controller.dart';
 import 'package:moduchango_app/view/design/colors.dart';
 import 'package:moduchango_app/view/pages/components/page_drawer.dart';
 import 'package:moduchango_app/view/pages/stock_release_history/stock_release_history.dart';
@@ -16,6 +17,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    StorageController s = Get.put(StorageController());
+    s.findAll();
+
     return Scaffold(
       drawer: PageDrawer(),
       appBar: AppBar(
