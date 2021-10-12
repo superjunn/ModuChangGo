@@ -44,10 +44,12 @@ const signIn = async (req, res, next) => {
     const user = await User.findOne({ id });
 
     if (!user) return res.json({result: 0, error: "no user data"});
+    console.log(typeof password);
+    console.log(typeof user.password);
+    console.log(typeof String(user.password));
+    // const passwordCheck = await bcrypt.compare(password.toString(), user.password);
 
-    const passwordCheck = await bcrypt.compare(password.toString(), user.password);
-
-    if (!passwordCheck) return res.json({result: 0, error: "wrong password"});
+    // if (!passwordCheck) return res.json({result: 0, error: "wrong password"});
     const token = createToken(id);
     res.cookie('user', token, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 })
 
