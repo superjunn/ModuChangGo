@@ -15,24 +15,25 @@ const createToken = (userId) => {
 };
 
 
+const createHash = function(password){
+bcrypt.hash(password, 10, function(err, hash) {
+            if(err) res.json({result:0, error:"encryption error"});
+            else  return hash;
+        });
+}
+
 // user 정보 db에 저장
 const signUp = async function (req, res, next) {
     try {
 
         const user = new User();
         user.user_id = req.body.user_id;
+        user.user_password = createHash(req.body.user_password);
         user.user_army = req.body.user_army;
-        bcrypt.hash(req.body.user_password, 10, function(err, hash) {
-            if(err) res.json({result:0, error:"encryption error"});
-            else
-            {
-              user.password = hash;
-              user.save();
-              res.status(201).json({result: 1});
-            }
-        });
 
+        user.save();
 
+        res.status(201).json({result: 1});
     } catch (err) {
         console.error(err);
         next(err);
