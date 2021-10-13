@@ -58,7 +58,7 @@
 <tr>
 <td width="100" align="center"><img src="/image/김태한.jpg" width="60" height="60"></td>
 <td width="100" align="center">김태한</td>
-<td width="300">웹 개발<br></td>
+<td width="300">앱 개발<br></td>
 </td>
 <td width="100" align="center">
 	<a href="https://github.com/TaehanKim00">
@@ -72,7 +72,7 @@
 <tr>
 <td width="100" align="center"><img src="/image/허승준.jpg" width="60" height="60"></td>
 <td width="100" align="center">허승준</td>
-<td width="300">앱 개발<br>API 설계<br></td>
+<td width="300"> 개발<br>API 설계<br></td>
 </td>
 <td width="100" align="center">
 	<a href="https://github.com/superjunn">
