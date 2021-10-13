@@ -6,13 +6,13 @@ import 'package:moduchango/domain/storage/storage_provider.dart';
 class StorageRepository {
   final StorageProvider _storageProvider = StorageProvider();
 
-  Future<List<Storage>> view() async {
+  Future<void> view() async {
     Response response = await _storageProvider.view();
     dynamic body = response.body;
     print("body : ${body}");
-    List<Storage> storages =
-        body.map((storage) => Storage.fromJson(storage)).toList();
-    print(storages);
-    return storages;
+    // List<Storage> storages =
+    //     body.map((storage) => Storage.fromJson(storage)).toList();
+    // print(storages);
+    // return storages;
   }
 }
