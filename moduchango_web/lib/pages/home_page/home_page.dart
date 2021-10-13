@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     StorageController s = Get.put(StorageController());
-    s.view();
+    s.findAll();
 
     return Scaffold(
       body: ListView(

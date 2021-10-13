@@ -1,13 +1,15 @@
+import 'package:intl/intl.dart';
+
 class Storage {
   final String? id;
-  final String? storgeName;
+  final String? storageName;
   final String? location;
   final String? manager;
   final int? image;
 
   Storage({
     this.id,
-    this.storgeName,
+    this.storageName,
     this.location,
     this.manager,
     this.image,
@@ -15,8 +17,8 @@ class Storage {
 
   Storage.fromJson(Map<String, dynamic> json)
       : id = json["_id"],
-        storgeName = json["storageName"],
+        storageName = json["storageName"],
         location = json["location"],
         manager = json["manager"],
-        image = json["imamge"];
+        image = json["image"];
 }
