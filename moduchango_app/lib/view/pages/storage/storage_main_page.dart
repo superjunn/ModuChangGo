@@ -26,8 +26,8 @@ class StorageMainPage extends StatelessWidget {
             children: List.generate(
               s.storages.length,
               (index) => StorageForm(
-                storage_name: "훈련용 창고",
-                storage_location: "전투연병장 뒤쪽",
+                storage_name: "${s.storages[index].storageName}",
+                storage_location: "${s.storages[index].location}",
                 storage_image: "https://picsum.photos/240/120",
               ),
             ),
