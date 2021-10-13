@@ -65,9 +65,11 @@ void setup()
 
 void loop() 
 {
+	//mode값 받기(가변저항)
 	int mode = analogRead(A0);
 	val = map(mode, 0, 1023, 0, 2);
-
+	String changostring = "";
+	//ndef정보 추출
 	if (nfc.tagPresent())
 	{
 		NfcTag tag = nfc.read();
@@ -78,13 +80,13 @@ void loop()
 			int payloadLength = record.getPayloadLength();
 			byte payload[payloadLength];
 			record.getPayload(payload);
-			String payloadAsString = ""; 
 			for (int c = 0; c < payloadLength; c++) 
 			{
-				payloadAsString += (char)payload[c];
+				changostring += (char)payload[c];
 			}
 		}
 	}
+	//ndef정보 json파일로 변환
 	data = ndeftoJson(payloadAsString,val);
 	//server에 정보 POST
 	httpClient.begin(client);
