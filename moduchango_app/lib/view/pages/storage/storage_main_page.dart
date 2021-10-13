@@ -24,7 +24,7 @@ class StorageMainPage extends StatelessWidget {
           child: GridView.count(
             crossAxisCount: 2,
             children: List.generate(
-              10,
+              s.storages.length,
               (index) => StorageForm(
                 storage_name: "훈련용 창고",
                 storage_location: "전투연병장 뒤쪽",
