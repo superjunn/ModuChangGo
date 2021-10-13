@@ -7,7 +7,4 @@
 
 
 ## License
-
-
-**NDEF Library**
 GPL V3 License
