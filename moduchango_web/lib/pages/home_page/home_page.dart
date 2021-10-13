@@ -8,11 +8,11 @@ import 'home_page_components/home_page_bodys.dart';
 import 'home_page_components/home_page_header.dart';
 
 class HomePage extends StatelessWidget {
-  StorageController s = Get.put(StorageController());
-
   @override
   Widget build(BuildContext context) {
+    StorageController s = Get.put(StorageController());
     s.view();
+
     return Scaffold(
       body: ListView(
         children: [
