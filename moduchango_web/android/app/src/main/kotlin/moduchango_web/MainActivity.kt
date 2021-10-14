@@ -1,4 +1,4 @@
-package com.example.moduchango
+package moduchango_web
 
 import io.flutter.embedding.android.FlutterActivity
 
