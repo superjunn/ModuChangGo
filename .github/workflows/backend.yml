@@ -1,0 +1,24 @@
+name: server deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: access remote ssh
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_IP }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd ${{ secrets.DIRECTORY }} && git pull
+            cd %{{ secrets.BE_PATH }}
+            npm install --no-save
+            pm2 delete server
+            pm2 start app.js --name "server"
