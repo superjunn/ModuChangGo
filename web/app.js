@@ -1,87 +1,128 @@
 const express = require('express');
-const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-
-const index = require('./routes/index');
-const users = require('./routes/users');
-
+const mongoose = require('mongoose');
+const db_info = require('./config/db_info.json');
+const port = 3000;
 const app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
+const userController = require('./routes/controllers/userControllers');
+const { verifyToken } = require('./routes/middlewares/authorization');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
+// mongodb 연결
+const url = `mongodb+srv://${db_info.id}:${db_info.password}@cluster0.xql9i.mongodb.net/${db_info.database}?retryWrites=true&w=majority`
 
-// DB connection
+mongoose.connect({
+useNewUrlParser: true,
+useFindAndModify: false
+});
 
-const mysql = require('mysql');
+const db = mongoose.connection;
+db.on('error', console.error);
+db.once('open', function(){
+    console.log("Connected to mongodb server");
+});
 
-const getConnection = require('./config/database');
+mongoose.connect(url);
 
+// models import
+const Product = require('./models/product');
+const History = require('./models/history');
+const User = require('./models/users');
+const Storage = require('./models/storages');
 
-// MySQL에서 modu_chango 라는 데이터베이스에 chango_list 라는 table 생성
+// 로그인
+app.post('/login', userController.signIn);
 
-// CREATE TABLE IF NOT EXISTS `chango_list` (
-//   `NIIN` varchar(20) NOT NULL,
-//   `productName` varchar(50) NOT NULL,
-//   `location` varchar(50) NOT NULL,
-//	 `mode` int(3) UNSIGNED NOT NULL,
-//   PRIMARY KEY (`NIIN`)
-// ) DEFAULT CHARSET=utf8;
+// 회원가입
+app.post('/join', userController.signUp);
 
+// 창고 추가
+app.post('/storages/add', function(req, res){
+    var storage = new Storage();
 
-// 데이터 송수신 페이지
-app.post('/product', (req, res) => {
-console.log(req.body);
-const product = {
-    NIIN: req.body.NIIN,
-    productName: req.body.productName,
-	location: req.body.location,
-	mode: req.body.mode
-	}
-	if (product){
-		if (product.mode == 1){ // 입고
-			res.send(product);
+    storage.storageName = req.body.storageName;
+    storage.location = req.body.location;
+    storage.manager = req.body.manager;
+    storage.item = req.body.item;
 
-			getConnection((conn) => {
-			const sql = 'INSERT INTO chango_list VALUES (?, ?, ?)';
-			const params = [product.NIIN, product.productName, product.location];
-			conn.query(sql, params, function(err) {
-				conn.release();
-				if(err) console.log('query is not excuted. insert fail...\n' + err);
-				else res.redirect('/main');
-				});
-			})
-		} else { // 출고
-			res.send(product);
+    storage.save(function(err){
+        if(err){
+            console.error(err);
+            res.json({result: 0});
+            return;
+        }
 
-			getConnection((conn) => {
-			const sql = 'DELETE FROM chango_list WHERE NIIN=?';
-			const params = [product.NIIN];
-			conn.query(sql, params, function(err) {
-				conn.release();
-				if(err) {
-					alert('query is not excuted. delete fail...\n' + err);
-					res.redirect('/product');
-				} else res.redirect('/main');
-				});
-			})		
-		}		
-	}
-    
-	
-})
+        res.json({result: 1});
 
+    });
+});
 
-app.listen(process.env.PORT || 3000, () => console.log('Example app listening on port 3000!'));
+// 입출고내역
+app.get('/history', function(req,res){
+    History.find({}, function(err, history){
+        if(err) return res.status(500).send({error: 'database failure'});
+        res.json(history);
+    })
+});
 
-module.exports = app;
+//창고보기
+app.get('/storages', function(req,res){
+    Storage.find({}, function(err, storage){
+        if(err) return res.status(500).send({error: 'database failure'});
+        res.json(storage);
+    })
+});
+
+//창고 자세히 보기
+app.get('/storages/:storageName', function(req, res){
+    Product.find({storageName: req.params.storageName}, function(err, product){
+        if(err) return res.status(500).json({error: err});
+        if(!product) return res.status(404).json({error: 'product not found'});
+        res.json(product);
+    })
+});
+
+//창고 수정
+//app.put('/storages/edit/:storageName', function(req, res){
+//    Storage.find({storageName: req.params.storageName}, function(err, storage){
+//        if(err) return res.status(500).json({ error: 'database failure' });
+//        if(!storage) return res.status(404).json({ error: 'storage not found' });
+//
+//        if(req.body.storageName) storage.storageName = req.body.storageName;
+//        if(req.body.location) storage.location = req.body.location;
+//        if(req.body.manager) storage.manager = req.body.manager;
+//        if(req.body.image) storage.image = req.body.image;
+//
+//        storage.save(function(err){
+//            if(err) res.status(500).json({error: 'failed to update'});
+//            res.json({result: 1});
+//        });
+//    });
+//});
+app.put('/storages/edit/:storageName', function(req, res){
+    Storage.update({storageName: req.params.storageName }, { $set: req.body }, function(err, output){
+        if(err) res.status(500).json({ error: 'database failure' });
+console.log(output);
+        if(!output.modifiedCount) return res.status(404).json({ error: 'storage not found' });
+        res.json( {result: 1} );
+        }
+    );
+});
+
+//창고 삭제
+app.delete('/storages/:storageName', function(req, res){
+    Storage.remove({ storageName: req.params.storageName }, function(err, output){
+        if(err) return res.status(500).json({ error: "delete failed"})
+
+        res.json({result: 1});
+    })
+});
+
+app.listen(port, () => {
+    console.log(`Server is running at ${port}`);
+});

@@ -16,6 +16,14 @@ TextStyle h2({Color mColor = Colors.black, bool isBold = true}) {
   }
 }
 
+TextStyle h2_5({Color mColor = Colors.black, bool isBold = true}) {
+  if (isBold) {
+    return TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: mColor);
+  } else {
+    return TextStyle(fontSize: 16, color: mColor);
+  }
+}
+
 TextStyle h3({Color mColor = Colors.black, bool isBold = true}) {
   if (isBold) {
     return TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: mColor);

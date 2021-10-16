@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+flutter run -d web-server --web-hostname=0.0.0.0 
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

@@ -1,27 +1,106 @@
-# flutter-devcontainer
-GitHub Codespace - Flutter 개발 환경 자동 생성 파일
+# 모두의창고
 
-본 저장소를 활용하여 Flutter 개발 환경이 모두 설정 되어 있는 GitHub Codespace 를 바로 생성할 수 있습니다.  
-Flutter 개발 환경이 설정된 Codespace 를 설정 하려면 아래 절차를 수행합니다.
+![image](https://user-images.githubusercontent.com/81310047/136657199-26290e89-19f4-4573-b7f3-6895ab4f4dad.png)
 
-## 저장소 및 Codespace 생성
-- [여기를 클릭하여 본 저장소를 템플릿으로 새 저장소를 생성합니다.](https://github.com/osamhack2021/flutter-devcontainer/generate)
-  - **Owner** 를 `osamhack2021` 로 지정하고, **Repository name**은 원하는 저장소 이름을 입력합니다.
-- 새로 생성된 저장소에서 Codespace 를 생성 하면 자동으로 Flutter 개발 환경이 구축된 Codespace 가 생성 됩니다.
 
-## Flutter 프로젝트 생성 및 테스트
+## 프로젝트 소개
 
-아래 명령으로 `myapp` 프로젝트를 생성하고, 테스트를 위해 웹 앱 형태로 실행합니다.
-```bash
-flutter create myapp
-cd myapp
-flutter run -d web-server --web-hostname=0.0.0.0 
-``` 
+모두의 창고는, 국군 보급 관리 체계의 편리함을 향상시키기 위해 만들어진 프로젝트입니다. 사용자들은 기존의 일일이 최신화하던 창고의 불편함에서 벗어나 자동화를 바탕으로 창고관리 및 보급품 관리를 편리하게 해결할 수 있습니다.
+1. 재고정리 자동화 프로그램
+- 매번 창고 정리마다 개수를 세서 창고를 최신화하지 않아도 됩니다. 불출, 입고 시 태그 한 번이면 재고파악을 자동으로 진행해줍니다.
+- 직관적인 아이템을 바탕으로 자동화를 실현해줍니다.
+2. 창고 시각화
+창고 재고 파악 시 중요한 위치나 어느 창고에 무엇이 있는지를 파악할 수 있습니다.
 
-본 저장소를 활용하여 생성된 Codespace 에는 Android SDK 도 같이 설정되어 있습니다.
-별도 추가적인 절차 없이, 아래 명령줄로 Android 앱 APK 파일을 빌드할 수 있습니다.
-```bash
-flutter build apk
-```
+## 기능 설계 및 설명
 
-Flutter 프로젝트 개발환경 구축, 앱 개발, 빌드 테스트 등에 관한 자세한 사항은, 별도로 전달 받으신 가이드 문서와 [Flutter 공식 문서](https://flutter.dev/)를 참고해 주시기 바랍니다.
+
+
+## 컴퓨터 구성 / 필수 조건 안내(Prerequisites)
+
+
+## 기술 스택(Technique Used)
+### Server(back-end)
+
+### Front-end
+
+### Iot
+
+
+## 설치 안내
+
+
+## 팀 정보 (Team Information)
+<table width="788">
+<thead>
+<tr>
+<th width="100" align="center">사진</th>
+<th width="100" align="center">성명</th>
+<th width="150" align="left">담당</th>
+<th width="100" align="center">깃허브</th>
+<th width="175" align="center">이메일</th>
+</tr> 
+</thead>
+<tbody>
+<tr>
+<td width="100" align="center"><img src="/image/박규한.jpg" width="60" height="60"></td>
+<td width="100" align="center">박규한</td>
+<td width="150">백엔드 개발<br>서버 환경 구축<br>데이터베이스 설계</td>
+<td width="100" align="center">
+	<a href="https://github.com/rbgksqkr">
+		<img src="http://img.shields.io/badge/rbgksqkr-655ced?style=social&logo=github"/>
+	</a>
+</td>
+<td width="175" align="center">
+	<a href="mailto:rbgks1937@gmail.com"><img src="https://img.shields.io/static/v1?label=&message=rbgks1937@gmail.com&color=orange&style=flat-square&logo=gmail"></a>
+	</td>
+</tr>
+<tr>
+<td width="100" align="center"><img src="/image/김태한.jpg" width="60" height="60"></td>
+<td width="100" align="center">김태한</td>
+<td width="300">앱 개발<br></td>
+</td>
+<td width="100" align="center">
+	<a href="https://github.com/TaehanKim00">
+		<img src="http://img.shields.io/badge/TaehanKim00-655ced?style=social&logo=github"/>
+	</a>
+</td>
+<td width="175" align="center">
+	<a href="mailto:tk5582lm@gmail.com"><img src="https://img.shields.io/static/v1?label=&message=tk5582lm@gmail.com&color=green&style=flat-square&logo=gmail"></a>
+	</td>
+</tr>
+<tr>
+<td width="100" align="center"><img src="/image/허승준.jpg" width="60" height="60"></td>
+<td width="100" align="center">허승준</td>
+<td width="300"> 개발<br>API 설계<br></td>
+</td>
+<td width="100" align="center">
+	<a href="https://github.com/superjunn">
+		<img src="http://img.shields.io/badge/superjunn-655ced?style=social&logo=github"/>
+	</a>
+</td>
+<td width="175" align="center">
+	<a href="mailto:superjunn00@gmail.com.com"><img src="https://img.shields.io/static/v1?label=&message=superjunn00@gmail.com&color=green&style=flat-square&logo=gmail"></a>
+	</td>
+</tr>
+<tr>
+<td width="100" align="center"><img src="/image/조명근.PNG" width="60" height="60"></td>
+<td width="100" align="center">조명근</td>
+<td width="300">아두이노 개발<br>문서화 작업<br></td>
+</td>
+<td width="100" align="center">
+	<a href="https://github.com/realisshomyang">
+		<img src="http://img.shields.io/badge/realisshomyang-655ced?style=social&logo=github"/>
+	</a>
+</td>
+<td width="175" align="center">
+	<a href="mailto:mgmg612@gmail.com"><img src="https://img.shields.io/static/v1?label=&message=mgmg612@gmail.com&color=green&style=flat-square&logo=gmail"></a>
+	</td>
+</tr>
+</tr>
+</tbody>
+</table>
+
+
+## 저작권 및 사용권 정보(Copyleft/ End User Licsense)
+ * [MIT](https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/blob/main/LICENSE)

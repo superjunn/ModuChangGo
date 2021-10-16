@@ -1,0 +1,58 @@
+{
+    "shelves": [
+        {
+            "momStorage": "012345",
+            "shelfNum": "1",
+            "numOfRows": "3",
+            "numOfColumns": "4"
+        },
+        {
+            "momStorage": "012345",
+            "shelfNum": "2",
+            "numOfRows": "3",
+            "numOfColumns": "4"
+        },
+        {
+            "momStorage": "012345",
+            "shelfNum": "3",
+            "numOfRows": "3",
+            "numOfColumns": "5"
+        },
+        {
+            "momStorage": "012345",
+            "shelfNum": "4",
+            "numOfRows": "4",
+            "numOfColumns": "3"
+        },
+        {
+            "momStorage": "012346",
+            "shelfNum": "1",
+            "numOfRows": "4",
+            "numOfColumns": "3"
+        },
+        {
+            "momStorage": "012346",
+            "shelfNum": "2",
+            "numOfRows": "4",
+            "numOfColumns": "3"
+        },
+        {
+            "momStorage": "012347",
+            "shelfNum": "1",
+            "numOfRows": "4",
+            "numOfColumns": "3"
+        },
+        {
+            "momStorage": "012347",
+            "shelfNum": "2",
+            "numOfRows": "4",
+            "numOfColumns": "3"
+        },
+        {
+            "momStorage": "012347",
+            "shelfNum": "3",
+            "numOfRows": "4",
+            "numOfColumns": "4"
+        }
+    ]
+}
