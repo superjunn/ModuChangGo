@@ -2,6 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cookieParser = require('cookie-parser');
 const db_info = require('./config/db_info.json');
 const port = 3000;
 const app = express();
@@ -12,6 +13,7 @@ const userRouter = require('./routes/user');
 const historyRouter = require('./routes/history');
 
 app.use(logger('dev'));
+app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

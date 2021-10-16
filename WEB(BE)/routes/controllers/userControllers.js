@@ -15,20 +15,13 @@ const createToken = (userId) => {
 };
 
 
-const createHash = function(password){
-bcrypt.hash(password, 10, function(err, hash) {
-            if(err) res.json({result:0, error:"encryption error"});
-            else  return hash;
-        });
-}
-
 // user 정보 db에 저장
 const signUp = async function (req, res, next) {
     try {
 
         const user = new User();
         user.user_id = req.body.user_id;
-        user.user_password = req.body.user_password;
+        user.user_password = await bcrypt.hash(req.body.user_password, 10);
         user.user_army = req.body.user_army;
 
         user.save();
@@ -52,15 +45,13 @@ const signIn = async (req, res, next) => {
     const user = await User.findOne({ user_id:id });
 
     if (!user) return res.json({result: 0, error: "no user data"});
-    // console.log(typeof password);
-    // console.log(user);
-    //console.log(typeof String(user.password));
-    const passwordCheck = await bcrypt.compare(password, user.password);
+
+    const passwordCheck = await bcrypt.compare(password, user.user_password);
 
     if (!passwordCheck) return res.json({result: 0, error: "wrong password"});
     const token = createToken(id);
-    res.cookie('user', token, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 })
-
+    // res.cookie('user', token, { maxAge: 24 * 60 * 60 * 1000 })
+	res.json({result:1, user:user, token:token});
 
   } catch (err) {
     next(err);

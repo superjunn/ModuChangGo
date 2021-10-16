@@ -8,7 +8,7 @@ const verifyToken = require('./middlewares/authorization');
 router.get('/', function(req,res){
     User.find({}, function(err, user){
         if(err) return res.status(500).send({error: 'database failure'});
-        res.json(user);
+        res.json(user);		
     })
 });
 
