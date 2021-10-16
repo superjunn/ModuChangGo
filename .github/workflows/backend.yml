@@ -20,5 +20,4 @@ jobs:
             cd ${{ secrets.DIRECTORY }} && git pull
             cd %{{ secrets.BE_PATH }}
             npm install --no-save
-            pm2 delete server
-            pm2 start app.js --name "server"
+            pm2 reload all
