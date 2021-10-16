@@ -46,7 +46,6 @@ router.post('/add', function(req, res){
 router.put('/edit/:storageName', function(req, res){
     Storage.update({storageName: req.params.storageName }, { $set: req.body }, function(err, output){
         if(err) res.status(500).json({ error: 'database failure' });
-console.log(output);
         if(!output.modifiedCount) return res.status(404).json({ error: 'storage not found' });
         res.json( {result: 1} );
         }
