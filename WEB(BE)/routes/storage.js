@@ -13,7 +13,7 @@ router.get('/', function(req,res){
 
 // 창고 자세히 보기
 router.get('/:storageName', function(req, res){
-    Product.find({storageName: req.params.storageName}, function(err, product){
+    Storage.find({storageName: req.params.storageName}, function(err, product){
         if(err) return res.status(500).json({error: err});
         if(!product) return res.status(404).json({error: 'product not found'});
         res.json(product);
@@ -44,7 +44,7 @@ router.post('/add', function(req, res){
 
 //창고 수정
 router.put('/edit/:storageName', function(req, res){
-    Storage.update({storageName: req.params.storageName }, { $set: req.body }, function(err, output){
+    Storage.updateOne({storageName: req.params.storageName }, { $set: req.body }, function(err, output){
         if(err) res.status(500).json({ error: 'database failure' });
         if(!output.modifiedCount) return res.status(404).json({ error: 'storage not found' });
         res.json( {result: 1} );
