@@ -1,5 +1,3 @@
-import 'package:intl/intl.dart';
-
 class Storage {
   final String? id;
   final String? storageName;

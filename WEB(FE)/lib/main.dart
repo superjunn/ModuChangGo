@@ -1,11 +1,11 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/pages/home_page/home_page.dart';
+import 'package:http/http.dart' as http;
 
-import 'pages/test_page/test_page.dart';
-
-
-void main() {
+void main() async {
   runApp(MyApp());
 }
 
