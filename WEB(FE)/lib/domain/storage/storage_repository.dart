@@ -15,6 +15,7 @@ class StorageRepository {
       List<Storage> storages = temp.map((e) => Storage.fromJson(e)).toList();
       return storages;
     } else {
+      print("여기서 이게 출력되는구만 !");
       return <Storage>[];
     }
   }

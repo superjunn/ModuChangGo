@@ -8,7 +8,7 @@ class HomePageHeader extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/home_page_image.jpg'),
+          image: AssetImage('assets/banner2.jpg'),
           fit: BoxFit.cover,
         ),
       ),
