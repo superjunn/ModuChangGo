@@ -2,7 +2,11 @@
 # 모두의창고
 ![모두의 창고](https://user-images.githubusercontent.com/81310047/137625503-6dac5122-7bff-4092-ba17-959849d5d4b3.png)
 
-
+<p align="center">
+<a href="https://www.notion.so/201f76c4b2d442bd8fc1e5c6447e32ac">
+<img src="https://img.shields.io/badge/GitBook-project_doc-blue?&style=for-the-badge&logo=github">
+</a>
+</p>
 
 
 
