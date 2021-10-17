@@ -5,6 +5,7 @@ import 'package:moduchango/domain/storage/storage_repository.dart';
 class StorageController extends GetxController {
   final StorageRepository _storageRepository = StorageRepository();
   final storages = <Storage>[].obs;
+  final storage = <Storage>.obs;
 
   @override
   void onInit() {
