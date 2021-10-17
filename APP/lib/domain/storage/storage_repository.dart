@@ -6,7 +6,7 @@ import 'package:moduchango_app/domain/storage/storage_provider.dart';
 class StorageRepository {
   final StorageProvider _storageProvider = StorageProvider();
 
-  Future<List<Content>> findById(String storageName) async {
+  Future<List<Content>> findByName(String storageName) async {
     Response response = await _storageProvider.findByName(storageName);
     dynamic body = response.body;
     print(body);

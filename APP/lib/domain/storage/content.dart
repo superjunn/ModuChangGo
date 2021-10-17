@@ -1,22 +1,16 @@
 class Content {
-  final String? id;
-  final String? storageName;
-  final String? location;
-  final String? manager;
-  final int? image;
+  final String? NIIN;
+  final String? contentName;
+  final int? amount;
 
   Content({
-    this.id,
-    this.storageName,
-    this.location,
-    this.manager,
-    this.image,
+    this.NIIN,
+    this.contentName,
+    this.amount,
   });
 
   Content.fromJson(Map<String, dynamic> json)
-      : id = json["_id"],
-        storageName = json["storageName"],
-        location = json["location"],
-        manager = json["manager"],
-        image = json["image"];
+      : NIIN = json["NIIN"],
+        contentName = json["productName"],
+        amount = json["image"];
 }
