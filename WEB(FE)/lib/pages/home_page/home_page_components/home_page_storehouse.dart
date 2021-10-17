@@ -37,7 +37,12 @@ class HomePageStoreHouse extends StatelessWidget {
                       (5),
                       (index) {
                         if (index != 4) {
-                          return StorageForm(formWidth: storage_edge_s);
+                          return StorageForm(
+                            formWidth: storage_edge_s,
+                            storageName: s.storages[index].storageName!,
+                            location: s.storages[index].location!,
+                            image_id: s.storages[index].image!,
+                          );
                         } else {
                           return StorageInitForm(formWidth: storage_edge_s);
                         }

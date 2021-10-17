@@ -12,11 +12,15 @@ import 'package:moduchango/pages/test_page/test_page.dart';
 class StorageForm extends StatelessWidget {
   final formWidth;
   final Status stat;
-  final image_id;
+  final String storageName;
+  final String location;
+  final int image_id;
 
   const StorageForm({
     required this.formWidth,
     this.stat = Status.view,
+    required this.storageName,
+    required this.location,
     required this.image_id,
   });
 

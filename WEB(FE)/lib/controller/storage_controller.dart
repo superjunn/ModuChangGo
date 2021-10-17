@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
+import 'package:moduchango/domain/content/content.dart';
 import 'package:moduchango/domain/storage/storage.dart';
 import 'package:moduchango/domain/storage/storage_repository.dart';
 
 class StorageController extends GetxController {
   final StorageRepository _storageRepository = StorageRepository();
   final storages = <Storage>[].obs;
-  final storage = Storage().obs;
+  final storage = <Content>[].obs;
 
   @override
   void onInit() {
@@ -19,7 +20,7 @@ class StorageController extends GetxController {
   }
 
   Future<void> findByID(String storageName) async {
-    Storage storage = await _storageRepository.findById(storageName);
+    List<Content> storage = await _storageRepository.findByName(storageName);
     this.storage.value = storage;
   }
 

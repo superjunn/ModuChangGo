@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moduchango/design_data/styles.dart';
 
 class StorageImage extends StatelessWidget {
-  final image_id;
+  final int image_id;
 
   const StorageImage({required this.image_id});
 
