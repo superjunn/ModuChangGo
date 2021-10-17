@@ -16,7 +16,6 @@
 ## 목차
 -  [프로젝트 소개](#프로젝트-소개)  
 -   [기능 설계 및 설명](#기능-설계-및-설명)  
--  [컴퓨터 구성 / 필수 조건 안내 (Prerequisites)](#컴퓨터-구성--필수-조건-안내-prerequisites)  
 -  [기술 스택(Technique Used)](#기술-스택-technique-used)  
 -  [설치 안내](#설치-안내)
 -  [팀 정보 (Team Information)](#팀-정보-team-information)
@@ -32,8 +31,6 @@
 ## 기능 설계 및 설명
 
 
-
-## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 
 
 ## 기술 스택 (Technique Used)
