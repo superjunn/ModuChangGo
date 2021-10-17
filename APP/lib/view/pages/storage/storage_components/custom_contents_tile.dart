@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomContentsTile extends StatelessWidget {
   final String content_name;
-  final int content_amount;
+  final int? content_amount;
 
   const CustomContentsTile({
     required this.content_name,

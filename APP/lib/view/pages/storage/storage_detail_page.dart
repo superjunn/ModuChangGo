@@ -20,7 +20,7 @@ class StorageDetailPage extends StatelessWidget {
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
         centerTitle: true,
-        title: Text("훈련용 창고"),
+        title: Text(this.storage_name),
         actions: [
           IconButton(
             onPressed: () {

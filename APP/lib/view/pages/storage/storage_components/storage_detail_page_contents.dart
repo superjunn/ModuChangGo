@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:moduchango_app/controller/storage_controller.dart';
 import 'package:moduchango_app/view/pages/storage/storage_components/custom_contents_tile.dart';
 
 class StorageDetailPageContents extends StatelessWidget {
   final String? storage_name;
   StorageDetailPageContents({required this.storage_name});
 
-  final contents = List.generate(20, (i) {
-    return CustomContentsTile(
-      content_amount: 12,
-      content_name: "방상외피",
-    );
-  });
-
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: contents,
-    );
+    StorageController s = Get.find();
+
+    return Obx(() => Column(
+          children: List.generate(s.contents.length, (i) {
+            return CustomContentsTile(
+              content_amount: s.contents[i].amount,
+              content_name: "${s.contents[i].contentName}",
+            );
+          }),
+        ));
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:moduchango_app/controller/storage_controller.dart';
 import 'package:moduchango_app/view/design/size.dart';
 import 'package:moduchango_app/view/pages/storage/storage_components/storage_image.dart';
 import 'package:moduchango_app/view/pages/storage/storage_detail_page.dart';
@@ -19,11 +20,13 @@ class StorageForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    StorageController s = Get.put(StorageController());
     return Container(
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: InkWell(
           onTap: () {
+            s.findByName(s.storages[this.storage_index].storageName!);
             Get.to(() => StorageDetailPage(
                   storage_name: this.storage_name,
                   storage_index: this.storage_index,
