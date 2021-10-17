@@ -8,8 +8,8 @@ class HomePageHeader extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/banner2.jpg'),
-          fit: BoxFit.cover,
+          image: AssetImage('assets/banner.jpg'),
+          fit: BoxFit.fitHeight,
         ),
       ),
       width: double.infinity,
@@ -20,14 +20,14 @@ class HomePageHeader extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             SizedBox(height: 350),
-            Text(
-              "병영창고 정리의 혁신",
-              style: h1(),
-            ),
-            Text(
-              "모두의 창고를 통해 부대 병영창고 정리의 혁신을 느껴보세요",
-              style: h2(),
-            ),
+            // Text(
+            //   "병영창고 정리의 혁신",
+            //   style: h1(),
+            // ),
+            // Text(
+            //   "모두의 창고를 통해 부대 병영창고 정리의 혁신을 느껴보세요",
+            //   style: h2(),
+            // ),
           ],
         ),
       ),
