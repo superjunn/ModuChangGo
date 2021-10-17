@@ -1,7 +1,13 @@
 
 # 모두의창고
+![모두의 창고](https://user-images.githubusercontent.com/81310047/137625503-6dac5122-7bff-4092-ba17-959849d5d4b3.png)
 
-![image](https://user-images.githubusercontent.com/81310047/136657199-26290e89-19f4-4573-b7f3-6895ab4f4dad.png)
+<p align="center">
+<a href="https://sulfuric-comet-5bd.notion.site/201f76c4b2d442bd8fc1e5c6447e32ac">
+<img src="https://img.shields.io/badge/NOTION-team_page-green?&style=for-the-badge&logo=notion">
+</a>
+</p>
+
 
 </p>
 <p align="center">
@@ -13,7 +19,6 @@
 ## 목차
 -  [프로젝트 소개](#프로젝트-소개)  
 -   [기능 설계 및 설명](#기능-설계-및-설명)  
--  [컴퓨터 구성 / 필수 조건 안내 (Prerequisites)](#컴퓨터-구성--필수-조건-안내-prerequisites)  
 -  [기술 스택(Technique Used)](#기술-스택-technique-used)  
 -  [설치 안내](#설치-안내)
 -  [팀 정보 (Team Information)](#팀-정보-team-information)
@@ -22,15 +27,18 @@
 ## 프로젝트 소개
 
 **모두의 창고** 프로젝트는 국군 군수품 관리 체계의 편리함을 증가시키기 위해 개발된 프로젝트입니다. 
-현재 군수품 관리는 실제 창고의 현황(오프라인)과  관리체계(온라인)가 연결되어 있지 않아 보급 담당인원이 일일히 처리하는 상태입니다. 
-이 뿐 아니라 창고 정리 때마다 개수를 세며 최신화를 하고있는 상황입니다.  
+현재 군수품 관리는 실제 창고의 현황(오프라인)과 관리체계(온라인)가 연결되어 있지 않아 창고 정리 때마다 개수를 세며 최신화를 하고있는 상황입니다. 보급 담당인원이 일일히 처리하는 상태입니다. 
+
 국방개혁 2.0의 군수개혁 추진에 맞게 모두의 창고는 물품을 IOT,앱,웹 기반으로 군수품 원격 관리체계를 구축하는 것이 목표입니다. 이에 맞게 크게 2가지 키워드를 바탕으로 프로젝트를 진행하였습니다.
+![image](https://user-images.githubusercontent.com/81310047/137630858-65433ec1-5d05-4a96-95b1-b7089d725f7e.png)
 
-## 기능 설계 및 설명
+![image](https://user-images.githubusercontent.com/81310047/137630861-a9660501-e018-4e7d-9638-36aca646c996.png)
 
 
 
-## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
+## 기능 설계
+
+
 
 
 ## 기술 스택 (Technique Used)
