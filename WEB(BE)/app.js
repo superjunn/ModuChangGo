@@ -14,6 +14,7 @@ const historyRouter = require('./routes/history');
 
 app.use(logger('dev'));
 app.use(cookieParser());
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
