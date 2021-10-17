@@ -34,9 +34,9 @@ class HomePageStoreHouse extends StatelessWidget {
                 Obx(
                   () => Wrap(
                     children: List.generate(
-                      (5),
+                      (s.storages.length + 1),
                       (index) {
-                        if (index != 4) {
+                        if (index != s.storages.length) {
                           return StorageForm(
                             formWidth: storage_edge_s,
                             storageName: s.storages[index].storageName!,
