@@ -23,7 +23,7 @@ router.put('/edit', function(req, res){
     User.updateOne({user_id: req.body.user_id }, { $set: req.body }, function(err, output){
         if(err) res.status(500).json({ error: 'database failure' });
         if(!output.modifiedCount) return res.status(404).json({ error: 'storage not found' });
-        res.json( {result: 1} );
+        res.json( {updateUser:req.body.user_id, result: 1} );
         }
     );
 });
