@@ -35,7 +35,7 @@ class StorageDetailPage extends StatelessWidget {
           SizedBox(height: medium_gap),
           StorageDetailPageImages(storage_index: this.storage_index),
           SizedBox(height: medium_gap),
-          StorageDetailPageContents(),
+          StorageDetailPageContents(storage_name: this.storage_name),
         ],
       ),
     );

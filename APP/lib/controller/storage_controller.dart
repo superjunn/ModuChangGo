@@ -16,4 +16,6 @@ class StorageController extends GetxController {
     List<Storage> storages = await _storageRepository.findAll();
     this.storages.value = storages;
   }
+
+  Future<void> findBtName(String storageName) async {}
 }
