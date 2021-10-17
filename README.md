@@ -1,7 +1,23 @@
+
 # 모두의창고
 
 ![image](https://user-images.githubusercontent.com/81310047/136657199-26290e89-19f4-4573-b7f3-6895ab4f4dad.png)
 
+</p>
+<p align="center">
+	<a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/search?l=JavaScript&type=code"><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper"></a>
+	<a href="https://github.com/osamhack2021/app_web_IoT_UMCS_Team60/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper?color=success"></a>
+	<a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper"></a>
+</p>
+
+## 목차
+-  [프로젝트 소개](#프로젝트-소개)  
+-   [기능 설계 및 설명](#기능-설계-및-설명)  
+-  [컴퓨터 구성 / 필수 조건 안내 (Prerequisites)](#컴퓨터-구성--필수-조건-안내-prerequisites)  
+-  [기술 스택(Technique Used)](#기술-스택-technique-used)  
+-  [설치 안내](#설치-안내)
+-  [팀 정보 (Team Information)](#팀-정보-team-information)
+-  [저작권 및 사용권 정보(Copyleft / End User License)](#저작권-및-사용권-정보-copyleft--end-user-license)
 
 ## 프로젝트 소개
 
@@ -16,11 +32,11 @@
 
 
 
-## 컴퓨터 구성 / 필수 조건 안내(Prerequisites)
+## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
 
 
-## 기술 스택(Technique Used)
-### Server(back-end)
+## 기술 스택 (Technique Used)
+### Back-end (server)
 
 ### Front-end
 
@@ -102,5 +118,5 @@
 </table>
 
 
-## 저작권 및 사용권 정보(Copyleft/ End User Licsense)
+## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/blob/main/LICENSE)
