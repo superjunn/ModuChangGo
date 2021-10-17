@@ -10,8 +10,12 @@ class StorageRepository {
     dynamic body = response.body;
     print("body : ${body}");
 
-    List<Storage> storages =
-        body.map((storage) => Storage.fromJson(storage)).toList();
-    return storages;
+    if (body.runtimeType == List) {
+      List<dynamic> temp = body;
+      List<Storage> storages = temp.map((e) => Storage.fromJson(e)).toList();
+      return storages;
+    } else {
+      return <Storage>[];
+    }
   }
 }

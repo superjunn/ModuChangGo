@@ -18,9 +18,10 @@ class PageHeaderLogo extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(width: monitorWidth * 0.01),
-          Icon(
-            Icons.home,
-            size: 40,
+          SizedBox(
+            width: 35,
+            height: 35,
+            child: Image.asset('moduchango_logo.png'),
           ),
           SizedBox(
             width: gap_xs,
