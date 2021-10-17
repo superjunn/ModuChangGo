@@ -2,12 +2,19 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 final storageImages = [
-  "https://picsum.photos/240/120",
-  "https://picsum.photos/240/120",
-  "https://picsum.photos/240/120"
+  "assets/chango1.jpg",
+  "assets/chango1_1.jpg",
+  "assets/chango2.jpg",
+  "assets/chango2_1.jpg",
+  "assets/chango3.jpg",
+  "assets/chango4.jpg",
 ];
 
 class StorageDetailPageImages extends StatelessWidget {
+  final int storage_index;
+
+  const StorageDetailPageImages({required this.storage_index});
+
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
@@ -23,7 +30,7 @@ class StorageDetailPageImages extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 5.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
-                child: Image.network(
+                child: Image.asset(
                   url,
                   fit: BoxFit.cover,
                 ),

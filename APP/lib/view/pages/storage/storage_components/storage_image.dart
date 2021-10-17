@@ -14,14 +14,19 @@ class StorageImage extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Image.network(image_link),
+          Image.asset(
+            image_link,
+            width: 170,
+            height: 80,
+            fit: BoxFit.cover,
+          ),
           Positioned(
             child: Text(
               storage_name,
               style: TextStyle(
-                fontSize: 16,
-                color: Colors.white,
-              ),
+                  fontSize: 16,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
             ),
           ),
         ],

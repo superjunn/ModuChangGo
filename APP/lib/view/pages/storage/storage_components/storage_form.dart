@@ -5,11 +5,13 @@ import 'package:moduchango_app/view/pages/storage/storage_components/storage_ima
 import 'package:moduchango_app/view/pages/storage/storage_detail_page.dart';
 
 class StorageForm extends StatelessWidget {
+  final int storage_index;
   final String storage_name;
   final String storage_location;
   final String storage_image;
 
   const StorageForm({
+    required this.storage_index,
     required this.storage_name,
     required this.storage_location,
     required this.storage_image,
@@ -22,7 +24,10 @@ class StorageForm extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         child: InkWell(
           onTap: () {
-            Get.to(() => StorageDetailPage());
+            Get.to(() => StorageDetailPage(
+                  storage_name: this.storage_name,
+                  storage_index: this.storage_index,
+                ));
           },
           child: Material(
             borderRadius: BorderRadius.circular(10),

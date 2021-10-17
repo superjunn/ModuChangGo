@@ -5,6 +5,14 @@ import 'package:moduchango_app/view/pages/storage/storage_components/storage_det
 import 'package:moduchango_app/view/pages/storage/storage_components/storage_detail_page_images.dart';
 
 class StorageDetailPage extends StatelessWidget {
+  final String storage_name;
+  final int storage_index;
+
+  const StorageDetailPage({
+    required this.storage_name,
+    required this.storage_index,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +33,7 @@ class StorageDetailPage extends StatelessWidget {
       body: ListView(
         children: [
           SizedBox(height: medium_gap),
-          StorageDetailPageImages(),
+          StorageDetailPageImages(storage_index: this.storage_index),
           SizedBox(height: medium_gap),
           StorageDetailPageContents(),
         ],

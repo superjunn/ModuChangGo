@@ -8,6 +8,13 @@ import 'package:moduchango_app/view/pages/storage/storage_add_page.dart';
 class StorageMainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    List<String> selectedPic = [
+      "assets/chango1.jpg",
+      "assets/chango2.jpg",
+      "assets/chango3.jpg",
+      "assets/chango4.jpg",
+    ];
+
     StorageController s = Get.put(StorageController());
     return Obx(
       () => Scaffold(
@@ -26,9 +33,10 @@ class StorageMainPage extends StatelessWidget {
             children: List.generate(
               s.storages.length,
               (index) => StorageForm(
+                storage_index: index,
                 storage_name: "${s.storages[index].storageName}",
                 storage_location: "${s.storages[index].location}",
-                storage_image: "https://picsum.photos/240/120",
+                storage_image: selectedPic[index],
               ),
             ),
           ),
