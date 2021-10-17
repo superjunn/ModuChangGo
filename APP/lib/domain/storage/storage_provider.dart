@@ -7,4 +7,7 @@ class StorageProvider extends GetConnect {
 
   Future<Response> findByName(String storageName) =>
       get("$host/storages/${storageName}");
+
+  Future<Response> deleteByName(String storageName) =>
+      delete("$host/storages/${storageName}");
 }

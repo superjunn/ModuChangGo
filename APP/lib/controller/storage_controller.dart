@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:moduchango_app/domain/storage/content.dart';
+import 'package:moduchango_app/domain/storage/delete_add_edt.dart';
 import 'package:moduchango_app/domain/storage/storage.dart';
 import 'package:moduchango_app/domain/storage/storage_repository.dart';
 
@@ -12,6 +13,13 @@ class StorageController extends GetxController {
   void onInit() {
     super.onInit();
     findAll();
+  }
+
+  Future<void> deleteByName(String storageName) async {
+    int result = await _storageRepository.deleteByName(storageName);
+    if (result == 1) {
+      print("서버 쪽 삭제 성공");
+    }
   }
 
   Future<void> findAll() async {

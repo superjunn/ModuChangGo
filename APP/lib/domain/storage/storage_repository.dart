@@ -1,10 +1,17 @@
 import 'package:get/get.dart';
 import 'package:moduchango_app/domain/storage/content.dart';
+import 'package:moduchango_app/domain/storage/delete_add_edt.dart';
 import 'package:moduchango_app/domain/storage/storage.dart';
 import 'package:moduchango_app/domain/storage/storage_provider.dart';
 
 class StorageRepository {
   final StorageProvider _storageProvider = StorageProvider();
+
+  Future<int> deleteByName(String storageName) async {
+    Response response = await _storageProvider.deleteByName(storageName);
+    dynamic body = response.body;
+    return 1;
+  }
 
   Future<List<Content>> findByName(String storageName) async {
     Response response = await _storageProvider.findByName(storageName);
@@ -23,7 +30,6 @@ class StorageRepository {
   Future<List<Storage>> findAll() async {
     Response response = await _storageProvider.findAll();
     dynamic body = response.body;
-    print(body);
     if (body.runtimeType == List) {
       List<dynamic> temp = body;
       List<Storage> storages = temp.map((e) => Storage.fromJson(e)).toList();

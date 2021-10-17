@@ -13,6 +13,10 @@ class StorageMainPage extends StatelessWidget {
       "assets/chango2.jpg",
       "assets/chango3.jpg",
       "assets/chango4.jpg",
+      "assets/chango5.jpg",
+      "assets/chango6.jpg",
+      "assets/chango7.jpg",
+      "assets/chango8.jpg",
     ];
 
     StorageController s = Get.put(StorageController());
