@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Storage = require('../models/storages');
-
+const Product = require('../models/product');
 
 // 창고 현황
 router.get('/', function(req,res){
@@ -13,7 +13,7 @@ router.get('/', function(req,res){
 
 // 창고 자세히 보기
 router.get('/:storageName', function(req, res){
-    Storage.find({storageName: req.params.storageName}, function(err, product){
+    Product.find({storageName: req.params.storageName}, function(err, product){
         if(err) return res.status(500).json({error: err});
         if(!product) return res.status(404).json({error: 'product not found'});
         res.json(product);
