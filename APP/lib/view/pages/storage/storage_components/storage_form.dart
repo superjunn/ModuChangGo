@@ -4,9 +4,6 @@ import 'package:moduchango_app/controller/storage_controller.dart';
 import 'package:moduchango_app/view/design/size.dart';
 import 'package:moduchango_app/view/pages/storage/storage_components/storage_image.dart';
 import 'package:moduchango_app/view/pages/storage/storage_detail_page.dart';
-import 'package:moduchango_app/view/pages/storage/storage_main_page.dart';
-
-import '../../home_page.dart';
 
 class StorageForm extends StatelessWidget {
   final int storage_index;
