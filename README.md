@@ -1,6 +1,7 @@
 
 # 모두의창고
-![logo](https://user-images.githubusercontent.com/81310047/137625431-5b87d05c-4329-4e04-b01b-343474a171cc.jpg)
+![모두의 창고](https://user-images.githubusercontent.com/81310047/137625503-6dac5122-7bff-4092-ba17-959849d5d4b3.png)
+
 
 
 
