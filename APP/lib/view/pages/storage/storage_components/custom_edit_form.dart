@@ -40,9 +40,7 @@ class CustomEditForm extends StatelessWidget {
               title: s.storages[storage_index].storageName!,
               myValid: (value) {
                 if (value!.isEmpty) {
-                  return "관리자 ID를 입력하세요.";
-                } else if (!isAlphanumeric(value)) {
-                  return "ID는 영어와 숫자로만 이루어집니다.";
+                  return "수정할 이름을 입력하세요.";
                 } else {
                   return null;
                 }
@@ -59,13 +57,10 @@ class CustomEditForm extends StatelessWidget {
               ),
             ),
             CustomEditTextFormField(
-                title: "비밀번호",
+                title: s.storages[storage_index].location!,
                 myValid: (value) {
                   if (value!.isEmpty) {
-                    return "비밀번호를 입력하세요.";
-                  } else if (!(3 < value.toString().length &&
-                      value.toString().length < 13)) {
-                    return "비밀번호는 4자 이상 12자 이하입니다.";
+                    return "수정할 창고 위치를 입력하세요.";
                   } else {
                     return null;
                   }
