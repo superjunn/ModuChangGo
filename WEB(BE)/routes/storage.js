@@ -37,7 +37,7 @@ router.post('/add', function(req, res){
             return;
         }
 
-        res.json({result: 1});
+        res.json({storage:storage, result: 1});
 
     });
 });
@@ -47,17 +47,17 @@ router.put('/edit/:storageName', function(req, res){
     Storage.updateOne({storageName: req.params.storageName }, { $set: req.body }, function(err, output){
         if(err) res.status(500).json({ error: 'database failure' });
         if(!output.modifiedCount) return res.status(404).json({ error: 'storage not found' });
-        res.json( {result: 1} );
+        res.json( {updateStorage:req.params.storageName, result: 1} );
         }
     );
 });
 
 //창고 삭제
 router.delete('/:storageName', function(req, res){
-    Storage.remove({ storageName: req.params.storageName }, function(err, output){
-        if(err) return res.status(500).json({ error: "delete failed"})
-
-        res.json({result: 1});
+    Storage.deleteOne({ storageName: req.params.storageName }, function(err, output){
+        if(err) return res.status(500).json({ error: "delete failed"});
+		if(!output.deletedCount) return res.status(404).json({ error: 'storage not found' });
+        res.json({deleteStorage:req.params.storageName, result: 1});
     })
 });
 
