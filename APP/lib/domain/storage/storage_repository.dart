@@ -9,7 +9,6 @@ class StorageRepository {
   Future<List<Content>> findByName(String storageName) async {
     Response response = await _storageProvider.findByName(storageName);
     dynamic body = response.body;
-    print(body);
     if (body.runtimeType == List) {
       List<dynamic> temp = body;
       List<Content> contents = temp.map((e) => Content.fromJson(e)).toList();
