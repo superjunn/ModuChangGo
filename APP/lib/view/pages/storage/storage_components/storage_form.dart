@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango_app/controller/storage_controller.dart';
 import 'package:moduchango_app/view/design/size.dart';
+import 'package:moduchango_app/view/pages/home_page.dart';
 import 'package:moduchango_app/view/pages/storage/storage_components/storage_image.dart';
 import 'package:moduchango_app/view/pages/storage/storage_detail_page.dart';
+import 'package:moduchango_app/view/pages/storage/storage_edit_page.dart';
 
 class StorageForm extends StatelessWidget {
   final int storage_index;
@@ -63,7 +65,13 @@ class StorageForm extends StatelessWidget {
                         children: [
                           Expanded(
                             child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.to(() => StorageEditPage(
+                                      storage_index: this.storage_index,
+                                      storage_name: this.storage_name,
+                                      storage_location: this.storage_location,
+                                    ));
+                              },
                               child: Text("수정"),
                               style: TextButton.styleFrom(
                                   padding: EdgeInsets.zero,
