@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 class CustomEditTextFormField extends StatelessWidget {
   final String title;
   final myValid;
+  final controller;
 
-  const CustomEditTextFormField({required this.title, required this.myValid});
+  const CustomEditTextFormField({
+    required this.title,
+    required this.myValid,
+    this.controller,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +19,7 @@ class CustomEditTextFormField extends StatelessWidget {
         TextFormField(
           // validator: (value) => value!.isEmpty ? "Please enter some text" : null
           // 값이 없으면 Please enter some text 경고 화면 표시
+          controller: controller,
           validator: myValid, // Bonus way to provide validator
           obscureText: title == "Password" ? true : false,
           decoration: InputDecoration(
