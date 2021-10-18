@@ -15,7 +15,7 @@ const createToken = (userId) => {
 };
 
 
-// user 정보 db에 저장
+// 회원가입
 const signUp = async function (req, res) {
     const user = new User();
     user.user_id = req.body.user_id;
@@ -38,26 +38,30 @@ const signUp = async function (req, res) {
 };
 
 // 로그인
-const signIn = async (req, res, next) => {
+const signIn = async (req, res) => {
   try {
 
     const id = req.body.user_id;
     const password = req.body.user_password;
 
-    if (!id || !password) return res.json({result: 0, error: "wrong input"});
+    if (!id || !password) 
+		return res.json({result: 0, error: "wrong input"});
 
     const user = await User.findOne({ user_id:id });
 
-    if (!user) return res.json({result: 0, error: "no user data"});
+    if (!user) 
+		return res.json({result: 0, error: "no user data"});
 
     const passwordCheck = await bcrypt.compare(password, user.user_password);
 
-    if (!passwordCheck) return res.json({result: 0, error: "wrong password"});
-    const token = createToken(id);
+    if (!passwordCheck) 
+		return res.json({result: 0, error: "wrong password"});
+    
+	const token = createToken(id);
 	res.json({result:1, user:user, token:token});
 
   } catch (err) {
-    next(err);
+    return res.json({result: 0, error: "login error"});
   }
 };
 
