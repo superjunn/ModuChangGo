@@ -9,6 +9,9 @@ import 'package:moduchango/pages/storehouse_page/storehouse_page_components/stor
 
 class StoreHouseContentsDetailViewPage extends StatelessWidget {
   var refreshKey = GlobalKey<RefreshIndicatorState>();
+  final String storageName;
+
+  StoreHouseContentsDetailViewPage({required this.storageName});
 
   @override
   Widget build(BuildContext context) {
@@ -34,32 +37,23 @@ class StoreHouseContentsDetailViewPage extends StatelessWidget {
   _buildBody() {
     StorageController s = Get.put(StorageController());
 
-    Obx(
-      () => RefreshIndicator(
-        key: refreshKey,
-        onRefresh: () async {
-          await s.findAll();
-        },
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            StoreHousePageLeftMenuBar(),
-            Expanded(
-              child: Wrap(
-                spacing: 10,
-                children: List.generate(
-                  s.contents.length,
-                  (index) => ContentsTile(
-                    contentsName: "${s.contents[index].contentName}",
-                    image: "${s.contents[index].amount}",
-                    niin: "${s.contents[index].niin}",
-                  ),
-                ),
-              ),
-            ),
-          ],
+    Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        StoreHousePageLeftMenuBar(),
+        Expanded(
+          child: Wrap(
+            spacing: 10,
+            children: List.generate(
+                3,
+                (index) => ContentsTile(
+                      contentsName: "방상외피",
+                      amount: "훈련용창고",
+                      niin: "띠바",
+                    )),
+          ),
         ),
-      ),
+      ],
     );
   }
 }

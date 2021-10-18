@@ -29,7 +29,7 @@ class StorageForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    StorageController s = Get.find();
+    StorageController s = Get.put(StorageController());
     s.findAll();
 
     return Padding(
@@ -38,7 +38,8 @@ class StorageForm extends StatelessWidget {
         onTap: () {
           if (stat == Status.view) {
             s.findByName("$storageName");
-            Get.to(() => StoreHouseContentsDetailViewPage());
+            Get.to(() =>
+                StoreHouseContentsDetailViewPage(storageName: storageName));
           } else if (stat == Status.init) {
             Get.to(() => StorageInitPage());
           } else if (stat == Status.edit) {
@@ -66,7 +67,7 @@ class StorageForm extends StatelessWidget {
             // height: formHeight,
             child: Column(
               children: [
-                StorageImage(image_id: image_id),
+                StorageImage(image_id: image_id, storageName: storageName),
                 Text("창고 이름 : $storageName", style: hbody(), maxLines: 1),
                 Text("창고 위치 : $location", style: hbody(), maxLines: 1),
                 SizedBox(
@@ -76,8 +77,11 @@ class StorageForm extends StatelessWidget {
                       Expanded(
                         child: TextButton(
                           onPressed: () {
-                            Get.to(() =>
-                                StorageEditPage(storageName: storageName));
+                            Get.to(() => StorageEditPage(
+                                  storageName: storageName,
+                                  image: image_id,
+                                  location: location,
+                                ));
                           },
                           child: Text("수정"),
                           style: TextButton.styleFrom(

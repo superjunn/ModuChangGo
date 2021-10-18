@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 class ContentsTile extends StatelessWidget {
   final String contentsName;
   final String niin;
-  final String image;
+  final String amount;
 
   const ContentsTile({
     required this.contentsName,
     required this.niin,
-    required this.image,
+    required this.amount,
   });
 
   @override
@@ -20,7 +20,7 @@ class ContentsTile extends StatelessWidget {
         },
         child: Icon(Icons.storage),
       ),
-      title: Text("${contentsName} : $image개"),
+      title: Text("${contentsName} : $amount개"),
       subtitle: Text("인식번호 : $niin"),
     );
   }

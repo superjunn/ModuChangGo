@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:moduchango/components/common/custom_text_form_field.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
+import 'package:moduchango/controller/storage_controller.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_page_components/storehouse_page_left_menu_bar.dart';
 
 class StorageEditPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   final String? storageName;
+  final String? location;
+  final int? image;
 
-  StorageEditPage({this.storageName});
+  StorageEditPage({this.storageName, this.location, this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +37,8 @@ class StorageEditPage extends StatelessWidget {
   }
 
   _buildBody() {
+    StorageController s = Get.put(StorageController());
+    s.findByName(storageName!);
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -52,11 +58,15 @@ class StorageEditPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CustomTextFormField(
-                          titleText: "창고 이름", hintText: "훈련용 창고", width: 340),
+                          titleText: "창고 이름",
+                          hintText: "$storageName",
+                          width: 340),
                       CustomTextFormField(
-                          titleText: "창고 이미지", hintText: "231", width: 340),
+                          titleText: "창고 위치",
+                          hintText: "$location",
+                          width: 340),
                       CustomTextFormField(
-                          titleText: "창고 위치", hintText: "전투연병장 뒤쪽", width: 340),
+                          titleText: "창고 이미지", hintText: "$image", width: 340),
                     ],
                   ),
                 ),
