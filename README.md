@@ -126,7 +126,7 @@
 </tbody>
 </table>
 
-
+## 기대효과 및 발전가능성
 
 ## 기술 스택 (Technique Used)
 <p align="center"><img src="/image/tecstack/tecstack.png"></p>
