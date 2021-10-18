@@ -12,10 +12,16 @@ import 'package:moduchango/pages/test_page/test_page.dart';
 class StorageForm extends StatelessWidget {
   final formWidth;
   final Status stat;
+  final String storageName;
+  final String location;
+  final int image_id;
 
   const StorageForm({
     required this.formWidth,
     this.stat = Status.view,
+    required this.storageName,
+    required this.location,
+    required this.image_id,
   });
 
   @override
@@ -52,10 +58,10 @@ class StorageForm extends StatelessWidget {
             // height: formHeight,
             child: Column(
               children: [
-                StorageImage(),
-                Text("훈련용 창고", style: hbody()),
-                Text("선반 개수 : 5개", style: hbody()),
-                Text("전투연병장 뒤쪽", style: hbody()),
+                StorageImage(image_id: image_id),
+                Text("$storageName", style: hbody()),
+                Text("$storageName", style: hbody()),
+                Text("$location", style: hbody()),
                 SizedBox(
                   // height: 30,
                   child: Row(
