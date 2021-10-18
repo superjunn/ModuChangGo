@@ -19,6 +19,6 @@ class Storage {
       : id = json["_id"],
         storageName = json["storageName"],
         location = json["location"],
-        manager = json["manager"],
+        manager = json["manager"] ?? "armyTiger",
         image = json["image"] ?? 1;
 }

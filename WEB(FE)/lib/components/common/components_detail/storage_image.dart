@@ -3,8 +3,9 @@ import 'package:moduchango/design_data/styles.dart';
 
 class StorageImage extends StatelessWidget {
   final int image_id;
+  final String storageName;
 
-  const StorageImage({required this.image_id});
+  const StorageImage({required this.image_id, required this.storageName});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class StorageImage extends StatelessWidget {
           ),
           Positioned(
             child: Text(
-              "훈련용 창고",
+              "$storageName",
               style: h2(mColor: Colors.white),
             ),
           ),

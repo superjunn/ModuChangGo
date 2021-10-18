@@ -27,9 +27,10 @@ class StorageRepository {
     Response response = await _storageProvider.findByName(storageName);
     dynamic body = response.body;
     print("print!!!@!@ : $body");
-    if (body.runtimeType == List) {
+    if (true) {
       List<dynamic> temp = body;
       List<Content> contents = temp.map((e) => Content.fromJson(e)).toList();
+      print("contents!!@#!@# :L ${contents[0].contentName}");
       return contents;
     } else {
       print("런타임타입이 리스트가 아니어서 디폴트 빈리스트 리턴 in Repository findByName !!");
