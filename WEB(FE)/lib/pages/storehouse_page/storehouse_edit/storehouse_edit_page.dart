@@ -7,6 +7,9 @@ import 'package:moduchango/pages/storehouse_page/storehouse_page_components/stor
 
 class StorageEditPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
+  final String? storageName;
+
+  StorageEditPage({this.storageName});
 
   @override
   Widget build(BuildContext context) {
@@ -49,17 +52,11 @@ class StorageEditPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CustomTextFormField(
-                          titleText: "창고 이름",
-                          hintText: "훈련용 창고",
-                          width: 340),
+                          titleText: "창고 이름", hintText: "훈련용 창고", width: 340),
                       CustomTextFormField(
-                          titleText: "창고 이미지",
-                          hintText: "231",
-                          width: 340),
+                          titleText: "창고 이미지", hintText: "231", width: 340),
                       CustomTextFormField(
-                          titleText: "창고 위치",
-                          hintText: "전투연병장 뒤쪽",
-                          width: 340),
+                          titleText: "창고 위치", hintText: "전투연병장 뒤쪽", width: 340),
                     ],
                   ),
                 ),

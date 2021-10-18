@@ -11,6 +11,9 @@ import 'package:moduchango/pages/storehouse_page/storehouse_page_components/stor
 
 class StoreHouseMyStoragesViewPage extends StatelessWidget {
   var refreshKey = GlobalKey<RefreshIndicatorState>();
+  final String? staty;
+
+  StoreHouseMyStoragesViewPage({this.staty});
 
   @override
   Widget build(BuildContext context) {

@@ -32,7 +32,7 @@ class StoreHouseContentsDetailViewPage extends StatelessWidget {
   }
 
   _buildBody() {
-    StorageController s = Get.find();
+    StorageController s = Get.put(StorageController());
 
     Obx(
       () => RefreshIndicator(

@@ -42,11 +42,9 @@ class StorageForm extends StatelessWidget {
           } else if (stat == Status.init) {
             Get.to(() => StorageInitPage());
           } else if (stat == Status.edit) {
-            s.findByName("$storageName");
-            Get.to(() => StorageEditPage());
+            Get.to(() => StorageEditPage(storageName: storageName));
           } else if (stat == Status.delete) {
-            s.findByName("$storageName");
-            s.deleteByName(s.contents[0].storageName!);
+            s.deleteByName("$storageName");
             Get.to(() => HomePage());
             // 여기 딜리트 페이지로 가는게 아니라 alert 띄워야됨
           } else if (stat == Status.history) {
@@ -78,7 +76,8 @@ class StorageForm extends StatelessWidget {
                       Expanded(
                         child: TextButton(
                           onPressed: () {
-                            Get.to(() => StorageEditPage());
+                            Get.to(() =>
+                                StorageEditPage(storageName: storageName));
                           },
                           child: Text("수정"),
                           style: TextButton.styleFrom(
@@ -88,7 +87,10 @@ class StorageForm extends StatelessWidget {
                       ),
                       Expanded(
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            StorageController s = Get.put(StorageController());
+                            s.deleteByName(storageName);
+                          },
                           child: Text("삭제"),
                           style: TextButton.styleFrom(
                               padding: EdgeInsets.zero,
