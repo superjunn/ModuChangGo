@@ -1,6 +1,6 @@
 
 # 모두의창고
-<p align="center"><img src="/image/.png"></p>
+<p align="center"><img src="/image/모두의 창고3.PNG"></p>
 
 <p align="center">
 <a href="https://sulfuric-comet-5bd.notion.site/201f76c4b2d442bd8fc1e5c6447e32ac">
