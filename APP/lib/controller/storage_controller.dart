@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:moduchango_app/domain/storage/content.dart';
-import 'package:moduchango_app/domain/storage/delete_add_edt.dart';
+import 'package:moduchango_app/domain/storage/delete_add_edit.dart';
 import 'package:moduchango_app/domain/storage/storage.dart';
 import 'package:moduchango_app/domain/storage/storage_repository.dart';
 
