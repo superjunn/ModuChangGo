@@ -42,7 +42,7 @@
 
 
 ## 기술 스택 (Technique Used)
-<p align="center"><img src="/image/tecstack.png"></p>
+<p align="center"><img src="/image/tecstack/tecstack.png"></p>
 
 ### FrontEnd
 <table><tbody>
