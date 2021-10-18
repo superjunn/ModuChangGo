@@ -4,7 +4,6 @@ const User = require('../models/users');
 const userController = require('./controllers/userControllers');
 const verifyToken = require('./middlewares/authorization');
 
-/* GET users listing. */
 router.get('/', function(req,res){
     User.find({}, function(err, user){
         if(err) return res.status(500).send({error: 'database failure'});

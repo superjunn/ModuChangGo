@@ -13,12 +13,16 @@ import 'package:validators/validators.dart';
 class CustomEditForm extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   final int storage_index;
+  final _storageName = TextEditingController();
+  final _location = TextEditingController();
 
   CustomEditForm({required this.storage_index});
 
   @override
   Widget build(BuildContext context) {
     StorageController s = Get.find();
+    _storageName.text = "${s.storages[storage_index].storageName}";
+    _location.text = "${s.storages[storage_index].location}";
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Form(
@@ -37,6 +41,7 @@ class CustomEditForm extends StatelessWidget {
               ),
             ),
             CustomEditTextFormField(
+              controller: _storageName,
               title: s.storages[storage_index].storageName!,
               myValid: (value) {
                 if (value!.isEmpty) {
@@ -57,6 +62,7 @@ class CustomEditForm extends StatelessWidget {
               ),
             ),
             CustomEditTextFormField(
+                controller: _location,
                 title: s.storages[storage_index].location!,
                 myValid: (value) {
                   if (value!.isEmpty) {
@@ -77,7 +83,16 @@ class CustomEditForm extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30)),
                   minimumSize: Size(100, 40),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  print(_storageName.text);
+                  if (_formKey.currentState!.validate()) {
+                    s.updateByStorageName(
+                        s.storages[storage_index].storageName!,
+                        _storageName.text,
+                        _location.text);
+                    Get.back();
+                  }
+                },
                 child: Text("수정 완료"),
               ),
             ),

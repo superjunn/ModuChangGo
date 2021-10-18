@@ -15,6 +15,11 @@ class StorageController extends GetxController {
     findAll();
   }
 
+  Future<void> updateByStorageName(
+      String orgStorageName, String newStorageName, String location) async {
+    await _storageRepository.update(orgStorageName, newStorageName, location);
+  }
+
   Future<void> deleteByName(String storageName) async {
     int result = await _storageRepository.deleteByName(storageName);
     if (result == 1) {

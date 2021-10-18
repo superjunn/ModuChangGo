@@ -6,6 +6,7 @@ import 'package:moduchango_app/view/pages/storage/storage_components/storage_for
 import 'package:moduchango_app/view/pages/storage/storage_add_page.dart';
 
 class StorageMainPage extends StatelessWidget {
+  var refreshKey = GlobalKey<RefreshIndicatorState>();
   @override
   Widget build(BuildContext context) {
     List<String> selectedPic = [
@@ -20,27 +21,34 @@ class StorageMainPage extends StatelessWidget {
     ];
 
     StorageController s = Get.put(StorageController());
+
     return Obx(
-      () => Scaffold(
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: kColor5,
-          tooltip: "창고 추가",
-          onPressed: () {
-            Get.to(() => StorageAddPage());
-          },
-          child: Icon(Icons.add, color: Colors.black),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: GridView.count(
-            crossAxisCount: 2,
-            children: List.generate(
-              s.storages.length,
-              (index) => StorageForm(
-                storage_index: index,
-                storage_name: "${s.storages[index].storageName}",
-                storage_location: "${s.storages[index].location}",
-                storage_image: selectedPic[index],
+      () => RefreshIndicator(
+        key: refreshKey,
+        onRefresh: () async {
+          await s.findAll();
+        },
+        child: Scaffold(
+          floatingActionButton: FloatingActionButton(
+            backgroundColor: kColor5,
+            tooltip: "창고 추가",
+            onPressed: () {
+              Get.to(() => StorageAddPage());
+            },
+            child: Icon(Icons.add, color: Colors.black),
+          ),
+          body: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: GridView.count(
+              crossAxisCount: 2,
+              children: List.generate(
+                s.storages.length,
+                (index) => StorageForm(
+                  storage_index: index,
+                  storage_name: "${s.storages[index].storageName}",
+                  storage_location: "${s.storages[index].location}",
+                  storage_image: selectedPic[index % 8],
+                ),
               ),
             ),
           ),

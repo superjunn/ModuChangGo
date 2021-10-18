@@ -10,4 +10,7 @@ class StorageProvider extends GetConnect {
 
   Future<Response> deleteByName(String storageName) =>
       delete("$host/storages/${storageName}");
+
+  Future<Response> update(String storageName, Map data) =>
+      put("$host/storages/edit/${storageName}", data);
 }
