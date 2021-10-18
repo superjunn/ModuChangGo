@@ -1,8 +1,8 @@
-class UpdateReqDto {
+class SaveReqDto {
   final String? storageName;
   final String? location;
 
-  UpdateReqDto(this.storageName, this.location);
+  SaveReqDto(this.storageName, this.location);
 
   Map<String, dynamic> toJson() => {
         "storageName": storageName,
