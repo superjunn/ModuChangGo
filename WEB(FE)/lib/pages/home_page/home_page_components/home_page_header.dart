@@ -6,7 +6,12 @@ class HomePageHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.greenAccent,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/banner.jpg"),
+          fit: BoxFit.fitHeight,
+        ),
+      ),
       width: double.infinity,
       height: header_height,
       child: Align(
