@@ -59,9 +59,9 @@ class StorageForm extends StatelessWidget {
             child: Column(
               children: [
                 StorageImage(image_id: image_id),
-                Text("$storageName", style: hbody()),
-                Text("$storageName", style: hbody()),
-                Text("$location", style: hbody()),
+                Text("$storageName", style: hbody(), maxLines: 1),
+                Text("$storageName", style: hbody(), maxLines: 1),
+                Text("$location", style: hbody(), maxLines: 1),
                 SizedBox(
                   // height: 30,
                   child: Row(
