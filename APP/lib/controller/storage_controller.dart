@@ -15,9 +15,20 @@ class StorageController extends GetxController {
     findAll();
   }
 
+  Future<void> save(String storageName, String location) async {
+    int result = await _storageRepository.save(storageName, location);
+    if (result == 1) {
+      print("서버 쪽 추가 성공");
+    }
+  }
+
   Future<void> updateByStorageName(
       String orgStorageName, String newStorageName, String location) async {
-    await _storageRepository.update(orgStorageName, newStorageName, location);
+    int result = await _storageRepository.update(
+        orgStorageName, newStorageName, location);
+    if (result == 1) {
+      print("서버 쪽 수정 성공");
+    }
   }
 
   Future<void> deleteByName(String storageName) async {

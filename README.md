@@ -42,12 +42,53 @@
 
 
 ## 기술 스택 (Technique Used)
-### Back-end (server)
+<p align="center"><img src="/image/tecstack/tecstack.png"></p>
 
-### Front-end
+### FrontEnd
+<table><tbody>
+ <tr>
+  <td width="80">
+   <div align="center"><a href="https://flutter.dev/" target="_blank"> <img src="/image/tecstack/flutter.png" width="90" height="60"/> </a><br>Flutter</div>
+  </td>
+ </tr>
+</tbody></table>
 
-### Iot
+### BackEnd
+<table><tbody>
+ <tr>
+  <td width="80">
+   <div align="center"><a href="https://nodejs.org" target="_blank"> <img src="/image/tecstack/nodejs.png" width="90" height="60"/> </a><br>Node.js</div>
+  </td>
+  <td width="100">
+   <div align="center"><a href="https://expressjs.com/ko/" target="_blank"> <img src="/image/tecstack/Expressjs.png" width="120" height="60"/></a><br>Express</div>
+  </td>
+  <td width="80">
+   <div align="center"><a href="https://www.javascript.com/" target="_blank"> <img src="/image/tecstack/javascript.png" width="90" height="60"/> </a><br>javascript</div>
+  </td>
+ </tr>
+</tbody></table>
 
+### DataBase
+<table><tbody>
+ <tr>
+  <td width="80">
+   <div align="center"><a href="https://www.mongodb.com/" target="_blank"> <img src="/image/tecstack/mongodb.png" width="90" height="60"/> </a><br>MongoDB</div>
+  </td>
+ </tr>
+</tbody></table>
+
+
+### IOT
+<table><tbody>
+ <tr>
+  <td width="80">
+   <div align="center"><a href="https://www.arduino.cc/" target="_blank"> <img src="/image/tecstack/arduino.png" width="90" height="60"/> </a><br>Arduino</div>
+  </td>
+  <td width="80">
+   <div align="center"><a href="https://www.nodemcu.com/index_en.html" target="_blank"> <img src="/image/tecstack/nodemcu.png" width="90" height="60"/> </a><br>Nodemcu</div>
+  </td>
+ </tr>
+</tbody></table>
 
 ## 설치 안내
 
@@ -126,3 +167,5 @@
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/blob/main/LICENSE)
+
+<p align="center"><img src="/image/모두의 창고4.PNG"></p>

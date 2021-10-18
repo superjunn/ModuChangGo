@@ -13,4 +13,6 @@ class StorageProvider extends GetConnect {
 
   Future<Response> update(String storageName, Map data) =>
       put("$host/storages/edit/${storageName}", data);
+
+  Future<Response> save(Map data) => post("$host/storages/add", data);
 }
