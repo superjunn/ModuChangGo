@@ -9,11 +9,13 @@ class HolderRepository {
   Future<List<Holder>> findAll() async {
     Response response = await _holderProvider.findAll();
     dynamic body = response.body;
-    print("레포지토리가 받아온 body는 ?? : ${body}");
+    print("레포지토리가 받아온 holder body는 ?? : ${body}");
+    print("holder repository 에서 런타입음 ?? : ${body.runtimeType}");
 
     if (body.runtimeType == List) {
       List<dynamic> temp = body;
       List<Holder> holders = temp.map((e) => Holder.fromJson(e)).toList();
+      print("holders is 정상적으로 넘어감 !");
       return holders;
     } else {
       print("런타임타입이 리스트가 아니어서 디폴트 빈리스트 리턴 in REpository !!");

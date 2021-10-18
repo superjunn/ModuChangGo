@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-const host = "https://jsonplaceholder.typicode.com/";
+const host = "https://jsonplaceholder.typicode.com";
 
 class HolderProvider extends GetConnect {
   Future<Response> findAll() => get("$host/posts");
