@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:moduchango_app/view/design/size.dart';
-import 'package:moduchango_app/view/pages/components/page_drawer.dart';
+import 'package:get/get.dart';
+import 'package:moduchango_app/controller/history_controller.dart';
+import 'package:moduchango_app/view/pages/stock_release_history/custom_history_tile.dart';
 
 class StockReleaseHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        SizedBox(height: medium_gap),
-        // StorageDetailPageImages(storage_index: this.storage_index),
-        SizedBox(height: medium_gap),
-        // StorageDetailPageContents(storage_name: this.storage_name),
-      ],
-    );
+    HistoryController h = Get.find();
+
+    return Obx(() => Column(
+          children: List.generate(h.history.length, (i) {
+            return CustomHistoryTile();
+          }),
+        ));
   }
 }
