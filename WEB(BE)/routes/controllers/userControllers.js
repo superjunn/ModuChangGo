@@ -16,21 +16,25 @@ const createToken = (userId) => {
 
 
 // user 정보 db에 저장
-const signUp = async function (req, res, next) {
-    try {
+const signUp = async function (req, res) {
+    const user = new User();
+    user.user_id = req.body.user_id;
+    user.user_password = await bcrypt.hash(req.body.user_password, 10);
+    user.user_army = req.body.user_army;
+		
+	const userCheck = await User.findOne({user_id:user.user_id});
+		
+	if (userCheck == null){
+		user.save(function(err){
+			if(err){
+				res.json({result: 0, error:err});
+			}
+			res.json({result: 1, user:user});
+		});				
+	} else {
+		res.json({result:0, error:"user already exists"});
+	}		
 
-        const user = new User();
-        user.user_id = req.body.user_id;
-        user.user_password = await bcrypt.hash(req.body.user_password, 10);
-        user.user_army = req.body.user_army;
-
-        user.save();
-
-        res.status(201).json({result: 1});
-    } catch (err) {
-        console.error(err);
-        next(err);
-    }
 };
 
 // 로그인
