@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/storage_image.dart';
+import 'package:moduchango/controller/storage_controller.dart';
 import 'package:moduchango/design_data/styles.dart';
 import 'package:moduchango/pages/history_page/history_byStorage_page/history_byStorage_view_page.dart';
 import 'package:moduchango/pages/home_page/home_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_delete/storehouse_delete_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_edit/storehouse_edit_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_init/storage_init_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_contents_detail_view_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_my_storages_view_page.dart';
 import 'package:moduchango/pages/test_page/test_page.dart';
 
 class StorageForm extends StatelessWidget {
@@ -26,18 +29,23 @@ class StorageForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    StorageController s = Get.find();
+    s.findAll();
+
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: InkWell(
         onTap: () {
           if (stat == Status.view) {
-            Get.to(() => TestPage());
+            s.findByName("$storageName");
+            Get.to(() => StoreHouseContentsDetailViewPage());
           } else if (stat == Status.init) {
             Get.to(() => StorageInitPage());
           } else if (stat == Status.edit) {
-            Get.to(() => StorageEditPage());
+            Get.to(() => StorageEditPage(storageName: storageName));
           } else if (stat == Status.delete) {
-            Get.to(() => StoreHouseDeletePage());
+            s.deleteByName("$storageName");
+            Get.to(() => HomePage());
             // 여기 딜리트 페이지로 가는게 아니라 alert 띄워야됨
           } else if (stat == Status.history) {
             Get.to(() => HistoryByStorageViewPage());
@@ -59,9 +67,8 @@ class StorageForm extends StatelessWidget {
             child: Column(
               children: [
                 StorageImage(image_id: image_id),
-                Text("$storageName", style: hbody(), maxLines: 1),
-                Text("$storageName", style: hbody(), maxLines: 1),
-                Text("$location", style: hbody(), maxLines: 1),
+                Text("창고 이름 : $storageName", style: hbody(), maxLines: 1),
+                Text("창고 위치 : $location", style: hbody(), maxLines: 1),
                 SizedBox(
                   // height: 30,
                   child: Row(
@@ -69,7 +76,8 @@ class StorageForm extends StatelessWidget {
                       Expanded(
                         child: TextButton(
                           onPressed: () {
-                            Get.to(() => StorageEditPage());
+                            Get.to(() =>
+                                StorageEditPage(storageName: storageName));
                           },
                           child: Text("수정"),
                           style: TextButton.styleFrom(
@@ -79,7 +87,10 @@ class StorageForm extends StatelessWidget {
                       ),
                       Expanded(
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            StorageController s = Get.put(StorageController());
+                            s.deleteByName(storageName);
+                          },
                           child: Text("삭제"),
                           style: TextButton.styleFrom(
                               padding: EdgeInsets.zero,

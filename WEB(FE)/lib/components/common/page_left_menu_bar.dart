@@ -9,7 +9,9 @@ class PageLeftMenuBar extends StatelessWidget {
   final List<dynamic> funpageRouteList;
 
   const PageLeftMenuBar(
-      {required this.title, required this.functionsList, required this.funpageRouteList});
+      {required this.title,
+      required this.functionsList,
+      required this.funpageRouteList});
 
   @override
   Widget build(BuildContext context) {

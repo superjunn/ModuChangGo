@@ -6,11 +6,13 @@ class CustomTextFormField extends StatelessWidget {
   final titleText;
   final hintText;
   final double width;
+  final controller;
 
   const CustomTextFormField({
     required this.titleText,
     required this.hintText,
     required this.width,
+    this.controller,
   });
 
   @override
@@ -18,7 +20,7 @@ class CustomTextFormField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(gap_xs),
       child: Row(
-        mainAxisAlignment : MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
             width: 100,
@@ -31,6 +33,7 @@ class CustomTextFormField extends StatelessWidget {
           SizedBox(
             width: width,
             child: TextFormField(
+              controller: controller,
               style: TextStyle(fontSize: 14, height: 1.5),
               obscureText: hintText == "비밀번호를 입력하세요" ? true : false,
               decoration: InputDecoration(

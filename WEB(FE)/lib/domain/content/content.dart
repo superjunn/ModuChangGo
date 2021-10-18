@@ -1,16 +1,19 @@
 class Content {
-  final String? NIIN;
+  final String? niin;
   final String? contentName;
+  final String? storageName;
   final int? amount;
 
   Content({
-    this.NIIN,
+    this.niin,
     this.contentName,
+    this.storageName,
     this.amount,
   });
 
   Content.fromJson(Map<String, dynamic> json)
-      : NIIN = json["NIIN"],
+      : niin = json["NIIN"],
         contentName = json["productName"],
+        storageName = json["storageName"],
         amount = json["image"];
 }

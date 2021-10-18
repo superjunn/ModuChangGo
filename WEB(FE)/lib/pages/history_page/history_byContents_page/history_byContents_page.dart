@@ -5,8 +5,9 @@ import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/pages/history_page/history_page_components/history_page_left_menu_bar.dart';
 
-
 class HistoryByContentsPage extends StatelessWidget {
+  var refreshKey = GlobalKey<RefreshIndicatorState>();
+
   @override
   Widget build(BuildContext context) {
     double bodyWidth = getBodyWidth(context);
@@ -40,12 +41,8 @@ class HistoryByContentsPage extends StatelessWidget {
                 3,
                 (index) => ContentsTile(
                       contentsName: "방상외피",
-                      Storage: "훈련용창고",
-                      Shelf: "3",
-                      rfidInfo: "띠바",
-                      cnt: 12,
-                      Col: "1",
-                      Row: "2",
+                      image: "훈련용창고",
+                      niin: "띠바",
                     )),
           ),
         ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/components/common/page_left_menu_bar.dart';
+import 'package:moduchango/controller/storage_controller.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_init/storage_init_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_my_storages_view_page.dart';
 
