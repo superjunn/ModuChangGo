@@ -45,12 +45,12 @@ class PageHeader extends StatelessWidget {
                       Get.to(() => HistoryByDateViewPage());
                     },
                   ),
-                  PageHeaderFunctionBlock(
-                    mText: "공지사항",
-                    funPageRoute: () {
-                      Get.to(() => AnnouncementsPage());
-                    },
-                  ),
+                  // PageHeaderFunctionBlock(
+                  //   mText: "공지사항",
+                  //   funPageRoute: () {
+                  //     Get.to(() => AnnouncementsPage());
+                  //   },
+                  // ),
                   PageHeaderFunctionBlock(
                     mText: "마이 페이지",
                     funPageRoute: () {

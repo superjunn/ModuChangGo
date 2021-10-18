@@ -44,13 +44,18 @@ class StoreHouseContentsDetailViewPage extends StatelessWidget {
         Expanded(
           child: Wrap(
             spacing: 10,
-            children: List.generate(
-                3,
-                (index) => ContentsTile(
-                      contentsName: "방상외피",
-                      amount: "훈련용창고",
-                      niin: "띠바",
-                    )),
+            children: [
+              ContentsTile(
+                  contentsName: "위생복 상의(하기용)M95",
+                  amount: "37",
+                  niin: "5432-104829421"),
+              ContentsTile(
+                  contentsName: "수통", amount: "5", niin: "3454-482910482"),
+              ContentsTile(
+                  contentsName: "위생복 하의(하기용)",
+                  amount: "20",
+                  niin: "5428-583028102"),
+            ],
           ),
         ),
       ],
