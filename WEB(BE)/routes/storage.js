@@ -22,24 +22,26 @@ router.get('/:storageName', function(req, res){
 
 
 // 창고 추가
-router.post('/add', function(req, res){
-    var storage = new Storage();
+router.post('/add', async function(req, res){
 
-    storage.storageName = req.body.storageName;
-    storage.location = req.body.location;
-    storage.manager = req.body.manager;
-    storage.item = req.body.item;
+	const storage = new Storage();
+	storage.storageName = req.body.storageName;
+	storage.location = req.body.location;
+	storage.manager = req.body.manager;
+	storage.image = req.body.image;
 
-    storage.save(function(err){
-        if(err){
-            console.error(err);
-            res.json({result: 0});
-            return;
-        }
+	const storageCheck = await Storage.findOne({storageName:storage.storageName});
+	if (storageCheck == null){
+		storage.save(function(err){
+			if(err){
+				res.json({result: 0, error:err});
+			}
+			res.json({result: 1, storage:storage});
+		});			
+	} else {
+		res.json({result:0, error:"storage already exists"});
+	}
 
-        res.json({storage:storage, result: 1});
-
-    });
 });
 
 //창고 수정
