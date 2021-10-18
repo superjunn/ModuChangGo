@@ -42,7 +42,7 @@
 
 
 ## 기술 스택 (Technique Used)
-<p align="center"><img src="/image/tecstack.png.PNG"></p>
+<p align="center"><img src="/image/tecstack.png"></p>
 ### Back-end (server)
 
 ### Front-end
