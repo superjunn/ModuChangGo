@@ -45,13 +45,14 @@ class StoreHouseMyStoragesViewPage extends StatelessWidget {
   }
 
   _buildBody() {
-    HolderController h = Get.find();
+    StorageController s = Get.find();
+    s.findAll();
 
     return Obx(
       () => RefreshIndicator(
         key: refreshKey,
         onRefresh: () async {
-          await h.findAll();
+          await s.findAll();
         },
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,11 +62,11 @@ class StoreHouseMyStoragesViewPage extends StatelessWidget {
               child: Wrap(
                 spacing: 10,
                 children: List.generate(
-                  h.holders.length,
+                  s.storages.length,
                   (index) => StorageForm(
-                    storageName: h.holders[index].id!.toString(),
-                    location: h.holders[index].id!.toString(),
-                    image_id: h.holders[index].id!,
+                    storageName: s.storages[index].storageName!,
+                    location: s.storages[index].location!,
+                    image_id: s.storages[index].image!,
                     formWidth: storage_edge_b + 20,
                   ),
                 ),

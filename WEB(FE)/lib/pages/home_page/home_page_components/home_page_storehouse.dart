@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:moduchango/components/common/storage_form.dart';
 import 'package:moduchango/components/common/storage_init_form_.dart';
 import 'package:moduchango/controller/holder_controller.dart';
+import 'package:moduchango/controller/storage_controller.dart';
 import 'package:moduchango/design_data/size.dart';
 import 'package:moduchango/design_data/styles.dart';
 
@@ -11,14 +12,14 @@ class HomePageStoreHouse extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    HolderController h = Get.put(HolderController());
+    StorageController s = Get.put(StorageController());
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: Obx(
         () => RefreshIndicator(
           key: refreshKey,
           onRefresh: () async {
-            await h.findAll();
+            await s.findAll();
           },
           child: Container(
             child: Column(
@@ -26,22 +27,21 @@ class HomePageStoreHouse extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text("창고 보기 창고 개수 : ${h.holders.length}, ${h.holders}",
-                        style: h2_5()),
+                    Text("창고 보기 (창고 개수 : ${s.storages.length})", style: h2_5()),
                   ],
                 ),
                 SizedBox(height: gap_s),
                 Obx(
                   () => Wrap(
                     children: List.generate(
-                      (h.holders.length + 1 - 94),
+                      (s.storages.length + 1),
                       (index) {
-                        if (index != h.holders.length - 94) {
+                        if (index != s.storages.length) {
                           return StorageForm(
                             formWidth: storage_edge_s,
-                            storageName: h.holders[index].body!,
-                            location: h.holders[index].title!,
-                            image_id: h.holders[index].id!,
+                            storageName: s.storages[index].storageName!,
+                            location: s.storages[index].location!,
+                            image_id: s.storages[index].image!,
                           );
                         } else {
                           return StorageInitForm(formWidth: storage_edge_s);
