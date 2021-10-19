@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:moduchango_app/view/pages/stock_release_history/stock_release_detail_page.dart';
 
 class CustomHistoryTile extends StatelessWidget {
   final String? id;
@@ -19,18 +21,38 @@ class CustomHistoryTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Text? leading_text;
     if (this.state == "입고") {
-      Text leading_text = Text("입고", style: TextStyle(color: Colors.green));
+      return ListTile(
+        leading: Text("입고", style: TextStyle(color: Colors.green)),
+        title: Text("${this.productName}"),
+        subtitle: Text("창고: ${this.storageName}"),
+        onTap: () {
+          Get.to(() => StockReleaseDetailPage(
+                id: this.id,
+                NIIN: this.NIIN,
+                productName: this.productName,
+                state: this.state,
+                storageName: this.storageName,
+                time: this.time,
+              ));
+        },
+      );
     } else {
-      Text leading_text = Text("출고", style: TextStyle(color: Colors.redAccent));
+      return ListTile(
+        leading: Text("출고", style: TextStyle(color: Colors.redAccent)),
+        title: Text("${this.productName}"),
+        subtitle: Text("창고: ${this.storageName}"),
+        onTap: () {
+          Get.to(() => StockReleaseDetailPage(
+                id: this.id,
+                NIIN: this.NIIN,
+                productName: this.productName,
+                state: this.state,
+                storageName: this.storageName,
+                time: this.time,
+              ));
+        },
+      );
     }
-
-    return ListTile(
-      leading: leading_text,
-      title: Text("${this.productName}"),
-      subtitle: Text("창고: ${this.storageName}"),
-      onTap: () {},
-    );
   }
 }
