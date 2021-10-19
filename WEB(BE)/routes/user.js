@@ -27,4 +27,13 @@ router.put('/edit', function(req, res){
     );
 });
 
+router.delete('/:userId', function(req, res){
+    User.deleteOne({ user_id: req.params.userId }, function(err, output){
+        if(err) return res.status(500).json({ error: "delete failed"});
+		if(!output.deletedCount) return res.status(404).json({ error: 'user not found' });
+        res.json({deleteUser:req.params.userId, result: 1});
+    })
+});
+
+
 module.exports = router;
