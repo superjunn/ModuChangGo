@@ -121,7 +121,7 @@
 			</td>
 			<td width="35%">
 	   			<h4 align="center">
-		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_login.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_history.png" width="75%" height="75%"></a><br><br>로그인 페이지 앱</h4></td>
+		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_login.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_history.png" width="75%" height="75%"></a><br><br>입출고 내역 확인 앱</h4></td>
 		</tr>
 </tbody>
 </table>
