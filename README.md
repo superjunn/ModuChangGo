@@ -11,9 +11,9 @@
 
 </p>
 <p align="center">
-	<a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/search?l=JavaScript&type=code"><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper"></a>
+	<a href=""><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper"></a>
 	<a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper?color=success"></a>
-	  <a href="">
+	  <a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/graphs/commit-activity">
       <img src="https://img.shields.io/github/commit-activity/m/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper" alt="Commit per month"></a>
 	<a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper"></a>
 </p>
