@@ -26,7 +26,7 @@ class PageDrawer extends StatelessWidget {
                       child: Padding(
                           padding: EdgeInsets.all(16.0),
                           child: Image.asset(
-                            'assets/moduchango_logo.jpg',
+                            'assets/logo2.png',
                             height: 100,
                           )),
                     ),

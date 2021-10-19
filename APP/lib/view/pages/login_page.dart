@@ -19,7 +19,7 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset(
-                    'assets/moduchango_logo.png',
+                    'assets/logo.PNG',
                     height: 150,
                   ),
                   Text(
