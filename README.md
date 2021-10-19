@@ -14,11 +14,14 @@
 	<a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/search?l=JavaScript&type=code"><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper"></a>
 	<a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper?color=success"></a>
 	<a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper"></a>
+  <a href="">
+      <img src="https://img.shields.io/github/commit-activity/m/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper?style=for-the-badge" alt="Commit per month">
+  </a>
 </p>
 
 ## 목차
 -  [프로젝트 소개](#프로젝트-소개)  
--   [기능 설계 및 설명](#기능-설계-및-설명)  
+-  [기능 설계 및 설명](#기능-설계-및-설명)  
 -  [기술 스택(Technique Used)](#기술-스택-technique-used)  
 -  [설치 안내](#설치-안내)
 -  [팀 정보 (Team Information)](#팀-정보-team-information)
@@ -36,7 +39,7 @@
 
 
 
-## 기능 설계
+## 기능 설계 및 설명
 >모든 사진은 클릭 시 확대 된 이미지로 확인할 수 있습니다.😀
 <table><tbody>
 		<tr>
