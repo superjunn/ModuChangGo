@@ -77,7 +77,7 @@
 			</td>
 			<td width="35%">
 	   			<h4 align="center">
-		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_viewwarehouse.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_login.png" width="75%" height="75%"></a><br><br>부대 내 창고 관리 및 확인 앱</h4></td>
+		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_viewwarehouse.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_storages_page.png" width="75%" height="75%"></a><br><br>부대 내 창고 관리 및 확인 앱</h4></td>
 		</tr>
 </tbody>
 </table>
@@ -99,7 +99,7 @@
 			</td>
 			<td width="35%">
 	   			<h4 align="center">
-		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_login.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_login.png" width="75%" height="75%"></a><br><br>창고 내 물품 재고확인 앱</h4></td>
+		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_login.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_storages_detail_page.png" width="75%" height="75%"></a><br><br>창고 내 물품 재고확인 앱</h4></td>
 		</tr>
 </tbody>
 </table>
@@ -121,7 +121,7 @@
 			</td>
 			<td width="35%">
 	   			<h4 align="center">
-		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_login.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_login.png" width="75%" height="75%"></a><br><br>로그인 페이지 앱</h4></td>
+		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_login.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_history.png" width="75%" height="75%"></a><br><br>로그인 페이지 앱</h4></td>
 		</tr>
 </tbody>
 </table>
