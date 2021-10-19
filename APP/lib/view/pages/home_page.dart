@@ -36,12 +36,9 @@ class _HomePageState extends State<HomePage> {
         },
         currentIndex: _index,
         items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "창고현황"),
           BottomNavigationBarItem(
-              icon: Icon(IconData(983518, fontFamily: 'MaterialIcons')),
-              label: "창고현황"),
-          BottomNavigationBarItem(
-              icon: Icon(IconData(58132, fontFamily: 'MaterialIcons')),
-              label: "입출고 내역"),
+              icon: Icon(Icons.compare_arrows), label: "입출고 내역"),
         ],
       ),
     );
