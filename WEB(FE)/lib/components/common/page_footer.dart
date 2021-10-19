@@ -10,19 +10,37 @@ class PageFooter extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.black12,
       ),
-      child: Row(
+      child: Column(
         children: [
-          Image.asset("assets/MND_logo.jpg", height: 200, width: 500),
-          Image.asset("assets/osam_logo.png", height: 200, width: 500),
-          Icon(Icons.zoom_in_sharp),
-          Column(
-            children: [
-              Text("Moduchango", style: hbody()),
-              Text("김태한", style: hbody()),
-              Text("박규한", style: hbody()),
-              Text("조명근", style: hbody()),
-              Text("허승준", style: hbody()),
-            ],
+          SizedBox(width: double.infinity, height: 50),
+          SizedBox(
+            height: 50,
+            child: Row(
+              children: [
+                SizedBox(width: 50),
+                SizedBox(
+                  height: 50,
+                  child: Image.asset("assets/osam_logo.png",
+                      fit: BoxFit.fitHeight),
+                ),
+                Spacer(),
+                SizedBox(
+                  height: 50,
+                  child:
+                      Image.asset("assets/msi_logo.png", fit: BoxFit.fitHeight),
+                ),
+                SizedBox(width: 15),
+                SizedBox(
+                  height: 50,
+                  child: Image.asset("assets/nipa_logo.png",
+                      fit: BoxFit.fitHeight),
+                ),
+                SizedBox(width: 50),
+              ],
+            ),
+          ),
+          Row(
+            children: [],
           ),
         ],
       ),

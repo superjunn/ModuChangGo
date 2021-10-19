@@ -37,9 +37,96 @@
 
 
 ## 기능 설계
+>모든 사진은 클릭 시 확대 된 이미지로 확인할 수 있습니다.😀
+<table><tbody>
+		<tr>
+			<td colspan=2>
+				<br>
+				<b>ㆍ 🔐 로그인 페이지 / 회원가입 기능</b><br>
+				<br>
+			</td>
+		</tr>
+		<tr>
+			<td width="65%">
+				<h4 align="center">
+				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/login.png"><img src="/image/ui/login.png" width="100%" height="100%">
+					</a><br><br>로그인 페이지 웹
+				</h4>
+			</td>
+			<td width="35%">
+	   			<h4 align="center">
+		   		<a href="https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/app_login.png"><img src="/image/ui/app_login.png" width="75%" height="75%"></a><br><br>로그인 페이지 앱</h4></td>
+		</tr>
+</tbody>
+</table>
 
+<table><tbody>
+		<tr>
+			<td colspan=2>
+				<br>
+				<b>👁‍🗨 부대 내 창고 관리 및 확인 기능</b><br>
+				<br>
+			</td>
+		</tr>
+		<tr>
+			<td width="65%">
+				<h4 align="center">
+				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/viewwarehouse.png"><img src="/image/ui/viewwarehouse.png" width="100%" height="100%">
+					</a><br><br>부대 내 창고 관리 및 확인 웹
+				</h4>
+			</td>
+			<td width="35%">
+	   			<h4 align="center">
+		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_viewwarehouse.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_login.png" width="75%" height="75%"></a><br><br>부대 내 창고 관리 및 확인 앱</h4></td>
+		</tr>
+</tbody>
+</table>
 
+<table><tbody>
+		<tr>
+			<td colspan=2>
+				<br>
+				<b>👨🏻‍💻창고 내 물품 재고확인 기능</b><br>
+				<br>
+			</td>
+		</tr>
+		<tr>
+			<td width="65%">
+				<h4 align="center">
+				<a href = ""><img src="/image/ui/login.png" width="100%" height="100%">
+					</a><br><br>창고 내 물품 재고확인 웹
+				</h4>
+			</td>
+			<td width="35%">
+	   			<h4 align="center">
+		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_login.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_login.png" width="75%" height="75%"></a><br><br>창고 내 물품 재고확인 앱</h4></td>
+		</tr>
+</tbody>
+</table>
 
+<table><tbody>
+		<tr>
+			<td colspan=2>
+				<br>
+				<b>😎입/출고 내역 확인 기능</b><br>
+				<br>
+			</td>
+		</tr>
+		<tr>
+			<td width="65%">
+				<h4 align="center">
+				<a href = "https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/login.png?token=ATMLCX4V42GXTG7E5YNPDITBNWB74"><img src="/image/ui/login.png" width="100%" height="100%">
+					</a><br><br>로그인 페이지 웹
+				</h4>
+			</td>
+			<td width="35%">
+	   			<h4 align="center">
+		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_login.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_login.png" width="75%" height="75%"></a><br><br>로그인 페이지 앱</h4></td>
+		</tr>
+</tbody>
+</table>
+
+## 기대효과 및 발전가능성
 
 ## 기술 스택 (Technique Used)
 <p align="center"><img src="/image/tecstack/tecstack.png"></p>
