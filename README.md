@@ -51,7 +51,7 @@
 		<tr>
 			<td width="65%">
 				<h4 align="center">
-				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/login.png"><img src="/image/ui/login.png" width="100%" height="100%">
+				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/web_login.png"><img src="/image/ui/login.png" width="100%" height="100%">
 					</a><br><br>로그인 페이지 웹
 				</h4>
 			</td>
@@ -73,7 +73,7 @@
 		<tr>
 			<td width="65%">
 				<h4 align="center">
-				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/viewwarehouse.png"><img src="/image/ui/viewwarehouse.png" width="100%" height="100%">
+				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/web_viewStorage.png"><img src="/image/ui/viewwarehouse.png" width="100%" height="100%">
 					</a><br><br>부대 내 창고 관리 및 확인 웹
 				</h4>
 			</td>
