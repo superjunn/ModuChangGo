@@ -36,6 +36,8 @@
 
 ![image](https://user-images.githubusercontent.com/81310047/137630861-a9660501-e018-4e7d-9638-36aca646c996.png)
 
+## 소개 영상
+[![Video Label](http://img.youtube.com/vi/rm6ZiT32iCo/0.jpg)](https://youtu.be/rm6ZiT32iCo)
 
 ## Service Flow
 <p align="center"><img src="/image/ui/flowChart.png"></p>
