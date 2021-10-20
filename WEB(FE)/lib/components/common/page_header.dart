@@ -4,11 +4,10 @@ import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/page_header_function_block.dart';
 import 'package:moduchango/components/common/components_detail/page_header_logo.dart';
 import 'package:moduchango/design_data/colors.dart';
-import 'package:moduchango/pages/announcements_page/announcements_page.dart';
 import 'package:moduchango/pages/history_page/history_byContents_page/history_byContents_page.dart';
 import 'package:moduchango/pages/home_page/home_page.dart';
-import 'package:moduchango/pages/join_page/login_page.dart';
-import 'package:moduchango/pages/login_page/join_page.dart';
+import 'package:moduchango/pages/join_page/join_page.dart';
+import 'package:moduchango/pages/login_page/login_page.dart';
 import 'package:moduchango/pages/my_page/my_page_view/my_page_view_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_my_storages_view_page.dart';
 

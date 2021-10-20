@@ -5,7 +5,7 @@ import 'package:moduchango/components/common/custom_text_form_field.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/join_page/login_page.dart';
+import 'package:moduchango/pages/login_page/login_page.dart';
 
 class JoinPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
