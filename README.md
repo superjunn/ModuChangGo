@@ -97,7 +97,7 @@
 		<tr>
 			<td width="65%">
 				<h4 align="center">
-				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/web_main.png"><img src="/image/ui/web_main.png" width="100%" height="100%">
+				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/web_history.png"><img src="/image/ui/web_main.png" width="100%" height="100%">
 					</a><br><br>창고 내 물품 재고확인 웹
 				</h4>
 			</td>
