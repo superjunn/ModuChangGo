@@ -90,8 +90,8 @@ class PageHeader extends StatelessWidget {
   void _sendEmail(BuildContext context) async {
     final Email email = Email(
       body: '',
-      subject: '[양파가족 문의]',
-      recipients: ['onionfamily.official@gmail.com'],
+      subject: '[문의]',
+      recipients: ['superjunn00@gmail.com'],
       cc: [],
       bcc: [],
       attachmentPaths: [],
@@ -102,7 +102,7 @@ class PageHeader extends StatelessWidget {
       await FlutterEmailSender.send(email);
     } catch (error) {
       String title =
-          "기본 메일 앱을 사용할 수 없기 때문에 앱에서 바로 문의를 전송하기 어려운 상황입니다.\n\n아래 이메일로 연락주시면 친절하게 답변해드릴게요 :)\n\nonionfamily.official@gmail.com";
+          "기본 메일 앱을 사용할 수 없기 때문에 앱에서 바로 문의를 전송하기 어려운 상황입니다.\n\n아래 이메일로 연락주시면 친절하게 답변해드릴게요 :)\n\nsuperjunn00@gmail.com";
       String message = "";
       showDialog(
         context: context,
