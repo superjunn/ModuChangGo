@@ -1,0 +1,25 @@
+name: server deploy
+
+on:
+  push:
+    branches: [ edit ]
+  pull_request:
+    branches: [ edit ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: access remote ssh
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_IP }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd ${{ secrets.DIRECTORY }} && git pull
+            cd 'WEB(BE)'
+            npm install --no-save
+            pm2 reload all
