@@ -37,7 +37,8 @@
 ![image](https://user-images.githubusercontent.com/81310047/137630861-a9660501-e018-4e7d-9638-36aca646c996.png)
 
 
-## Workflow
+## Service Flow
+<p align="center"><img src="/image/ui/flowChart.png"></p>
 
 ## 기능 설계 및 설명
 >모든 사진은 클릭 시 확대 된 이미지로 확인할 수 있습니다.😀
