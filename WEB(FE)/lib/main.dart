@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/pages/home_page/home_page.dart';
-import 'package:moduchango/pages/join_page/join_page.dart';
+import 'package:moduchango/pages/join_page/login_page.dart';
 
 import 'pages/test_page/test_page.dart';
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "NotoSans"),
-      home: JoinPage(),
+      home: LoginPage(),
     );
   }
 }

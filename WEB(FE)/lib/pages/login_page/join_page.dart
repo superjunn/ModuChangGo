@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:moduchango/components/common/custom_elevated_button.dart';
 import 'package:moduchango/components/common/custom_outlined_button.dart';
 import 'package:moduchango/components/common/custom_text_form_field.dart';
 import 'package:moduchango/components/common/page_footer.dart';
 import 'package:moduchango/components/common/page_header.dart';
 import 'package:moduchango/design_data/size.dart';
-import 'package:moduchango/pages/home_page/home_page.dart';
+import 'package:moduchango/pages/join_page/login_page.dart';
 
 class JoinPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
-  final _userID = TextEditingController();
-  final _userPwd = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +22,7 @@ class JoinPage extends StatelessWidget {
           Align(
             child: SizedBox(
               width: currentSize < 340 ? double.infinity : bodyWidth,
-              child: _buildJoinPageBody(),
+              child: _buildBody(),
             ),
           ),
           PageFooter(),
@@ -34,7 +31,7 @@ class JoinPage extends StatelessWidget {
     );
   }
 
-  _buildJoinPageBody() {
+  _buildBody() {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
@@ -51,16 +48,9 @@ class JoinPage extends StatelessWidget {
                     titleText: "아이디", hintText: "아이디를 입력해주세요", width: 340),
                 CustomTextFormField(
                     titleText: "비밀번호", hintText: "비밀번호를 입력해주세요", width: 340),
-                // CustomTextFormField(
-                //     titleText: "부대", hintText: "부대를 입력해주세요", width: 340),
-                CustomElevatedButton(
-                  buttonText: "로그인",
-                  funpageRoute: () => Get.to(() => HomePage()),
-                  width: 460,
-                ),
                 CustomOutlinedButton(
                   buttonText: "회원가입",
-                  funpageRoute: () => Get.to(() => JoinPage()),
+                  funpageRoute: () => Get.to(() => LoginPage()),
                   width: 460,
                 ),
               ],
