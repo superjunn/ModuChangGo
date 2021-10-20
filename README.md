@@ -51,7 +51,7 @@
 		<tr>
 			<td width="65%">
 				<h4 align="center">
-				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/web_login.png"><img src="/image/ui/login.png" width="100%" height="100%">
+				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/web_login.png"><img src="/image/ui/web_login.png" width="100%" height="100%">
 					</a><br><br>로그인 페이지 웹
 				</h4>
 			</td>
@@ -73,13 +73,13 @@
 		<tr>
 			<td width="65%">
 				<h4 align="center">
-				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/web_viewStorage.png"><img src="/image/ui/viewwarehouse.png" width="100%" height="100%">
+				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/web_viewStorage.png"><img src="/image/ui/web_viewStorage.png" width="100%" height="100%">
 					</a><br><br>부대 내 창고 관리 및 확인 웹
 				</h4>
 			</td>
 			<td width="35%">
 	   			<h4 align="center">
-		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_viewwarehouse.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_storages_page.png" width="75%" height="75%"></a><br><br>부대 내 창고 관리 및 확인 앱</h4></td>
+		   		<a href="https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/app_storages_page.png"><img src="/image/ui/app_storages_page.png" width="75%" height="75%"></a><br><br>부대 내 창고 관리 및 확인 앱</h4></td>
 		</tr>
 </tbody>
 </table>
@@ -101,7 +101,7 @@
 			</td>
 			<td width="35%">
 	   			<h4 align="center">
-		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_login.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_storages_detail_page.png" width="75%" height="75%"></a><br><br>창고 내 물품 재고확인 앱</h4></td>
+		   		<a href="https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/app_storages_detail_page.png"><img src="/image/ui/app_storages_detail_page.png" width="75%" height="75%"></a><br><br>창고 내 물품 재고확인 앱</h4></td>
 		</tr>
 </tbody>
 </table>
@@ -117,13 +117,13 @@
 		<tr>
 			<td width="65%">
 				<h4 align="center">
-				<a href = "https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/login.png?token=ATMLCX4V42GXTG7E5YNPDITBNWB74"><img src="/image/ui/web_history.png" width="100%" height="100%">
+				<a href = "https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/web_history.png"><img src="/image/ui/web_history.png" width="100%" height="100%">
 					</a><br><br>입출고 내역 확인 웹
 				</h4>
 			</td>
 			<td width="35%">
 	   			<h4 align="center">
-		   		<a href="https://raw.githubusercontent.com/realisshomyang/readmetest/main/image/ui/app_login.png?token=ATMLCXZPAHJM3H7VMVFUOM3BNWCC2"><img src="/image/ui/app_history.png" width="75%" height="75%"></a><br><br>입출고 내역 확인 앱</h4></td>
+		   		<a href="https://raw.githubusercontent.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/edit/image/ui/app_history.png"><img src="/image/ui/app_history.png" width="75%" height="75%"></a><br><br>입출고 내역 확인 앱</h4></td>
 		</tr>
 </tbody>
 </table>
