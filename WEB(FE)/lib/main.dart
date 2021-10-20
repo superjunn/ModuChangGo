@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/pages/login_page/login_page.dart';
+import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_contents_detail_view_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "NotoSans"),
-      home: LoginPage(),
+      home: StoreHouseContentsDetailViewPage(storageName: "운영창고"),
     );
   }
 }

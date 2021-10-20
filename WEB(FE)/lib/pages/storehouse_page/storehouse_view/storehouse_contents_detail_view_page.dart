@@ -11,7 +11,7 @@ class StoreHouseContentsDetailViewPage extends StatelessWidget {
   var refreshKey = GlobalKey<RefreshIndicatorState>();
   final String storageName;
 
-  StoreHouseContentsDetailViewPage({required this.storageName});
+  StoreHouseContentsDetailViewPage({this.storageName = "운영창고"});
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +35,8 @@ class StoreHouseContentsDetailViewPage extends StatelessWidget {
   }
 
   _buildBody() {
-    // StorageController s = Get.put(StorageController());
-
-    Row(
+    StorageController s = Get.put(StorageController());
+    return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         StoreHousePageLeftMenuBar(),
@@ -47,14 +46,14 @@ class StoreHouseContentsDetailViewPage extends StatelessWidget {
             children: [
               ContentsTile(
                   contentsName: "위생복 상의(하기용)M95",
-                  amount: "37",
-                  niin: "5432-104829421"),
+                  niin: "5432-104829421",
+                  amount: "37"),
               ContentsTile(
-                  contentsName: "수통", amount: "5", niin: "3454-482910482"),
+                  contentsName: "수통", niin: "3454-482910482", amount: "5"),
               ContentsTile(
                   contentsName: "위생복 하의(하기용)",
-                  amount: "20",
-                  niin: "5428-583028102"),
+                  niin: "5428-583028102",
+                  amount: "20"),
             ],
           ),
         ),

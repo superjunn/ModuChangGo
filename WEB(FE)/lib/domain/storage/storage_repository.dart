@@ -18,7 +18,6 @@ class StorageRepository {
       List<Storage> storages = temp.map((e) => Storage.fromJson(e)).toList();
       return storages;
     } else {
-      print("런타임타입이 리스트가 아니어서 디폴트 빈리스트 리턴 in REpository !!");
       return <Storage>[];
     }
   }
@@ -33,7 +32,6 @@ class StorageRepository {
       print("contents!!@#!@# :L ${contents[0].contentName}");
       return contents;
     } else {
-      print("런타임타입이 리스트가 아니어서 디폴트 빈리스트 리턴 in Repository findByName !!");
       return <Content>[];
     }
   }
@@ -47,16 +45,15 @@ class StorageRepository {
     Response response = await _storageProvider.init(initReqDto.toJson());
     dynamic body = response.body;
     CMRespDto temp = CMRespDto.fromJson(body);
-    print("body run time Type !!@!@!!!  : ${body.runtimeType}");
-    print(body);
+
     String result = temp.result!;
 
     if (result == "1") {
-      print("창고 추가 성공");
+      // print("창고 추가 성공");
       Storage storage = Storage.fromJson(initReqDto.toJson());
       return storage;
     } else {
-      print("창고 추가 실패");
+      // print("창고 추가 실패");
       return Storage();
     }
   }
@@ -64,7 +61,6 @@ class StorageRepository {
   Future<int> deleteByName(String storageName) async {
     Response response = await _storageProvider.deleteByName(storageName);
     dynamic body = response.body;
-    // print("body RunTIME  ?!?? type !?!? : ${body.runtimeType}");
     int temp = body["result"];
     print("temp??!? : $temp");
     return temp;
