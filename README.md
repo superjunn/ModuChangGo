@@ -37,6 +37,7 @@
 ![image](https://user-images.githubusercontent.com/81310047/137630861-a9660501-e018-4e7d-9638-36aca646c996.png)
 
 
+## Workflow
 
 ## 기능 설계 및 설명
 >모든 사진은 클릭 시 확대 된 이미지로 확인할 수 있습니다.😀
@@ -129,7 +130,7 @@
 </table>
 
 ## 기대효과(발전가능성) 및 한계점
-활용성(현재 프로젝트에 구현되어 있으며 실제 군에서 사용할 시 기대 가능한 사항들)
+### 활용성(현재 프로젝트에 구현되어 있으며 실제 군에서 사용할 시 기대 가능한 사항들)
 
 	1. 자동화로 인한 인원/시간 소요 감소
 	    - 본 프로젝트에서는 창고 재고의 입/출고가 RFID와 아두이노를 이용해 자동으로 진행됩니다.
@@ -155,7 +156,8 @@
 	      언제 어떤 창고에서 어떤 군수품이 입/출고 되었는지 확인할 수 있습니다.
 
 
-가능성(현재 프로젝트에는 구현되어 있지 않지만 실제 군에서 사용하기 위해 차후 개발 가능한 점들) ✌️
+### 가능성(현재 프로젝트에는 구현되어 있지 않지만 실제 군에서 사용하기 위해 차후 개발 가능한 점들)
+
 	1. Flutter 사용으로 인한 발전 가능성
 	    - 본 프로젝트에서는 크로스 플랫폼인 Flutter를 사용하였습니다.
 	    - 이 때문에 현재는 Android 앱, Chrome 웹만 지원하지만 
@@ -238,18 +240,18 @@
 git clone <https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper.git>
 
 ### FrontEnd(WEB)
-cd 'WEB(BE)'
+cd 'WEB(BE)'<br>
 flutter run -d web-server --web-hostname=0.0.0.0
 
 ### FrontEnd(APP)
-cd 'APP(Android)'
-flutter build apk --split-per-abi
-flutter install
+cd 'APP(Android)'<br>
+flutter build apk --split-per-abi<br>
+flutter install<br>
 
 ### BackEnd
-cd WEB_APP_IOT_ModuChangGo_Chang-keeper/'WEB(BE)'
-npm install
-npm start
+cd WEB_APP_IOT_ModuChangGo_Chang-keeper/'WEB(BE)'<br>
+npm install<br>
+npm start<br>
 
 ## 팀 정보 (Team Information)
 <table width="788">
