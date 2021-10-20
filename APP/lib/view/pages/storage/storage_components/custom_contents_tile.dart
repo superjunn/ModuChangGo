@@ -12,7 +12,7 @@ class CustomContentsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(IconData(983518, fontFamily: 'MaterialIcons')),
+      leading: Icon(Icons.view_headline),
       title: Text(content_name),
       subtitle: Text("개수: ${content_amount}개"),
     );
