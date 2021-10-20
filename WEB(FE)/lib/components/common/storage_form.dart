@@ -3,14 +3,11 @@ import 'package:get/get.dart';
 import 'package:moduchango/components/common/components_detail/storage_image.dart';
 import 'package:moduchango/controller/storage_controller.dart';
 import 'package:moduchango/design_data/styles.dart';
-import 'package:moduchango/pages/history_page/history_byStorage_page/history_byStorage_view_page.dart';
+import 'package:moduchango/pages/history_page/history_byContents_page/history_byContents_page.dart';
 import 'package:moduchango/pages/home_page/home_page.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_delete/storehouse_delete_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_edit/storehouse_edit_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_init/storage_init_page.dart';
 import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_contents_detail_view_page.dart';
-import 'package:moduchango/pages/storehouse_page/storehouse_view/storehouse_my_storages_view_page.dart';
-import 'package:moduchango/pages/test_page/test_page.dart';
 
 class StorageForm extends StatelessWidget {
   final formWidth;
@@ -49,7 +46,7 @@ class StorageForm extends StatelessWidget {
             Get.to(() => HomePage());
             // 여기 딜리트 페이지로 가는게 아니라 alert 띄워야됨
           } else if (stat == Status.history) {
-            Get.to(() => HistoryByStorageViewPage());
+            Get.to(() => HistoryByContentsPage());
           } else {
             print("Error");
             HomePage();

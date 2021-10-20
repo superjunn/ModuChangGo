@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moduchango/components/common/page_left_menu_bar.dart';
 import 'package:moduchango/pages/history_page/history_byContents_page/history_byContents_page.dart';
-import 'package:moduchango/pages/history_page/history_byDate_page/history_byDate_view_page.dart';
-import 'package:moduchango/pages/history_page/history_byStorage_page/history_byStorage_select_page.dart';
 
 class HistoryPageLeftMenuBar extends StatelessWidget {
   @override
