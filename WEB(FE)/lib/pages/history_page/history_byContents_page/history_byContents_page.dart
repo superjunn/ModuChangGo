@@ -36,35 +36,28 @@ class HistoryByContentsPage extends StatelessWidget {
 
   _buildBody() {
     StorageController s = Get.put(StorageController());
-    return Obx(
-      () => RefreshIndicator(
-        key: refreshKey,
-        onRefresh: () async {
-          s.findByName(storageName);
-        },
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            HistoryPageLeftMenuBar(),
-            Expanded(
-              child: Wrap(
-                spacing: 10,
-                children: List.generate(
-                    s.contents.length,
-                    (index) => ContentsTile(
-                          // contentsName: "${s.contents[index].contentName}",
-                          // amount: "${s.contents[index].amount}",
-                          // niin: "${s.contents[index].niin}",
-                          contentsName: "방상외피",
-                          amount: "19",
-                          niin: "123-456456",
-                        )),
-              ),
-            ),
-            Text("history by contentspagebody"),
-          ],
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        HistoryPageLeftMenuBar(),
+        Expanded(
+          child: Wrap(
+            spacing: 10,
+            children: [
+              ContentsTile(
+                  contentsName: "위생복 상의(하기용)M95",
+                  niin: "5432-104829421",
+                  amount: "37"),
+              ContentsTile(
+                  contentsName: "수통", niin: "3454-482910482", amount: "5"),
+              ContentsTile(
+                  contentsName: "위생복 하의(하기용)",
+                  niin: "5428-583028102",
+                  amount: "20"),
+            ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }

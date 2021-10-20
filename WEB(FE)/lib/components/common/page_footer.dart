@@ -27,12 +27,12 @@ class PageFooter extends StatelessWidget {
                 SizedBox(
                   height: 50,
                   child:
-                      Image.asset("assets/msi_logo.png", fit: BoxFit.fitHeight),
+                      Image.asset("assets/msi_logo.jpg", fit: BoxFit.fitHeight),
                 ),
                 SizedBox(width: 15),
                 SizedBox(
                   height: 50,
-                  child: Image.asset("assets/nipa_logo.png",
+                  child: Image.asset("assets/nipa_logo.jpg",
                       fit: BoxFit.fitHeight),
                 ),
                 SizedBox(width: 50),

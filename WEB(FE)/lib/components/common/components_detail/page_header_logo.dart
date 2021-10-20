@@ -21,7 +21,7 @@ class PageHeaderLogo extends StatelessWidget {
           SizedBox(
             width: 40,
             height: 40,
-            child: Image.asset("assets/moduchango_logo.png"),
+            child: Image.asset("assets/logo.png"),
           ),
           SizedBox(
             width: gap_xs,

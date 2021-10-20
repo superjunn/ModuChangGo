@@ -12,7 +12,6 @@ class JoinPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   final _userID = TextEditingController();
   final _userPwd = TextEditingController();
-  final _unitName = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -52,8 +51,8 @@ class JoinPage extends StatelessWidget {
                     titleText: "아이디", hintText: "아이디를 입력해주세요", width: 340),
                 CustomTextFormField(
                     titleText: "비밀번호", hintText: "비밀번호를 입력해주세요", width: 340),
-                CustomTextFormField(
-                    titleText: "부대", hintText: "부대를 입력해주세요", width: 340),
+                // CustomTextFormField(
+                //     titleText: "부대", hintText: "부대를 입력해주세요", width: 340),
                 CustomElevatedButton(
                   buttonText: "로그인",
                   funpageRoute: () => Get.to(() => HomePage()),

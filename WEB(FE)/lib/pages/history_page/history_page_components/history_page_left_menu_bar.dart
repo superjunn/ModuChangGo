@@ -10,14 +10,8 @@ class HistoryPageLeftMenuBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return PageLeftMenuBar(
       title: "입/출고 내역",
-      functionsList: [
-        "날짜별 보기",
-        "창고별 보기",
-        "물품별 보기",
-      ],
+      functionsList: ["입/출고 내역 보기"],
       funpageRouteList: [
-        () => Get.to(() => HistoryByDateViewPage()),
-        () => Get.to(() => HistoryByStorageSelectPage()),
         () => Get.to(() => HistoryByContentsPage()),
       ],
     );

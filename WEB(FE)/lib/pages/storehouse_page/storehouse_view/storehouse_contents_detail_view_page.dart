@@ -35,7 +35,7 @@ class StoreHouseContentsDetailViewPage extends StatelessWidget {
   }
 
   _buildBody() {
-    StorageController s = Get.put(StorageController());
+    // StorageController s = Get.put(StorageController());
 
     Row(
       crossAxisAlignment: CrossAxisAlignment.start,

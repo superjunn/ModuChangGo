@@ -13,7 +13,7 @@ class StorageRepository {
     dynamic body = response.body;
     // print("레포지토리가 받아온 body는 ?? : ${body}");
 
-    if (body.runtimeType == List) {
+    if (true) {
       List<dynamic> temp = body;
       List<Storage> storages = temp.map((e) => Storage.fromJson(e)).toList();
       return storages;
@@ -64,7 +64,7 @@ class StorageRepository {
   Future<int> deleteByName(String storageName) async {
     Response response = await _storageProvider.deleteByName(storageName);
     dynamic body = response.body;
-    print("body RunTIME  ?!?? type !?!? : ${body.runtimeType}");
+    // print("body RunTIME  ?!?? type !?!? : ${body.runtimeType}");
     int temp = body["result"];
     print("temp??!? : $temp");
     return temp;
