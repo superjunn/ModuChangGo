@@ -13,12 +13,14 @@
 <p align="center">
 	<a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/search?l=JavaScript&type=code"><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper"></a>
 	<a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper?color=success"></a>
+	  <a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/graphs/commit-activity">
+      <img src="https://img.shields.io/github/commit-activity/m/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper" alt="Commit per month"></a>
 	<a href="https://github.com/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/osamhack2021/WEB_APP_IOT_ModuChangGo_Chang-keeper"></a>
 </p>
 
 ## 목차
 -  [프로젝트 소개](#프로젝트-소개)  
--   [기능 설계 및 설명](#기능-설계-및-설명)  
+-  [기능 설계 및 설명](#기능-설계-및-설명)  
 -  [기술 스택(Technique Used)](#기술-스택-technique-used)  
 -  [설치 안내](#설치-안내)
 -  [팀 정보 (Team Information)](#팀-정보-team-information)
@@ -27,7 +29,7 @@
 ## 프로젝트 소개
 
 **모두의 창고** 프로젝트는 국군 군수품 관리 체계의 편리함을 증가시키기 위해 개발된 프로젝트입니다. 
-현재 군수품 관리는 실제 창고의 현황(오프라인)과 관리체계(온라인)가 연결되어 있지 않아 창고 정리 때마다 개수를 세며 최신화를 하고있는 상황입니다. 보급 담당인원이 일일히 처리하는 상태입니다. 
+현재 군수품 관리는 실제 창고의 현황(오프라인)과 관리체계(온라인)가 연결되어 있지 않아 창고 정리 때마다 개수를 세며 최신화를 하고있으며 이에 맞게 보급 담당인원이 일일히 군수정보체계에 처리하는 방식으로 운영되고 있습니다.
 
 국방개혁 2.0의 군수개혁 추진에 맞게 모두의 창고는 물품을 IOT,앱,웹 기반으로 군수품 원격 관리체계를 구축하는 것이 목표입니다. 이에 맞게 크게 2가지 키워드를 바탕으로 프로젝트를 진행하였습니다.
 ![image](https://user-images.githubusercontent.com/81310047/137630858-65433ec1-5d05-4a96-95b1-b7089d725f7e.png)
@@ -36,7 +38,7 @@
 
 
 
-## 기능 설계
+## 기능 설계 및 설명
 >모든 사진은 클릭 시 확대 된 이미지로 확인할 수 있습니다.😀
 <table><tbody>
 		<tr>
@@ -127,6 +129,18 @@
 </table>
 
 ## 기대효과 및 발전가능성
+1. 편리하고 정확한 부대 내 창고 관리 기능 😇
+    - 부대 내 창고 관리 기능으로 창고 확인 기능
+    - 창고 내 군수품 개수 파악 기능
+2. 자동화로 인한 인원/시간 소요 감소 😊
+    - 매번 창고 정리때 마다 개수를 세서 군수품을 파악하지 않아도 창고 내 군수품 파악 가능
+    - 입고/출고 내역을 바탕으로 군수품 입고 여부 체크 자동으로 가능
+    - 출고 시 따로 명부 작성을 안해도 군수품 추적 가능
+3. 발전 가능성 ✌️
+    - 국방 군수 관리체계 dellis와 연계가 된다면 부대 내 군수품 파악이 쉬워짐
+    - 불출/입고를 바탕으로 얻은 데이터를 바탕으로 부대 내 군수품 소요를 분기마다 파악할 수 있는 발전 가능성 존재
+    - 창고 마다 한개 씩 장치를 두는 것으로 가정하였지만, 선반마다 탑재하면 더 정확한 시각화 가능
+    - 저렴한 가격으로 군 내 IOT 구축 가능
 
 ## 기술 스택 (Technique Used)
 <p align="center"><img src="/image/tecstack/tecstack.png"></p>
